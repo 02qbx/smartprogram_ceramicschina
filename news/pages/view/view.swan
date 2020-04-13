@@ -1,0 +1,39 @@
+<import src="../../../wxParse/wxParse.swan"/>
+<view class="container">
+    <view class="darkgrey">
+        <import src="/template/mune/mune.swan" /> 
+        <!-- content -->
+        <view class="white newsview shadow">
+            <view class="art_title">{{pg_news.news_title}}</view>
+            <view class="tit">
+                <view>{{pg_news.re_title}}</view>
+                <view>{{pg_news.news_from}}</view>
+                <view>{{pg_news.make_date}}</view>
+            </view>
+            <view class="art_content">         
+              <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
+            </view>
+            <!-- 广告位 -->
+            
+            <navigator class="ad" url="/pages/index/index" >
+                <image mode="widthFix" src="/images/1.jpg"></image>
+                <view class="gg">广告</view>
+            </navigator>
+
+            <!-- 头条推荐 -->
+            <view class="newslist">
+                <view class="title">头条推荐</view>
+                <view class="news-con">
+                    <block s-for="{{list}}" s-for-item="item">
+                    <navigator url="/news/pages/view/view?id={{item.id}}" >{{item.news_title}}</navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+
+        <view class="footer">
+            <view>经营许可证编号：粤ICP备14052601号-1</view>
+            <view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
+        </view>
+    </view>
+</view>

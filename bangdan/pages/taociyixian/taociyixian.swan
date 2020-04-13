@@ -1,0 +1,83 @@
+<view class="container">
+<view class="topbar white">
+<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
+</view>
+   <view class="nav-top">
+            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
+            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
+            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
+            <navigator url="/news/pages/list/list?id=993">终端</navigator>
+            <navigator url="/news/pages/list/list?id=972">深度</navigator>
+            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+        </view>
+<view class="darkgrey">
+<view class="banner">
+<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
+</view>
+ <view class="content nav">
+<view class="nav-list">
+<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  class="active">陶瓷一线品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
+</view>
+</view>   
+</view>
+<view class="content white shadow">
+<view class="intro">中国陶瓷一线品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度陶瓷一线品牌榜的品牌有: 诺贝尔磁砖、马可波罗磁砖、能强陶瓷、强牌陶瓷、新罗玛陶瓷、如意陶瓷砖、好来登陶瓷、金丝路瓷砖。</view>
+</view><view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">陶瓷一线品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8117" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8117" pen-type="redirect" class="pname">诺贝尔磁砖</navigator><view class="sell">杭州诺贝尔集团有限公司是一家外资企业，于1992年在杭州成立，以人性化的“诺贝尔”产品不断创造完美的品质空间。集团公司总投资4.3亿美元，占地2300余亩，厂房面积80万平方米，员工近万余人，年生产规模近5000万平方米，产品深受国内外消费者的青睐。   </view><view><navigator url="/bangdan/pages/view/view?id=8117" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=4657" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=4657" pen-type="redirect" class="pname">马可波罗磁砖</navigator><view class="sell">马可波罗瓷砖，企业创立于1988年，品牌诞生于1996年。作为国内最早品牌化、产品系列最全最大的建陶品牌，是多家设计院战略合作品牌及奥运亚运世博会等大型工程建设的主要建材供应品牌。连续11年入选“中国最具价值品牌500强”，2014年，品牌价值120.25亿，连续3年位列建陶行业第一位。</view><view><navigator url="/bangdan/pages/view/view?id=4657" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8209" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203013615.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8209" pen-type="redirect" class="pname">能强陶瓷</navigator><view class="sell">广东能强陶瓷有限公司成立于1999年，生产基地位于中国著名的建陶基地广东佛山，是专业生产“微晶玻璃陶瓷复合板”、“大理石瓷砖 ”、“瓷质喷墨抛光砖”、“通体瓷质仿古砖”、“玻化抛光砖”、“不透水精品瓷片”、“原生木瓷砖”的大规模建陶厂家。</view><view><navigator url="/bangdan/pages/view/view?id=8209" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=1500" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-12-02/20151202085839.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=1500" pen-type="redirect" class="pname">强牌陶瓷</navigator><view class="sell">强牌陶瓷是佛山市金舵陶瓷企业旗下核心品牌，企业拥有20多年陶瓷墙地砖生产经验，拥有佛山和梧州两大生产基地，总占地面积达2000亩，总投资超过15亿元，致力成为具有卓越品质的陶瓷行业智造领跑者。</view><view><navigator url="/bangdan/pages/view/view?id=1500" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=7988" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2017-11-17/20171117085900.png"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=7988" pen-type="redirect" class="pname">新罗玛陶瓷</navigator><view class="sell">佛山市强瓷陶瓷有限公司旗下新罗马陶瓷是一家规模大、实力雄厚的大型陶瓷生产企业，拥有多条现代化全自动生产线。公司全面引进意大利、西班牙先进机器和制造技术，采用现代化生产管理模式，严格执行ISO9001国际质量体系和国家行业部门质量检测程序，不断提高产品质量。先后获得"中国十大质量品牌""中国质量五百强""国际知名品牌""国家钓鱼台入围品牌"等荣誉称号。在国内建陶行业处于领先地位。</view><view><navigator url="/bangdan/pages/view/view?id=7988" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=369" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-01-19/20190119102320.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=369" pen-type="redirect" class="pname">如意陶瓷砖</navigator><view class="sell">如意陶瓷砖创立于2003年，营销总部位于具有千年陶都之称的广东佛山，是一家集研发、生产、销售于一体的现代化大型建陶企业。</view><view><navigator url="/bangdan/pages/view/view?id=369" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8173" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-01-10/20190110085730.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8173" pen-type="redirect" class="pname">好来登陶瓷</navigator><view class="sell">好来登陶瓷总部位于素有“南国陶都”之称的佛山，公司始终坚持走高品质路线，旨在以专业技术、优良品质全面服务于顾客。以高质通体大理石瓷砖为爆款，展示其独特的产品个性和文化品位。</view><view><navigator url="/bangdan/pages/view/view?id=8173" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8212" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-20/20190320100715.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8212" pen-type="redirect" class="pname">金丝路瓷砖</navigator><view class="sell">佛山金丝路陶瓷有限公司办公室地址位于中国近代明清的天下四聚之一佛山，佛山 佛山市禅城区季华一路智慧新城T10栋22层（简一大理石瓷砖总部楼上），于2016年09月22日在佛山市禅城区市场监督管理局注册成立，在公司发展壮大的2年里，我们始终为客户提供好的产品和技术支持、健全的售后服务，我公司主要经营销售：陶瓷制品。</view><view><navigator url="/bangdan/pages/view/view?id=8212" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
+
+<view class="content white shadow ppbox">
+<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
+<view class="intro">
+    <!--
+<view>主办单位：中国建筑装饰协会</view>-->
+<view>承办单位：中国陶瓷网</view>
+<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+</view>
+<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
+<view class="intro">
+<view>电话：400-115-2002 / 0757-82532106</view>
+<view>联系人：谭小姐 </view>
+<view>传真：0757-82532105</view>
+<view>邮箱：cerchn@163.com </view>
+<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+</view>
+</view>
+<view class="footer">
+<view>经营许可证编号：粤ICP备14052601号-1</view>
+<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
+</view>
+</view>
+ </view>

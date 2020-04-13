@@ -1,0 +1,85 @@
+<view class="container">
+<view class="topbar white">
+<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
+</view>
+   <view class="nav-top">
+            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
+            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
+            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
+            <navigator url="/news/pages/list/list?id=993">终端</navigator>
+            <navigator url="/news/pages/list/list?id=972">深度</navigator>
+            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+        </view>
+<view class="darkgrey">
+<view class="banner">
+<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
+</view>
+ <view class="content nav">
+<view class="nav-list">
+<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  class="active">陶瓷十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
+</view>
+<view class="nav-list">
+<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
+</view>
+</view>   
+</view>
+<view class="content white shadow">
+<view class="intro">中国陶瓷十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度陶瓷十大品牌榜的品牌有:威尔斯陶瓷、强辉陶瓷、顺辉瓷砖、能强陶瓷、嘉俊陶瓷、白兔瓷砖、金丝玉玛瓷砖、大角鹿超耐磨大理石瓷砖、通利大理石瓷砖、狮王陶瓷。</view>
+</view>
+<view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">陶瓷十大品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8118" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-12-13/20181213092408.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8118" pen-type="redirect" class="pname">威尔斯陶瓷</navigator><view class="sell">威尔斯陶瓷始创于2000年，所属的广东宏威陶瓷实业有限公司是“国家标准制定企业”，是行业内享有盛誉的规模化、现代化的大型建筑陶瓷生产企业，被认定为“国家高新技术企业”。
+威尔斯陶瓷自面市以来，已经成长为目前中国建筑陶瓷界集研发、生产、销售为一体的行业知名品牌，先后获得“广东省名牌产品”等荣誉。公司率先通过ISO9001质量管理体系认证、ISO14001环境管理体系和OHSAS18001职业健康体系认证，被评为“广东省企业技术中心”、“标准化良好行为AAAA级企业”、“广东省守合同重信用企业”；获得发明专利38项，拥有26项通过权威鉴定的科技创新成果。</view><view><navigator url="/bangdan/pages/view/view?id=8118" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=85" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-10-14/20191014100842.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=85" pen-type="redirect" class="pname">强辉陶瓷</navigator><view class="sell">广东强辉陶瓷有限公司成立于2002年8月30日，地处南国陶都腹地广东佛山市禅城区南庄镇，是一家专业生产各种规格建筑陶瓷的现代化陶瓷企业。公司资金雄厚，设备先进，全线引进意大利陶瓷自动化生产线，生产出一流的产品。公司拥有专业研发、生产经营管理、市场营销等全方位的高素质人才，从而使企业从产品创意设计、系列产品研发、生产经营到营销能力等方面均在同行中居于行业领先地位。</view><view><navigator url="/bangdan/pages/view/view?id=85" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=7993" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-01-24/20180124103546.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=7993" pen-type="redirect" class="pname">顺辉瓷砖</navigator><view class="sell">顺辉瓷砖隶属于瓷砖制造商佛山高明顺成陶瓷有限公司。自1998年成立以来，秉承“顺动中国”的发展愿景，发扬专业、创新、责任、卓越的精神，致力于为现代人居空间提供优质的瓷砖产品，其生产的陶瓷墙地砖产品尺寸偏差、吸水率、破坏强度、耐磨性、耐污性等主要技术指标均优于国家标准及欧洲标准。顺辉瓷砖开创防伪瓷砖，获得国家专利认证（抗菌专利号：ZL200820047436.6，防伪标识专利号：ZL200820047850.7）。</view><view><navigator url="/bangdan/pages/view/view?id=7993" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=281" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203013615.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=281" pen-type="redirect" class="pname">能强陶瓷</navigator><view class="sell">广东能强陶瓷有限公司成立于1999年，生产基地位于中国著名的建陶基地广东佛山，是专业生产“微晶玻璃陶瓷复合板”、“大理石瓷砖 ”、“瓷质喷墨抛光砖”、“通体瓷质仿古砖”、“玻化抛光砖”、“不透水精品瓷片”、“原生木瓷砖”的大规模建陶厂家。</view><view><navigator url="/bangdan/pages/view/view?id=281" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=104" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-01-28/20150128052608.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=104" pen-type="redirect" class="pname">嘉俊陶瓷</navigator><view class="sell">广东嘉俊陶瓷有限公司，始创于1998年，是建陶行业单一品牌经营的典范，广东省产业升级示范企业，先后通过ISO9001质量管理体系认证、ISO14001环境管理体系认证、采用国际标准产品认证、环境标志产品认证等企业管理体系以及标准证明，凭借行业领先的科研实力和品牌价值，嘉俊陶瓷已成为中国建陶行业的杰出代表。</view><view><navigator url="/bangdan/pages/view/view?id=104" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8001" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318053255.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8001" pen-type="redirect" class="pname">白兔瓷砖</navigator><view class="sell">旭日陶瓷有限公司位于珠海市斗门区，初创于1999年，现已成为世界最具规模与实力的外墙砖生产企业，公司引进全套日本、意大利的先进设备，以卓越生产管理、科学配方与工艺，专业生产“白兔牌”系列外墙砖。下属企业有珠海市斗门区旭日陶瓷有限公司、珠海市白兔陶瓷有限公司、江门市旭日陶瓷有限公司和湖南旭日陶瓷有限公司。</view><view><navigator url="/bangdan/pages/view/view?id=8001" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=6894" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2017-11-07/20171107050532.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=6894" pen-type="redirect" class="pname">金丝玉玛瓷砖</navigator><view class="sell">佛山市金丝玉玛装饰材料有限公司是一家集营销、服务于一体的大型现代化陶瓷企业。金丝玉玛以K金瓷砖、微晶石、全抛釉、瓷片作为品牌核心类产品，目前已发展成为国内规模最大、品类最齐全的K金瓷砖品牌之一。</view><view><navigator url="/bangdan/pages/view/view?id=6894" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=6724" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-08-22/20190822095714.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=6724" pen-type="redirect" class="pname">大角鹿超耐磨大理石瓷砖</navigator><view class="sell">大角鹿独创“超耐磨钻石釉”专利技术有效提升大理石瓷砖的耐磨性，大角鹿超耐磨大理石瓷砖，超耐磨，持久新！</view><view><navigator url="/bangdan/pages/view/view?id=6724" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8152" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218022105.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8152" pen-type="redirect" class="pname">通利大理石瓷砖</navigator><view class="sell">通利，通天下之志，利天下之业。佛山新盛投资集团于2012年倾力打造，专注大理石瓷砖的领军品牌。</view><view><navigator url="/bangdan/pages/view/view?id=8152" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=295" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-09-11/20150911114347.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=295" pen-type="redirect" class="pname">狮王陶瓷</navigator><view class="sell">狮王陶瓷始建于2001年，历经多年发展，已成为享誉国内外的大型现在化陶瓷企业，年产量在国内同行业名列前十位，现已形成地面砖、内墙砖等多个产品系列，上千个花色品种，获得抛光砖十大品牌、陶瓷一线品牌等荣誉称号，狮王陶瓷是全国最大的专业生产地面砖和内墙砖的企业之一。</view><view><navigator url="/bangdan/pages/view/view?id=295" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
+
+<view class="content white shadow ppbox">
+<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
+<view class="intro">
+    <!--
+<view>主办单位：中国建筑装饰协会</view>-->
+<view>承办单位：中国陶瓷网</view>
+<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+</view>
+<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
+<view class="intro">
+<view>电话：400-115-2002 / 0757-82532106</view>
+<view>联系人：谭小姐 </view>
+<view>传真：0757-82532105</view>
+<view>邮箱：cerchn@163.com </view>
+<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+</view>
+</view>
+<view class="footer">
+<view>经营许可证编号：粤ICP备14052601号-1</view>
+<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
+</view>
+</view>
+ </view>

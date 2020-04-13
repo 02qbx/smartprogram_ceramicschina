@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="darkgrey">
+        <import src="/template/mune/mune.swan" /> 
+        <!-- ad -->
+         
+        <view class="wrap">
+            <swiper controls="{{!canIUse}}" indicator-dots="true" autoplay="true" interval="3000" duration="1200" style="height:180px;  width:100%; ">
+                
+ <block  s-for="{{ad}}" s-for-item="p">
+                <swiper-item class="row-view" > 
+                     <navigator url="/news/pages/view/view?id={{p.id}}" >                  
+                        <image mode="widthFix" bindtap="slideAction" src="https://img1.ceramicschina.com/{{p.ispic}}"></image>
+                     </navigator>                    
+                </swiper-item >  
+ </block>
+                
+            </swiper>
+            <!--<view class="ad">广告</view>-->
+        </view>
+      <view class="red">投资有风险，加盟需谨慎</view>
+        <!-- list -->
+        <view class="white newslist shadow">
+            <view class="n-list">
+                <view class="t">
+                    <view class="left">资讯</view>
+                    <view class="right">
+                        <navigator url="/news/pages/list/list?id=974" >专栏</navigator>
+                        <navigator url="/news/pages/list/list?id=973" >人物</navigator>
+                    </view>
+                </view>
+                <view class="list">
+                    <view class="list-con"  s-for="{{list}}" s-for-item="item">
+                        <navigator url="/news/pages/view/view?id={{item.id}}" >
+                            <view class="left">
+                                <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.ispic}}"></image>
+                            </view>
+                            <view class="right">
+                                <view class="title">{{item.news_title}}</view>
+                                <view class="n-bottom">
+                                    <view class="time">{{item.make_date}}</view>
+                                   <!-- <view class="read">{{item.click_n}}</view>-->
+                                </view>
+                            </view>
+                        </navigator>
+                    </view>
+               
+                </view>
+                <view  bindtap="loadMore" data-hash='{{pageid}}'  class="btn-more">点击加载</view>
+            </view>
+        </view>
+        <view class="footer">
+            <view>经营许可证编号：粤ICP备14052601号-1</view>
+            <view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
+        </view>
+    </view>
+</view>

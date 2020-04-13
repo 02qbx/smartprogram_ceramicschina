@@ -1,0 +1,202 @@
+view{color: #666;}
+.shadow{
+    -moz-box-shadow:0px 5px 6px #e5e5e5; 
+    -webkit-box-shadow:0px 5px 6px #e5e5e5; 
+    box-shadow:0px 5px 6px #e5e5e5;
+    margin-bottom: .3rem;
+}
+.white{
+    background: #ffffff;
+    /* margin: 0 0.2rem 0.2rem;
+    border-radius: 5px; */
+    overflow: hidden;
+}
+.darkgrey{background:#f6f6f6;}
+.left{float: left;}
+.right{float: right;}
+
+.logo{
+   display:flex;               
+ justify-content: center;         
+}
+ .logo image{
+  width: 100px;
+  height: 50px;
+}
+
+/*nav-top*/
+.nav-top{
+    background: #9b0101;
+    width: 100%;
+    overflow: hidden;
+}
+.nav-top swan-nav{
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    font-size:16px;
+    color: #fff;
+    width: 16.667%;
+    text-align: center;
+}
+.bangdan-nav{
+    background: #f0f0f0;
+    overflow: hidden;
+    padding: 5px 0;
+}
+.bangdan-nav swan-nav{
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    width: 33.334%;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/* list */
+.newslist{
+    margin: 0 0 5%;
+    border-radius: 0;
+}
+.n-list .t{
+    overflow: hidden;
+    border-bottom: 1px #ddd solid;
+    height: 45px;
+}
+.n-list .t .left{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #333;
+    padding-left: 10px;
+    border-left: 15px #c00 solid;
+    margin: 10px 0;
+}
+.n-list .t .right{
+    overflow: hidden;
+    font-size: 14px;
+    margin: 15px 8px;
+}
+.n-list .t .right swan-nav{
+    float: left;
+    padding: 0 7px;
+    line-height: 15px;
+}
+.n-list .t .right swan-nav:nth-child(1){
+    border-right: 2px #333 solid;
+}
+.n-list .list,.n-list .list .list-con{
+    overflow: hidden;
+}
+.n-list .list .list-con{
+    padding: 3%;
+    border-bottom: 1px dotted #ddd;
+}
+.n-list .list .list-con .left{
+    width: 35%;
+}
+.n-list .list .list-con .right{
+    width: 65%;
+    padding-left: 4%;
+    box-sizing: border-box;
+}
+.n-list .list .list-con .right .title{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.n-list .list .list-con .right .n-bottom swan-view{
+    font-size: 12px;
+    color: #ccc;
+}
+.n-list .list .n-bottom .time{
+    float: left;
+}
+.n-list .list .n-bottom .read{
+    float: right;
+    background: url(https://mip.ceramicschina.com/images/m_read.jpg) left center no-repeat;
+    padding-left: 18px;
+    background-size: 13px; 
+}
+.n-list .list .list-con .left swan-image{
+    width: 100%;
+    max-width:150px;
+}
+.n-list .btn-more{
+    text-align: center;
+    line-height: 45px;
+}
+
+/* btn */
+.btn{
+    margin: 0 auto;
+    text-align: center;
+}
+.mini-btn {
+    margin: 0 .2rem 0 0  !important;
+    width: 30%;
+    line-height: 45px !important;
+}
+.mini-btn:last-child {
+    margin-right: 0 !important;
+}
+.disabled {
+    opacity: .3 !important;
+}
+
+/* footer */
+.footer{text-align: center;font-size: 12px;line-height: 25px;}
+.foot{background: #9b0101;color: #fff;}
+
+@media screen and (min-width:640px){
+    .logo swan-image{
+        width: 150px;
+        height: 80px;
+    }
+    swan-swiper{
+        height: 350px !important;
+    }
+
+    .bangdan-nav swan-nav{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .nav-top swan-nav{
+        line-height: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .n-list .t{
+        height: 55px;
+    }
+    .n-list .t .left{
+        margin: 15px 0;
+    }
+    .n-list .t .right{
+        margin: 20px 8px;
+    }
+    .n-list .list .list-con .left{
+        width: 35%;
+        text-align: center;
+    }
+    .n-list .list .list-con .left swan-image{
+        max-width: 220px;
+    }
+    .n-list .list .list-con .right .title{
+        font-size: 16px;
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+
+    .footer{
+        line-height: 45px;
+        font-size: 14px;
+    }
+    .foot{
+        line-height: 35px;
+    }
+}

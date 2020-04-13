@@ -1,0 +1,23 @@
+{
+    "appid": "15784611",
+    "developType": "normal",
+    "host": "baiduboxapp",
+    "minSwanVersion": "3.0.39",
+    "preview": {
+        "packageId": 295030
+    },
+    "projectname": "中陶网小程序",
+    "publish": {
+        "version": "1.0.35.0"
+    },
+    "setting": {
+        "urlCheck": false
+    },
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.150.255-rc",
+            "extensionJsVersion": "1.10.4"
+        }
+    },
+    "swanList": ""
+}

@@ -1,0 +1,29 @@
+ <view class="topbar white">
+            <navigator class="logo" url="/pages/index/index" open-type="redirect">
+                <image mode="aspectFit" src="/images/logo.png"></image>
+            </navigator>
+        </view>
+        <view class="nav-top">
+            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
+            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
+            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
+            <navigator url="/news/pages/list/list?id=993">终端</navigator>
+            <navigator url="/news/pages/list/list?id=972">深度</navigator>
+            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+        </view>
+        <!--
+        <view class="bangdan-nav">
+            <navigator url="/bangdan/pages/index/index?typename=taocishidapinpai">陶瓷十大品牌</navigator>
+              <navigator url="/bangdan/pages/index/index?typename=taociyixian" >陶瓷一线品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=cizhuanshidapinpai">瓷砖十大品牌</navigator>
+          <navigator url="/bangdan/pages/index/index?typename=weiyushidapinpai">卫浴十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=dalishishidapinpai">大理石瓷砖十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=fangguzhuan">仿古砖十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=xiandaizhuanshidapinpai">现代砖十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=muwenzhuanshidapinpai">木纹砖十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=cipian">瓷片十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=gongnengcizhuan">功能砖十大品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=shejishituijian">设计师推荐品牌</navigator>
+            <navigator url="/bangdan/pages/index/index?typename=gongchengtuijianpinpai">工程推荐品牌</navigator>
+        </view>-->
+      

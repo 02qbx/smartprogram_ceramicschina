@@ -1,0 +1,15 @@
+ <view class="topbar white">
+            <navigator class="logo" url="/pages/index/index" open-type="redirect">
+                <image mode="aspectFit" src="/images/logo.png"></image>
+            </navigator>
+        </view>
+        <view class="nav-top">
+            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
+            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
+            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
+            <navigator url="/news/pages/list/list?id=993">终端</navigator>
+            <navigator url="/news/pages/list/list?id=972">深度</navigator>
+            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+        </view>
+    
+      
