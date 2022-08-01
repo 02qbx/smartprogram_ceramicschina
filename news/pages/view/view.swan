@@ -14,7 +14,7 @@
             <view>{{pg_news.makeDate}}</view>
         </view>
         <view class="art_content">
-            <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
+           <text><template is="wxParse" data="{{{wxParseData.nodes}}}"/></text>
         </view>
 
             <!-- 广告位 -->
