@@ -1,84 +1,172 @@
-<view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
+<view>
+   <!-- 在页面中对自定义组件进行引用 -->
+   <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
 </view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
-        </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  class="active">木纹砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
-</view>
-</view>   
-</view>
-<view class="content white shadow">
-<view class="intro">中国木纹砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度木纹砖十大品牌榜的品牌有: 蒙娜丽莎瓷砖、马可波罗磁砖、特兰托陶瓷、楼兰陶瓷、斯米克磁砖。</view>
-</view>
-<view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">木纹砖十大品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8114" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203040114.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8114" pen-type="redirect" class="pname">蒙娜丽莎瓷砖</navigator><view class="sell">蒙娜丽莎是建筑陶瓷文化艺术的领军品牌，拥有我国目前唯一 一座蒙娜丽莎主题文化艺术馆，同时也将全球蒙娜丽莎文化界首座全面引入薄板陶瓷艺术作品的艺术馆。</view><view><navigator url="/bangdan/pages/view/view?id=8114" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=259" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=259" pen-type="redirect" class="pname">马可波罗磁砖</navigator><view class="sell">马可波罗瓷砖，企业创立于1988年，品牌诞生于1996年。作为国内最早品牌化、产品系列最全最大的建陶品牌，是多家设计院战略合作品牌及奥运亚运世博会等大型工程建设的主要建材供应品牌。连续11年入选“中国最具价值品牌500强”，2014年，品牌价值120.25亿，连续3年位列建陶行业第一位。</view><view><navigator url="/bangdan/pages/view/view?id=259" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=302" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2016-03-21/20160321025856.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=302" pen-type="redirect" class="pname">特兰托陶瓷</navigator><view class="sell">特兰托陶瓷，是集研发、生产、销售与服务为一体的木纹砖品牌。品牌定位于简约、自然的北欧风格，产品设计源于北欧的橡木、松木、枫木、云杉等天然珍稀木材，不仅具有真实木材的纹理视觉感受和木质触感，更具备耐磨、防虫、防潮、防火、抗污、抗腐蚀等产品性能，比之木地板优越，性价比更高。产品带来的空间气质，十分适合于爱好都市的小资时尚，偏爱居家的简约风格设计，深谙人与自然有机融合的和谐情愫，追求雅致、个性、时尚的消费人群。配合应用在北欧装修风格的空间中，让生活充满简单的美感和自然的怡人气息。</view><view><navigator url="/bangdan/pages/view/view?id=302" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=29" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-01-13/20150113033845.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=29" pen-type="redirect" class="pname">楼兰陶瓷</navigator><view class="sell">楼兰陶瓷自1993年起开始专注做瓷砖，经过15年的耕耘和沉淀成就了楼兰陶瓷国际著名品牌的地位，楼兰陶瓷先后从意大利引进了国际一流的生产线、精密仪器和原材料，汇聚了国内外著名设计大师，就连奔驰汽车的设计师也为楼兰设计瓷砖。</view><view><navigator url="/bangdan/pages/view/view?id=29" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=435" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203110207.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=435" pen-type="redirect" class="pname">斯米克磁砖</navigator><view class="sell">上海斯米克控股股份有限公司系外商投资股份制企业，是专业生产和销售高级玻化石和高级釉面砖系列产品的企业，注册资本43,700万元。公司成立于1993年6月。于2007年8月A股在深圳交易所挂牌上市。</view><view><navigator url="/bangdan/pages/view/view?id=435" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
 
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+<view class="container">
+   <import src="/template/BrandsMune/BrandsMune.swan" />
+
+   <view class="darkgrey">
+       <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+   </view>
+
+   <view class="bdlist">
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+       </view>
+
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+       </view>
+       <view class="nav-link on">
+           <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+       </view>
+   </view>
+
+   <!-- list 木纹砖十大品牌 -->
+   <view class="tenbrandint">
+       <view class="title">木纹砖十大品牌</view>
+       <view class="int">中国木纹砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度木纹砖十大品牌榜的品牌有:蒙娜丽莎瓷砖、马可波罗磁砖、特兰托陶瓷、木诗伦瓷木、康拓陶瓷。（以上排名不分前后）</view>
+   </view>
+
+   <!-- bangdan -->
+   <view class="brandlist n_list col_12">
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=198">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203040114.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=198">
+                   <view class="pp_name">蒙娜丽莎瓷砖</view>
+                   <view class="pp_con">蒙娜丽莎是建筑陶瓷文化艺术的领军品牌，拥有我国目前唯一 一座蒙娜丽莎主题文化艺术馆，同时也将全球蒙娜丽莎文化界首座全面引入薄板陶瓷艺术作品的艺术馆</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=198" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=174">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=174">
+                   <view class="pp_name">马可波罗磁砖</view>
+                   <view class="pp_con">马可波罗瓷砖，企业创立于1988年，品牌诞生于1996年。作为国内最早品牌化、产品系列最全最大的建陶品牌</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=174" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=200">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-03-21/20160321025856.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=200">
+                   <view class="pp_name">特兰托陶瓷</view>
+                   <view class="pp_con">特兰托陶瓷，是集研发、生产、销售与服务为一体的木纹砖品牌。品牌定位于简约、自然的北欧风格，产品设计源于北欧的橡木、松木、枫木、云杉等天然珍稀木材</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=200" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7578">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-15/20200515093753.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7578">
+                   <view class="pp_name">木诗伦瓷木</view>
+                   <view class="pp_con">木诗伦陶瓷是建陶名企“佛山市中联天鸿基陶瓷有限公司”隆重推出的高端品牌。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7578" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=175">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218113859.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=175">
+                   <view class="pp_name">康拓陶瓷</view>
+                   <view class="pp_con">广东省佛山市康拓陶瓷有限公司创办于2006年，生产基地和营销中心均位于广东佛山。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=175" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+   </view>
+
+   <!-- box -->
+   <view class="ppbox">
+       <view class="title">活动组委</view>
+       <view class="intro">
+           <!-- <view>主办单位：中国建筑装饰协会</view> -->
+           <view>承办单位：中国陶瓷网</view>
+           <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+           <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+       </view>
+   </view>
+
+   <view class="ppbox">
+       <view class="title">品牌推广联系方式</view>
+       <view class="intro">
+           <view>电话：400-115-2002 / 0757-82532106</view>
+           <view>联系人：谭小姐 </view>
+           <view>传真：0757-82532105</view>
+           <view>邮箱：cerchn@163.com </view>
+           <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+       </view>
+   </view>
+
+   <view class="footer">
+       <view>经营许可证编号：粤ICP备14052601号-1</view>
+       <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+   </view>
+
 </view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+
+<view class="page-section-btns" bindtap="scrollToTop">
+   <view class="ToTop">
+       <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+   </view>
 </view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>

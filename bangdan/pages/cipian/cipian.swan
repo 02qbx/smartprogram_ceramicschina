@@ -1,86 +1,112 @@
+ <view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
 <view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
-</view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+    <import src="/template/BrandsMune/BrandsMune.swan" />
+
+    <view class="darkgrey">
+        <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+    </view>
+
+    <view class="bdlist">
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
         </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover" class="active" >瓷片十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
-</view>
-</view>   
-</view>
-<view class="content white shadow">
-<view class="intro">中国瓷片十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度瓷片十大品牌榜的品牌有: 华冠陶瓷、伊美洛陶瓷、博瓷精工砖、诺贝尔磁砖、L&D陶瓷。</view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+        </view>
+
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+        </view>
+        <view class="nav-link on">
+            <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+        </view>
+    </view>
+
+    <!-- list 瓷片十大品牌 -->
+    <view class="tenbrandint">
+        <view class="title">瓷片十大品牌</view>
+        <view class="int">中国瓷片十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度瓷片十大品牌榜的品牌有:华冠陶瓷。（以上排名不分前后）</view>
+    </view>
+
+    <!-- bangdan -->
+    <view class="brandlist n_list col_12">
+
+        <view class="n_con">
+            <view class="brandbox vip-icon col_left">
+                <navigator url="/bangdan/pages/view/view?id=5423">
+                    <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-12-03/20161203115329.jpg"></image>
+                </navigator>
+            </view>
+            <view class="col_right">
+                <navigator url="/bangdan/pages/view/view?id=5423">
+                    <view class="pp_name">华冠陶瓷</view>
+                    <view class="pp_con">华冠陶瓷是一家研发、生产、销售于一体的现代化民营建陶企业，主要生产：300X600、400X800、300X900、500X1000中高档锆白釉、微晶镜面墙地砖。</view>
+                </navigator>
+                <navigator url="/bangdan/pages/view/view?id=5423" class="joinbtn">加盟</navigator>
+            </view>
+        </view>
+
+    </view>
+
+    <!-- box -->
+    <view class="ppbox">
+        <view class="title">活动组委</view>
+        <view class="intro">
+            <!-- <view>主办单位：中国建筑装饰协会</view> -->
+            <view>承办单位：中国陶瓷网</view>
+            <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+            <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+        </view>
+    </view>
+
+    <view class="ppbox">
+        <view class="title">品牌推广联系方式</view>
+        <view class="intro">
+            <view>电话：400-115-2002 / 0757-82532106</view>
+            <view>联系人：谭小姐 </view>
+            <view>传真：0757-82532105</view>
+            <view>邮箱：cerchn@163.com </view>
+            <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+        </view>
+    </view>
+
+    <view class="footer">
+        <view>经营许可证编号：粤ICP备14052601号-1</view>
+        <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+    </view>
+
 </view>
 
-<view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">瓷片十大品牌</view><navigator url="/bangdan/pages/index/index?typename=cipian" class="right" >>></navigator></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=4694" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2016-12-03/20161203115329.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=4694" pen-type="redirect" class="pname">华冠陶瓷</navigator><view class="sell">华冠陶瓷是一家研发、生产、销售于一体的现代化民营建陶企业，主要生产：300X600、400X800、300X900、500X1000中高档锆白釉、微晶镜面墙地砖。
-</view><view><navigator url="/bangdan/pages/view/view?id=4694" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8213" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318034116.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8213" pen-type="redirect" class="pname">伊美洛陶瓷</navigator><view class="sell">   佛山市伊美洛陶瓷有限公司，是一家集专业研发、设计、生产、销售于一体的现代化陶瓷企业，拥有大型的营销中心与生产基地。本企业生产规模宏大，资金实力雄厚，拥有行业先进的生产设备，产品品质卓越、服务贴心周到，极大满足了现代人的消费需求，并为用户提供富有人文内涵的家居设计理念。</view><view><navigator url="/bangdan/pages/view/view?id=8213" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8203" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-11/20190311062748.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8203" pen-type="redirect" class="pname">博瓷精工砖</navigator><view class="sell">博瓷精工砖，是佛山市华星利陶瓷有限公司下属主力品牌。企业历经十七年发展，特别是近5年来，通过建新线、立展厅、强终端、搞宣传、抓管理，企业已成长为国内集研发、生产、销售为一体的大型陶瓷企业，企业和品牌在行业拥有极高知名度、美誉度。</view><view><navigator url="/bangdan/pages/view/view?id=8203" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=254" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=254" pen-type="redirect" class="pname">诺贝尔磁砖</navigator><view class="sell">杭州诺贝尔集团有限公司是一家外资企业，于1992年在杭州成立，以人性化的“诺贝尔”产品不断创造完美的品质空间。集团公司总投资4.3亿美元，占地2300余亩，厂房面积80万平方米，员工近万余人，年生产规模近5000万平方米，产品深受国内外消费者的青睐。   </view><view><navigator url="/bangdan/pages/view/view?id=254" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=447" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203112913.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=447" pen-type="redirect" class="pname">L&D陶瓷</navigator><view class="sell">    广东唯美集团，创立于1988年，位于制造业名城东莞市，集团主营建筑卫生陶瓷制造，房地产开发、酒店业等，是一家大型民营股份制企业。集团先后被评为中国工业企业500强、中国建材行业百强企业、省民营科技企业、广东省创新产业化示范基地、2012年被认定为“国家高新技术企业”。中央领导习近平、李克强、张德江、李长春、汪洋等先后视察唯美集团，对唯美产品、技术、营销等方面的创新给予高度评价。</view><view><navigator url="/bangdan/pages/view/view?id=447" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
-
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+    </view>
 </view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
-</view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>

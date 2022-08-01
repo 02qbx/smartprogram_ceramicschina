@@ -1,1 +1,15 @@
-{}
+{
+    "navigationBarTitleText": "中国陶瓷网",
+    "navigationBarBackgroundColor": "#c00",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "homeIcon":"ture",
+    "usingComponents": {
+        "smt-navigation": "@smt-ui/component/src/navigation",
+        "smt-icon": "@smt-ui/component/src/icon",
+        "custom":"/components/customview/customview"
+    },
+    "usingSwanComponents": {
+        "comment-list": "dynamicLib://myDynamicLib/comment-list"
+    }
+}

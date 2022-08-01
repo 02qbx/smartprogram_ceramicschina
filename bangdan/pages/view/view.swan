@@ -1,336 +1,323 @@
- <scroll-view scroll-y style="height:{{systemInfo.windowHeight}}px;"  scroll-into-view="{{toView}}">
-<import src="../../../wxParse/wxParse.swan"/>
-<view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect">
-<image mode="aspectFit" src="/images/logo.png"></image>
-</navigator>
+ <!-- <scroll-view scroll-y style="height:{{systemInfo.windowHeight}}px;"  scroll-into-view="{{toView}}">
+<import src="../../../wxParse/wxParse.swan"/> -->
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
 </view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
+
+<view class="container darkgrey">
+    <import src="/template/BrandsMune/BrandsMune.swan" />
+
+    <view class="brandsbox">
+        <view class="ppname">
+            <view class="brandbox imgbox">
+                <image mode="widthFix" src="https://img1.ceramicschina.com{{digest.pinpailogo}}"></image>
+            </view>
+            <view class="right">
+                <view class="namebox">{{digest.pinpainame}}</view>
+                <!-- <view class="con">
+                    <view>电脑手机：<text class="red">{{digest.PcCount}}</text>票</view>
+                    <view>微信：<text class="red">{{digest.Count}}</text>票</view>
+                </view> -->
+                <!-- <view>所属榜单：<text class="red">陶瓷十大品牌</text></view> -->
+                <!-- <button type="default" size="mini" class="go_vote">投一票</button> -->
+            </view>
         </view>
+        <view class="int">
+            <view class="brandr">
+                <view>
+                    <view class="left">公司名称：</view>
+                    <view class="right">{{digest.pinpaicompany}}</view>
+                </view>
+                <view>
+                    <view class="left">公司地址：</view>
+                    <view class="right">{{digest.pinpaiaddress}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- <view class="btn">
+            <view  class="go_join" bindtap="jmClick" data-hash="mao_pic">我要加盟</view>
+            <view  class="go_shop" bindtap="caiClick" data-hash="mao">我要采购</view>
+        </view> -->
+    </view>
 
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
-<!--
-<view class="red">温馨提醒：投资有风险，加盟需谨慎。</view>-->
-<view class="content white shadow pinpaibox">
-<view class="pinpai">
-<view class="pptop">
-<image mode="aspectFit" src="https://img1.ceramicschina.com{{digest.pg_pinpaidigest.pinpailogo}}"></image>
-<!--
-<view>电脑手机：<span class="red">{{digest.PcCount}}</span>票</view>
-<view>微信：<span class="red">{{digest.Count}}</span>票</view>
-<button type="default" size="mini" disabled="true" hover-class="button-hover">投一票</button> -->
-</view>
-<view class="ppbot">
-<view class="ppname">{{digest.pg_pinpaidigest.pinpainame}}</view>
-<view class="ppcon">
-<view>公司名称：{{digest.pg_pinpaidigest.pinpaicompany}}</view>
-<!--<view>所属榜单：<span class="red">陶瓷十大品牌</span></view>-->
-<view>公司地址：{{digest.pg_pinpaidigest.pinpaiaddress}}</view>
-<!--
-<view class="ewm">
-<image mode="aspectFit" src="https://img1.ceramicschina.com{{digest.PinpaiDigest.Pandanlogo}}"></image>
-</view>-->
-</view>
-</view>
-</view>
-<!--
-<view class="ppbtn">
-<view  class="go_join" bindtap="jmClick" data-hash="mao_pic">我要加盟</view>
- <view  class="go_shop" bindtap="caiClick" data-hash="mao">我要采购</view>
-</view>-->
-</view>
-<view class="content white shadow ppbox">
-<view class="tit">简介</view>
-<view class="intro">
-<image src="https://img1.ceramicschina.com{{digest.pg_pinpaidigest.pinpaibigpic}}" mode="widthFix"></image>
- <view class="wxParse">
-  <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
-</view>
-</view>
-</view>
-<view class="content white shadow ppbox">
-<view class="tit">品牌优势</view>
-<view class="intro">   
-  <view class="wxParse">
-  <template is="wxParse_pinpaiyousi" data="{{{wxParseData_pinpaiyousi.nodes}}}"/>
-</view>
-</view>
-</view>
-<view class="content white shadow ppbox">
-<view class="tit">流程</view>
-<view class="intro"> <view class="wxParse">
-  <template is="wxParse_pinpailiucheng" data="{{{wxParseData_pinpailiucheng.nodes}}}"/>
-</view>
-</view>
-</view>
- <view class="content white shadow ppbox">
-<view class="tit">条件</view>
-<view class="intro">
-  <view class="wxParse">
-  <template is="wxParse_pinpaitiaojian" data="{{{wxParseData_pinpaitiaojian.nodes}}}"/>
-</view>
-</view>
-</view>
- <view class="content white shadow ppbox">
-<view class="tit">支持</view>
-<view class="intro"> 
-<view class="wxParse">
-  <template is="wxParse_pinpaizhichi" data="{{{wxParseData_pinpaizhichi.nodes}}}"/>
-</view>
-</view>
-</view>
-<view class="content white shadow ppbox"  id="mao_pic">
-<view class="tit">我要了解</view>
- <form bindsubmit="formSubmitHandle" report-submit>
-<view class="ui-li-static">
-<view class="fb-mobile">
-<view class="left1">
-品牌：
-</view>
-<view class="right1">
- {{digest.pg_pinpaidigest.pinpainame}}
-  <input name="pinpaiid" value="{{digest.id}}" hidden /> 
-  <input name="UserID" value="{{digest.pg_pinpaidigest.userid}}" hidden/>   
-</view>
-</view>
- <view class="fb-mobile">
-<view class="left1">
- 开店地点:
-</view>
-<view class="right1">
-  <label class="section" for="section5">
-<picker id="section5"  name="sheng"  mode="region" bind:change="regionChange" custom-item="{{customItem}}" title="地区选择器">
-<view class="picker">
-<text class='chooseItem'></text>{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
-</view>
-</picker>
-</label> 
-</view>
-</view>
- <view class="fb-mobile">
-<view class="left1">
-详细地址:
-</view>
-<view class="right1">
-  <input name="KaidianAddress" placeholder="请输入开店详细地址" />
-</view>
-</view>
- <view class="fb-mobile">
-<view class="left1">
-计划投资：
-</view>
-<view class="right1">
-   <input name="TouZiE" type="number" placeholder="万元，如：50" />
-</view>
-</view>
+    <view class="tenbrandint">
+        <view class="title">品牌简介</view>
+        <view class="News_content">
+            <image src="https://img1.ceramicschina.com{{digest.pinpaibigpic}}" mode="widthFix"></image>
+            <view class="wxParse">
+                <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
+            </view>
+        </view>
+    </view>
 
-<view class="fb-mobile">
-<view class="title">希望加盟的形式:</view>
- <view class="item-wrap">
-   <radio-group name="DailiPinpaiID" bindchange="DailiPinpaiIDChange">
-  <view class="item">
-  <radio value="区域总代理" checked="true" >&nbsp;&nbsp;区域总代理</radio>
-  </view>
-   <view class="item">
-  <radio value="旗舰店" >&nbsp;&nbsp;旗舰店</radio>
-  </view>
-   <view class="item">
-  <radio value="品牌专卖店" >&nbsp;&nbsp;品牌专卖店</radio>
-  </view>
-   <view class="item">
-  <radio value="零售店" >&nbsp;&nbsp;零售店</radio>
-  </view>
-   <view class="item">
-  <radio value="其它" >&nbsp;&nbsp;其它</radio>
-  </view>
-   </radio-group>
-</view>
-</view>
-<view class="fb-mobile">
-<view class="title">从事过相关行业：</view>
- <view class="item-wrap">
-   <radio-group name="XiangguanHangye"  bindchange="XiangguanHangyeChange">
-  <view class="item">
-  <radio value="是" >&nbsp;&nbsp;是</radio>
-  </view>
-   <view class="item">
-  <radio value="没有" checked="true" >&nbsp;&nbsp;否</radio>
-  </view>
-   </radio-group>  
-</view>
-</view>
-<view class="fb-mobile">
-<view class="left1">
-您的姓名：
-</view>
-<view class="right1">
- <input name="Name" placeholder="请填写您的真实姓名" />   
-</view>
-</view>
-<view class="fb-mobile">
-<view class="left1">
-手机号码：
-</view>
-<view class="right1">
-  <input type="number" name="PhoneNumber" placeholder="请填写正确的手机号码" />   
-</view>
-</view>
-<view class="fb-mobile">
-<view class="title">申请加盟主要原因：</view>
- <view class="item-wrap">
-  <view class='check' >
-   <checkbox-group  name="AgentYuanyin"  class="checkbox-group">
-<checkbox class="check-box" value="作为目前代理产品的补充">作为目前代理产品的补充</checkbox>
- <checkbox class="check-box" value="想开拓自身的投资领域" >想开拓自身的投资领域</checkbox>
-  <checkbox class="check-box" value="看好当地的消费市场">看好当地的消费市场</checkbox>
-   <checkbox class="check-box" value="利用在当地的各种资源获得竞争优势" >利用在当地的各种资源获得竞争优势</checkbox>
-<checkbox class="check-box" value="借助品牌优势顺利开拓市场" >借助品牌优势顺利开拓市场</checkbox>
-</checkbox-group>
-</view>
-</view>
-</view>   
-</view>
-<button  class="go_join" form-type="submit" >提交</button>
- </form>
-</view>   
-<view class="content white shadow ppbox">
-<view class="tit">
-<view class="left">列表</view>
-<view class="right red"></view>
-</view>
-<view class="intro">
-<view class="list"  s-for="{{agentlist}}" s-for-item="p">
-<view class="tittop">
-<view class="left">{{p.name}}</view>
-<view class="right">发布于 {{p.email}}</view>
-</view>
-<view class="con">我是 {{p.name}}，在{{p.kaidianaddress}}，计划投资 {{p.touzie}} 万人民币，{{p.jiamengxingshi}}，{{p.xiangguanhangye}} 从事过相关行业，目前经营 {{p.jingyingpinpai}}，请与我联系。</view>
-<!--<view class="red">中国陶瓷网回复：</view>-->
-</view>   
-</view>
-</view>
- <view class="content white shadow ppbox" id="mao">
-<view class="tit">我要求购</view>
- <form bindsubmit="formSubmitcai" report-submit>
-<view class="ui-li-static">
-<view class="fb-mobile">
-<view class="left1">
-求购品牌：
-</view>
-<view class="right1">
-{{digest.pg_pinpaidigest.pinpainame}}
-  <input name="cai_pinpaiid" value="{{digest.id}}" hidden /> 
-  <input name="remark" value="" hidden />  
-  <input name="UserID" value="{{digest.pg_pinpaidigest.userid}}" hidden/>
-</view>
-</view>
-<view class="fb-mobile">
-<view class="left1">
-*求购地点
-</view>
-<view class="right1">
-   <label class="section" for="section1">
-<picker id="section1" name="cai_sheng"  mode="region" bind:change="regionChange1" custom-item="{{customItem1}}" title="地区选择器">
-<view class="picker">
-<text class='chooseItem'></text>{{regionData1[0]}} {{regionData1[1]}} {{regionData1[2]}}
-</view>
-</picker>
-</label> 
-</view>
-</view>
+    <view class="ppbox">
+        <view class="title">品牌优势</view>
+        <view class="intro">
+            <view class="wxParse">
+                <template is="wxParse_pinpaiyousi" data="{{{wxParseData_pinpaiyousi.nodes}}}"/>
+            </view>
+        </view>
+    </view>
 
-<view class="fb-mobile">
-<view class="left1">
-*详细地址：
-</view>
-<view class="right1">
-  <input type="text" name="address" placeholder="请输入详细地址" /> 
-</view>
-</view>
+    <view class="ppbox">
+        <view class="title">流程</view>
+        <view class="intro">
+            <view class="wxParse">
+                <template is="wxParse_pinpailiucheng" data="{{{wxParseData_pinpailiucheng.nodes}}}"/>
+            </view>
+        </view>
+    </view>
 
-<view class="fb-mobile">
-<view class="left1">
-   *采购面积：
-</view>
-<view class="right1">
-  <input type="number" name="purchasingnumber" placeholder="平方  如：50" /> 
-</view>
-</view>
+    <view class="ppbox">
+        <view class="title">条件</view>
+        <view class="intro">
+            <view class="wxParse">
+                <template is="wxParse_pinpaitiaojian" data="{{{wxParseData_pinpaitiaojian.nodes}}}"/>
+            </view>
+        </view>
+    </view>
 
-<view class="fb-mobile">
-<view class="title">*采购形式：</view>
-  <view class="right1">
-   <radio-group  name="purchasingtype" bindchange="purchasingtypeChange">
-  <radio value="家装" checked="true" >&nbsp;&nbsp;家装</radio>&nbsp;&nbsp;
-  <radio value="工程" >&nbsp;&nbsp;工程</radio>&nbsp;&nbsp;
-  <radio value="其它" >&nbsp;&nbsp;其它</radio>
-   </radio-group>
-</view>
-</view>
+    <view class="ppbox">
+        <view class="title">支持</view>
+        <view class="intro">
+            <view class="wxParse">
+                <template is="wxParse_pinpaizhichi" data="{{{wxParseData_pinpaizhichi.nodes}}}"/>
+            </view>
+        </view>
+    </view>
 
-   <view class="fb-mobile">
-<view class="left1">
-   *您的姓名：
-</view>
-<view class="right1">
-  <input type="text" name="cai_Name" placeholder="请填写您的真实姓名" /> 
-</view>
-</view>
+    <view class="ppbox" id="mao_pic">
+        <view class="title">我要了解</view>
+            <view class="intro">
+                <form bindsubmit="formSubmitHandle" report-submit>
+                    <view class="ui-li-static">
+                        <view class="fb-mobile">
+                            <view class="left1">品牌：</view>
+                            <view class="right1">
+                                {{digest.pinpainame}}
+                                <input name="pinpaiid" value="{{digest.id}}" hidden />
+                                <input name="UserID" value="{{digest.userid}}" hidden/>
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="left1">开店地点:</view>
+                            <view class="right1">
+                                <label class="section" for="section5">
+                                    <picker id="section5"  name="sheng"  mode="region" bind:change="regionChange" custom-item="{{customItem}}" title="地区选择器">
+                                        <view class="picker">
+                                            <text class='chooseItem'></text>{{regionData[0]}} {{regionData[1]}} {{regionData[2]}}
+                                        </view>
+                                    </picker>
+                                </label>
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="left1">详细地址:</view>
+                            <view class="right1">
+                                <input name="KaidianAddress" placeholder="请输入开店详细地址" />
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="left1">计划投资：</view>
+                            <view class="right1">
+                                <input name="TouZiE" type="number" placeholder="万元，如：50" />
+                            </view>
+                        </view>
 
-   <view class="fb-mobile">
-<view class="left1">
-  *手机号码：
-</view>
-<view class="right1">
-  <input type="number" name="cai_PhoneNumber" placeholder="请填写正确的手机号码" /> 
-</view>
-</view>
-<!--
-  <view class="fb-mobile">
-<view class="title">备注：</view>
- <view class="item-wrap">
-  <textarea name="remark" placeholder="备注"></textarea>
-</view>
-</view>
+                        <view class="fb-mobile">
+                            <view class="title">希望加盟的形式:</view>
+                                <view class="item-wrap">
+                                    <radio-group name="DailiPinpaiID" bindchange="DailiPinpaiIDChange">
+                                    <view class="item">
+                                        <radio value="区域总代理" checked="true" >&nbsp;&nbsp;区域总代理</radio>
+                                    </view>
+                                    <view class="item">
+                                        <radio value="旗舰店" >&nbsp;&nbsp;旗舰店</radio>
+                                    </view>
+                                    <view class="item">
+                                        <radio value="品牌专卖店" >&nbsp;&nbsp;品牌专卖店</radio>
+                                    </view>
+                                    <view class="item">
+                                        <radio value="零售店" >&nbsp;&nbsp;零售店</radio>
+                                    </view>
+                                    <view class="item">
+                                        <radio value="其它" >&nbsp;&nbsp;其它</radio>
+                                    </view>
+                                </radio-group>
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="title">从事过相关行业：</view>
+                            <view class="item-wrap">
+                                <radio-group name="XiangguanHangye"  bindchange="XiangguanHangyeChange">
+                                    <view class="item">
+                                        <radio value="是" >&nbsp;&nbsp;是</radio>
+                                    </view>
+                                    <view class="item">
+                                            <radio value="没有" checked="true" >&nbsp;&nbsp;否</radio>
+                                    </view>
+                                </radio-group>
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="left1">您的姓名：</view>
+                            <view class="right1">
+                                <input name="Name" placeholder="请填写您的真实姓名" />
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="left1">手机号码：</view>
+                            <view class="right1">
+                                <input type="number" name="PhoneNumber" placeholder="请填写正确的手机号码" />
+                            </view>
+                        </view>
+                        <view class="fb-mobile">
+                            <view class="title">申请加盟主要原因：</view>
+                            <view class="item-wrap">
+                                <view class='check' >
+                                    <checkbox-group  name="AgentYuanyin"  class="checkbox-group">
+                                        <checkbox class="check-box" value="作为目前代理产品的补充">作为目前代理产品的补充</checkbox>
+                                        <checkbox class="check-box" value="想开拓自身的投资领域" >想开拓自身的投资领域</checkbox>
+                                        <checkbox class="check-box" value="看好当地的消费市场">看好当地的消费市场</checkbox>
+                                        <checkbox class="check-box" value="利用在当地的各种资源获得竞争优势" >利用在当地的各种资源获得竞争优势</checkbox>
+                                        <checkbox class="check-box" value="借助品牌优势顺利开拓市场" >借助品牌优势顺利开拓市场</checkbox>
+                                    </checkbox-group>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <button  class="go_join" form-type="submit" >提交</button>
+                </form>
+            </view>
+        </view>
+    </view>
 
-</view>
--->
-<button form-type="submit" >提交</button>
- </form>
+    <!-- <view class="ppbox">
+        <view class="title">
+            <view class="left">列表</view>
+            <view class="right red"></view>
+        </view>
+        <view class="intro">
+            <view class="list"  s-for="{{agentlist}}" s-for-item="p">
+                <view class="tittop">
+                    <view class="left">{{p.name}}</view>
+                    <view class="right">发布于 {{p.email}}</view>
+                </view>
+                <view class="con">我是 {{p.name}}，在{{p.kaidianaddress}}，计划投资 {{p.touzie}} 万人民币，{{p.jiamengxingshi}}，{{p.xiangguanhangye}} 从事过相关行业，目前经营 {{p.jingyingpinpai}}，请与我联系。</view>
+                <view class="red">中国陶瓷网回复：</view>
+            </view>
+        </view>
+    </view> -->
+
+    <view class="ppbox" id="mao">
+        <view class="title">我要求购</view>
+        <view class="intro">
+            <form bindsubmit="formSubmitcai" report-submit>
+                <view class="ui-li-static">
+                    <view class="fb-mobile">
+                        <view class="left1">求购品牌：</view>
+                        <view class="right1">
+                            {{digest.pinpainame}}
+                            <input name="cai_pinpaiid" value="{{digest.id}}" hidden />
+                            <input name="remark" value="" hidden />
+                            <input name="UserID" value="{{digest.userid}}" hidden/>
+                        </view>
+                    </view>
+                    <view class="fb-mobile">
+                        <view class="left1">*求购地点</view>
+                        <view class="right1">
+                            <label class="section" for="section1">
+                                <picker id="section1" name="cai_sheng"  mode="region" bind:change="regionChange1" custom-item="{{customItem1}}" title="地区选择器">
+                                    <view class="picker">
+                                        <text class='chooseItem'></text>{{regionData1[0]}} {{regionData1[1]}} {{regionData1[2]}}
+                                    </view>
+                                </picker>
+                            </label>
+                        </view>
+                    </view>
+
+                    <view class="fb-mobile">
+                        <view class="left1">*详细地址：</view>
+                        <view class="right1">
+                            <input type="text" name="address" placeholder="请输入详细地址" />
+                        </view>
+                    </view>
+
+                    <view class="fb-mobile">
+                        <view class="left1">*采购面积：</view>
+                        <view class="right1">
+                            <input type="number" name="purchasingnumber" placeholder="平方  如：50" />
+                        </view>
+                    </view>
+
+                    <view class="fb-mobile">
+                        <view class="title">*采购形式：</view>
+                        <view class="item-wrap">
+                            <radio-group  name="purchasingtype" bindchange="purchasingtypeChange">
+                                <radio value="家装" checked="true" >&nbsp;&nbsp;家装</radio>&nbsp;&nbsp;
+                                <radio value="工程" >&nbsp;&nbsp;工程</radio>&nbsp;&nbsp;
+                                <radio value="其它" >&nbsp;&nbsp;其它</radio>
+                            </radio-group>
+                        </view>
+                    </view>
+
+                    <view class="fb-mobile">
+                        <view class="left1">*您的姓名：</view>
+                        <view class="right1">
+                            <input type="text" name="cai_Name" placeholder="请填写您的真实姓名" />
+                        </view>
+                    </view>
+
+                    <view class="fb-mobile">
+                        <view class="left1">*手机号码：</view>
+                        <view class="right1">
+                            <input type="number" name="cai_PhoneNumber" placeholder="请填写正确的手机号码" />
+                        </view>
+                    </view>
+                    <!--
+                        <view class="fb-mobile">
+                            <view class="title">备注：</view>
+                                <view class="item-wrap">
+                                    <textarea name="remark" placeholder="备注"></textarea>
+                                </view>
+                            </view>
+                        </view>
+                    -->
+                    <button form-type="submit" >提交</button>
+                </view>
+            </form>
+        </view>
+    </view>
+
+    <!-- <view class="ppbox">
+        <view class="title">
+            <view class="left">求购列表</view>
+            <view class="right red"></view>
+        </view>
+        <view class="intro">
+            <view class="list"  s-for="{{cailist}}" s-for-item="p">
+                <view class="tittop">
+                    <view class="left">{{p.contact}}</view>
+                    <view class="right">发布于 {{p.piclist}}</view>
+                </view>
+                <view class="con">{{p.title}}</view>
+
+                <view class="red">中国陶瓷网回复：</view>
+
+            </view>
+        </view>
+    </view> -->
+
+    <view class="footer">
+        <view>经营许可证编号：粤ICP备14052601号-1</view>
+        <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+    </view>
+
 </view>
 
-<view class="content white shadow ppbox">
-<view class="tit">
-<view class="left">求购列表</view>
-<view class="right red"></view>
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+    </view>
 </view>
-<view class="intro">
-<view class="list"  s-for="{{cailist}}" s-for-item="p">
-<view class="tittop">
-<view class="left">{{p.contact}}</view>
-<view class="right">发布于 {{p.piclist}}</view>
-</view>
-<view class="con">{{p.title}}</view>
-<!--
-<view class="red">中国陶瓷网回复：</view>
--->
-</view>   
-</view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>
- </scroll-view>

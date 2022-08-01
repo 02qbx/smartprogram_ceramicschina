@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'功能瓷砖十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'功能瓷砖十大品牌精工瓷砖领军品牌最新排名榜单-负离子瓷砖十大品牌企业有哪些-中国泳池砖领军品牌-中国陶瓷网',
             keywords:'功能瓷砖十大品牌',
-            description:'中国功能瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度功能瓷砖十大品牌榜的品牌有: 马可波罗磁砖、诺贝尔磁砖、强辉陶瓷、淘陶泳池砖、君悦磁砖、企鹅大板瓷砖、剑牌健康瓷砖。',
+            description:'中国功能瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度功能瓷砖十大品牌榜的品牌有:维罗生态砖、亚细亚瓷砖、汇亚磁砖、芬芳负离子陶瓷、斯米克磁砖。',
             articleTitle:'功能瓷砖十大品牌精工瓷砖领军品牌最新排名榜单-负离子瓷砖十大品牌企业有哪些-中国泳池砖领军品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

@@ -1,0 +1,217 @@
+<view>
+   <!-- 在页面中对自定义组件进行引用 -->
+   <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
+<view class="container">
+   <import src="/template/BrandsMune/BrandsMune.swan" />
+
+   <view class="darkgrey">
+       <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+   </view>
+
+   <view class="bdlist">
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link on">
+           <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+       </view>
+
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+       </view>
+   </view>
+
+   <!-- list 岩板/大板十大品牌 -->
+   <view class="tenbrandint">
+       <view class="title">岩板/大板十大品牌</view>
+       <view class="int">中国岩板/大板十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度岩板/大板十大品牌榜的品牌有:蒙娜丽莎瓷砖、高捷大岩板、壹號大理石瓷砖、依诺磁砖、领航岩板家居、顺辉瓷砖、将军•岩板、BOBO。（以上排名不分前后）</view>
+   </view>
+
+   <!-- bangdan -->
+   <view class="brandlist n_list col_12">
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=198">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203040114.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=198">
+                   <view class="pp_name">蒙娜丽莎瓷砖</view>
+                   <view class="pp_con">蒙娜丽莎是建筑陶瓷文化艺术的领军品牌，拥有我国目前唯一 一座蒙娜丽莎主题文化艺术馆，同时也将全球蒙娜丽莎文化界首座全面引入薄板陶瓷艺术作品的艺术馆</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=198" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7584">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-22/20200522021827.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7584">
+                   <view class="pp_name">高捷大岩板</view>
+                   <view class="pp_con">高捷大岩板是目前中国为数不多的专业岩板板材生产、销售，研发板和应用创新的企业之一。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7584" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=188">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514121742.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=188">
+                   <view class="pp_name">壹號大理石瓷砖</view>
+                   <view class="pp_con">壹號大理石瓷砖是广东壹号陶瓷有限公司旗下的强势品牌，是一家集营销、服务为一体的大型现代化企业</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=188" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=47">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-29/20150129065540.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=47">
+                   <view class="pp_name">依诺磁砖</view>
+                   <view class="pp_con">佛山市依诺陶瓷有限公司，坐落于享誉国际的佛山华夏陶瓷博览城，公司于1998年创建了依诺磁砖品牌，作为国内最早定位中国优质家居生活的建陶品牌</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=47" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=5403">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-25/20200525044900.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=5403">
+                   <view class="pp_name">领航岩板家居</view>
+                   <view class="pp_con">领航企业陶瓷有限公司位于肇庆市鼎湖区永安镇，成立于2009年，拥有占地面积500余亩及多条生产线的大型生产基地</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=5403" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=6470">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-01-24/20180124103546.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=6470">
+                   <view class="pp_name">顺辉瓷砖</view>
+                   <view class="pp_con">顺辉瓷砖隶属于瓷砖制造商佛山高明顺成陶瓷有限公司。自1998年成立以来，秉承“顺动中国”的发展愿景，发扬专业、创新、责任、卓越的精神，致力于为现代人居空间提供优质的瓷砖产品</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=6470" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7585">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-06-15/20200615034513.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7585">
+                   <view class="pp_name">将军•岩板</view>
+                   <view class="pp_con">大将军陶瓷创建于2003年，位于广东佛山，是一家集研发、生产、设计、营销为一体的现代化大型瓷砖企业，致力于为全球高端消费者提供高品位、简约、个性化的空间解决方案</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7585" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7529">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218113706.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7529">
+                   <view class="pp_name">BOBO</view>
+                   <view class="pp_con">广西新高盛薄型建陶有限公司是一家拥有自主品牌和核心技术，专注于陶瓷薄型化、建筑轻量化事业，专心于降耗节能减排、绿色低碳环保技术，专业于陶瓷薄型化技术创新、装备研发和产品设计、规模化生产与营销服务的高新技术企业</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7529" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+   </view>
+
+   <!-- box -->
+   <view class="ppbox">
+       <view class="title">活动组委</view>
+       <view class="intro">
+           <!-- <view>主办单位：中国建筑装饰协会</view> -->
+           <view>承办单位：中国陶瓷网</view>
+           <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+           <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+       </view>
+   </view>
+
+   <view class="ppbox">
+       <view class="title">品牌推广联系方式</view>
+       <view class="intro">
+           <view>电话：400-115-2002 / 0757-82532106</view>
+           <view>联系人：谭小姐 </view>
+           <view>传真：0757-82532105</view>
+           <view>邮箱：cerchn@163.com </view>
+           <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+       </view>
+   </view>
+
+   <view class="footer">
+       <view>经营许可证编号：粤ICP备14052601号-1</view>
+       <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+   </view>
+
+</view>
+
+<view class="page-section-btns" bindtap="scrollToTop">
+   <view class="ToTop">
+       <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+   </view>
+</view>

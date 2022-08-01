@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'瓷砖十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'瓷砖十大品牌最新排名榜单-瓷砖十大品牌企业有哪些-中国十大瓷砖品牌-中国陶瓷网',
             keywords:'瓷砖十大品牌',
-            description:'中国瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度瓷砖十大品牌榜的品牌有: 亚细亚瓷砖、金牌亚洲磁砖、钻石瓷砖、大角鹿超耐磨大理石瓷砖、金玉名家瓷砖、汇亚磁砖、利家居瓷砖、来德利陶瓷、大将军陶瓷、双庆陶瓷。',
+            description:'中国瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度瓷砖十大品牌榜的品牌有:亚细亚瓷砖、大角鹿超耐磨大理石瓷砖、金意陶瓷砖、金牌亚洲磁砖、汇亚磁砖、新润成瓷砖、东鹏瓷砖、裕成瓷砖、简一大理石瓷砖、蒙娜丽莎瓷砖。',
             articleTitle:'瓷砖十大品牌最新排名榜单-瓷砖十大品牌企业有哪些-中国十大瓷砖品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

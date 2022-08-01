@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'瓷片十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'瓷片十大品牌最新排名榜单-瓷片十大品牌企业有哪些-中国十大瓷片品牌-中国陶瓷网',
             keywords:'瓷片十大品牌',
-            description:'中国瓷片十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度瓷片十大品牌榜的品牌有: 华冠陶瓷、伊美洛陶瓷、博瓷精工砖、诺贝尔磁砖、L&D陶瓷。',
+            description:'中国瓷片十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度瓷片十大品牌榜的品牌有:华冠陶瓷。',
             articleTitle:'瓷片十大品牌最新排名榜单-瓷片十大品牌企业有哪些-中国十大瓷片品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

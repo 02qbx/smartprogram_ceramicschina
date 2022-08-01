@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'陶瓷一线品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'陶瓷一线品牌最新排名榜单-陶瓷一线品牌企业有哪些-中国一线陶瓷品牌-中国陶瓷网',
             keywords:'陶瓷一线品牌',
-            description:'中国陶瓷一线品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度陶瓷一线品牌榜的品牌有: 诺贝尔磁砖、马可波罗磁砖、能强陶瓷、强牌陶瓷、新罗玛陶瓷、如意陶瓷砖、好来登陶瓷、金丝路瓷砖。',
+            description:'中国陶瓷一线品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度陶瓷一线品牌榜的品牌有:诺贝尔瓷砖、大角鹿超耐磨大理石瓷砖、冠星王陶瓷、强牌陶瓷、大将军陶瓷、格仕陶磁砖、能强陶瓷、来德利陶瓷、利家居瓷砖、白兔瓷砖、KMY国际轻奢瓷砖、新罗玛陶瓷、如意陶瓷砖、好来登陶瓷、意万特陶瓷、阿里郎瓷砖、梅赛德斯瓷砖。',
             articleTitle:'陶瓷一线品牌最新排名榜单-陶瓷一线品牌企业有哪些-中国一线陶瓷品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

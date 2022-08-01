@@ -1,84 +1,202 @@
-<view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
+<view>
+   <!-- 在页面中对自定义组件进行引用 -->
+   <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
 </view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
-        </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  class="active" >设计师推荐品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
-</view>
-</view>   
-</view>
-<view class="content white shadow">
-<view class="intro">中国设计师推荐品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度设计师推荐品牌榜的品牌有: 马可波罗磁砖、诺贝尔磁砖、金舵瓷砖、新中源陶瓷、COLORX。</view>
-</view>
-<view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">设计师推荐品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8202" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8202" pen-type="redirect" class="pname">马可波罗磁砖</navigator><view class="sell">马可波罗瓷砖，企业创立于1988年，品牌诞生于1996年。作为国内最早品牌化、产品系列最全最大的建陶品牌，是多家设计院战略合作品牌及奥运亚运世博会等大型工程建设的主要建材供应品牌。连续11年入选“中国最具价值品牌500强”，2014年，品牌价值120.25亿，连续3年位列建陶行业第一位。</view><view><navigator url="/bangdan/pages/view/view?id=8202" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8200" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8200" pen-type="redirect" class="pname">诺贝尔磁砖</navigator><view class="sell">杭州诺贝尔集团有限公司是一家外资企业，于1992年在杭州成立，以人性化的“诺贝尔”产品不断创造完美的品质空间。集团公司总投资4.3亿美元，占地2300余亩，厂房面积80万平方米，员工近万余人，年生产规模近5000万平方米，产品深受国内外消费者的青睐。   </view><view><navigator url="/bangdan/pages/view/view?id=8200" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8192" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-08-24/20180824101010.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8192" pen-type="redirect" class="pname">金舵瓷砖</navigator><view class="sell">金舵瓷砖有限公司位于“中国建陶第一镇”广东省佛山市南庄镇。公司成立于1993年，是顺应“邓公南巡”东风成长起来的民营企业的代表。公司是全国最早系统应用进口先进设备的陶企典范，被业界誉为“中国抛光砖鼻祖”。</view><view><navigator url="/bangdan/pages/view/view?id=8192" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8218" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202014445.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8218" pen-type="redirect" class="pname">新中源陶瓷</navigator><view class="sell">广东新中源陶瓷有限公司（简称“新中源陶瓷”）是一家集科研、生产和销售为一体的知名建陶企业，营销总部位于“中国建陶第一镇”佛山市南庄镇。新中源陶瓷集“中国驰名商标”等多项荣誉于一身，被广东省人民政府确定为全省13家冲刺世界名牌企业之一。</view><view><navigator url="/bangdan/pages/view/view?id=8218" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8214" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-04-01/20190401115051.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8214" pen-type="redirect" class="pname">COLORX</navigator><view class="sell">因光的直线传播和人眼的凸透镜原理，世间所有物质形成视觉影像都会有一个“X”的成像过程，将此X定义为“遇见”。colorX，遇见光，幻化色彩，生活多姿多彩。X代表了未知的世界和无限的可能。色彩空间大师是对空间色彩的应用探索永不止步。集自然界一切色彩为创意来源，用无限之美打造精致生活。色彩无限，创意无限，惊喜无限。色彩空间大师，ColorX。</view><view><navigator url="/bangdan/pages/view/view?id=8214" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
 
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+<view class="container">
+   <import src="/template/BrandsMune/BrandsMune.swan" />
+
+   <view class="darkgrey">
+       <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+   </view>
+
+   <view class="bdlist">
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+       </view>
+
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+       </view>
+       <view class="nav-link on">
+           <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+       </view>
+   </view>
+
+   <!-- list 设计师推荐品牌 -->
+   <view class="tenbrandint">
+       <view class="title">设计师推荐品牌</view>
+       <view class="int">中国设计师推荐品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度设计师推荐品牌榜的品牌有:金舵瓷砖、长安瓷砖、鹰牌陶瓷、新中源陶瓷、金牌亚洲磁砖、布朗尼瓷砖、帕诺特瓷砖。（以上排名不分前后）</view>
+   </view>
+
+   <!-- bangdan -->
+   <view class="brandlist n_list col_12">
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=21">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-08-24/20180824101010.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=21">
+                   <view class="pp_name">金舵瓷砖</view>
+                   <view class="pp_con">金舵瓷砖有限公司位于“中国建陶第一镇”广东省佛山市南庄镇。公司成立于1993年，是顺应“邓公南巡”东风成长起来的民营企业的代表</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=21" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7576">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514081258.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7576">
+                   <view class="pp_name">长安瓷砖</view>
+                   <view class="pp_con">长安瓷砖自2005年创立以来，立足广东佛山，以“中国风”、“文艺范”为鲜明的品牌特色，在年轻的用户群体中刮起了一阵东方美学的热潮，融汇现代过硬制陶技术，自主设计、研发、生产，打造引领现代家居潮流的优质产品。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7576" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=45">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-15/20200515105226.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=45">
+                   <view class="pp_name">鹰牌陶瓷</view>
+                   <view class="pp_con">佛山石湾鹰牌陶瓷有限公司位于中国陶都广东佛山，始建于1974年8月18日，是世界上较具规模的专业化陶瓷企业之一。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=45" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=156">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202014445.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=156">
+                   <view class="pp_name">新中源陶瓷</view>
+                   <view class="pp_con">广东新中源陶瓷有限公司（简称“新中源陶瓷”）是一家集科研、生产和销售为一体的知名建陶企业，营销总部位于“中国建陶第一镇”佛山市南庄镇</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=156" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=159">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218015138.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=159">
+                   <view class="pp_name">金牌亚洲磁砖</view>
+                   <view class="pp_con">广东金牌陶瓷有限公司是一家集研发、生产、销售于一体的大型陶瓷企业，主营微晶釉下彩、柔抛大理石、瓷质抛光砖、高级釉面砖等建筑材料，属于广东省民营科技企业</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=159" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7574">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514115610.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7574">
+                   <view class="pp_name">布朗尼瓷砖</view>
+                   <view class="pp_con">布朗尼源自英文Brownies，是英国苏格兰传说中善良活泼的精灵仙子，也是甜美馥郁的美式甜品，引申词Brown，亦是自然万物中代表土壤的色彩，隐喻品牌如大地般具有磅礴的生命力</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7574" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7575">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514120112.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7575">
+                   <view class="pp_name">帕诺特瓷砖</view>
+                   <view class="pp_con">帕诺特，源自英文Palette，是艺术家和设计大师创作中不可或缺的灵感调色板，寓意品牌及产品的独特艺术性与创造能力</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7575" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+   </view>
+
+   <!-- box -->
+   <view class="ppbox">
+       <view class="title">活动组委</view>
+       <view class="intro">
+           <!-- <view>主办单位：中国建筑装饰协会</view> -->
+           <view>承办单位：中国陶瓷网</view>
+           <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+           <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+       </view>
+   </view>
+
+   <view class="ppbox">
+       <view class="title">品牌推广联系方式</view>
+       <view class="intro">
+           <view>电话：400-115-2002 / 0757-82532106</view>
+           <view>联系人：谭小姐 </view>
+           <view>传真：0757-82532105</view>
+           <view>邮箱：cerchn@163.com </view>
+           <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+       </view>
+   </view>
+
+   <view class="footer">
+       <view>经营许可证编号：粤ICP备14052601号-1</view>
+       <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+   </view>
+
 </view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+
+<view class="page-section-btns" bindtap="scrollToTop">
+   <view class="ToTop">
+       <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+   </view>
 </view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>

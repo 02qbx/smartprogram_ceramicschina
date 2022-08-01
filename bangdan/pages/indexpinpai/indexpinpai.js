@@ -1,16 +1,29 @@
 const app = getApp()
 
 Page({
-   data: {
-list:[],
-PG_PinpaiData:[],
-PG_PinpaiData2:[] 
+    data: {
+        list:[],
+        PG_PinpaiData:[],
+        PG_PinpaiData2:[]
+    },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
     },
     onLoad: function () {
-       var that=this; 
+       var that=this;
             swan.setNavigationBarTitle({
     title: '中国陶瓷网十大品牌榜'
-    });   
+    });
     swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpai_ty',
         method: 'GET',
@@ -21,12 +34,12 @@ PG_PinpaiData2:[]
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) { 
-            
-               that.setData({              
+        success: function (res) {
+
+               that.setData({
               PG_PinpaiData:res.data
             })
-        }     
+        }
         })
         swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpai_ty',
@@ -38,32 +51,32 @@ PG_PinpaiData2:[]
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) { 
-            
-               that.setData({              
+        success: function (res) {
+
+               that.setData({
               PG_PinpaiData2:res.data
             })
-        }     
+        }
         })
 
      /* swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpaitype',
         method: 'GET',
         dataType: 'json',
-         
+
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) {           
-               that.setData({              
+        success: function (res) {
+               that.setData({
               list:res.data
-            }) 
-           }     
+            })
+           }
         })
         */
- 
+
         // 监听页面加载的生命周期函数
-    }, 
+    },
 
     onReady: function() {
         // 监听页面初次渲染完成的生命周期函数

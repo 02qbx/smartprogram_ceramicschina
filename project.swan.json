@@ -4,19 +4,19 @@
     "host": "baiduboxapp",
     "minSwanVersion": "3.0.39",
     "preview": {
-        "packageId": 295030
+        "packageId": 714312
     },
     "projectname": "中陶网小程序",
     "publish": {
-        "version": "1.0.35.0"
+        "version": "1.0.41.0"
     },
     "setting": {
         "urlCheck": false
     },
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.150.255-rc",
-            "extensionJsVersion": "1.10.4"
+            "swanJsVersion": "3.320.32",
+            "extensionJsVersion": "1.21.2"
         }
     },
     "swanList": ""

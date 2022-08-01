@@ -1,18 +1,31 @@
 var WxParse = require('../../../wxParse/wxParse.js');
 Page({
     data: {
- systemInfo:{},
-toView: 'default',
- regionData: ['全部', '', ''],
-   customItem: '',
-    regionData1: ['全部', '', ''],
-    customItem1: '',
-    digest:{},
-    agentlist:[],
-    cailist:[]
+        systemInfo:{},
+        toView: 'default',
+        regionData: ['全部', '', ''],
+        customItem: '',
+        regionData1: ['全部', '', ''],
+        customItem1: '',
+        digest:{},
+        agentlist:[],
+        cailist:[]
+    },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
     },
     onLoad: function (options) {
-       var that=this; 
+        var that=this;
           swan.request({
         url: 'https://smartprogram.ceramicschina.com/viewpinpai',
         method: 'GET',
@@ -24,31 +37,31 @@ toView: 'default',
             'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-           console.log(res.data.pg_PinpaiJiaMeng);
-             that.setData({              
+           //console.log(res.data.pg_PinpaiJiaMeng);
+             that.setData({
               digest:res.data,
-              agentlist:res.data.pg_PinpaiJiaMeng,
-               cailist:res.data.pg_purchasing
+             // agentlist:res.data.pg_PinpaiJiaMeng,
+              // cailist:res.data.pg_purchasing
             })
 
-         WxParse.wxParse('wxParseData', 'html', res.data.pg_pinpaidigest.pinpaijianjie, that, 10);
-          WxParse.wxParse('wxParseData_pinpaitiaojian', 'html', res.data.pg_pinpaidigest.pinpaitiaojian, that, 10);
-            WxParse.wxParse('wxParseData_pinpaiyousi', 'html', res.data.pg_pinpaidigest.pinpaiyousi, that, 10);
-              WxParse.wxParse('wxParseData_pinpaizhichi', 'html', res.data.pg_pinpaidigest.pinpaizhichi, that, 10);
-          
-    WxParse.wxParse('wxParseData_pinpailiucheng', 'html', res.data.pg_pinpaidigest.pinpailiucheng, that, 10);
-          
- 
-        
+         WxParse.wxParse('wxParseData', 'html', res.data.pinpaijianjie, that, 10);
+          WxParse.wxParse('wxParseData_pinpaitiaojian', 'html', res.data.pinpaitiaojian, that, 10);
+            WxParse.wxParse('wxParseData_pinpaiyousi', 'html', res.data.pinpaiyousi, that, 10);
+              WxParse.wxParse('wxParseData_pinpaizhichi', 'html', res.data.pinpaizhichi, that, 10);
+
+    WxParse.wxParse('wxParseData_pinpailiucheng', 'html', res.data.pinpailiucheng, that, 10);
+
+
+
 swan.setNavigationBarTitle({
-    title: res.data.pg_pinpaidigest.pinpainame
+    title: res.data.pinpainame
 });
 swan.setPageInfo({
-            title: res.data.pg_pinpaidigest.pinpainame + '招商加盟代理采购_中国陶瓷网',
-            keywords: res.data.pg_pinpaidigest.pinpainame + "招商," +  res.data.pg_pinpaidigest.pinpainame + "加盟," +  res.data.pg_pinpaidigest.pinpainame + "代理," +  res.data.pg_pinpaidigest.pinpainame + "采购",
-            description: res.data.pg_pinpaidigest.pinpaidescription,
-            articleTitle:res.data.pg_pinpaidigest.pinpainame + '招商加盟代理采购_中国陶瓷网',
-             image: ['https://img1.ceramicschina.com'+res.data.pg_pinpaidigest.pinpailogo+''],
+            title: res.data.pinpainame + '怎么样_'+res.data.pinpainame+'企业简介_中国陶瓷网',
+            keywords: res.data.pinpainame + "怎么样," +  res.data.pinpainame + "企业简介",
+            description: res.data.pinpaidescription,
+            articleTitle:res.data.pinpainame + '怎么样_'+res.data.pinpainame+'企业简介_中国陶瓷网',
+             image: ['https://img1.ceramicschina.com'+res.data.pinpailogo+''],
             success: function () {
                 console.log('setPageInfo success');
             },
@@ -71,7 +84,7 @@ swan.setPageInfo({
         },
         success: function (re) {
             var datalists=re.data;
-           
+
  that.setData(
             'agentlist',datalists
         );
@@ -98,14 +111,14 @@ swan.setPageInfo({
    });
    */
         }
-        })  
+        })
 
 swan.getSystemInfo({
     success: function (res3) {
           that.setData(
            'systemInfo',res3
-        )      
-      
+        )
+
        // console.log(res3.windowHeight);
     }
 });
@@ -119,7 +132,7 @@ swan.getSystemInfo({
       success: function (res) {
       }
     })
-  }, 
+  },
     formSubmitHandle: function(e) {
        var istrue=true;
         var that=this;
@@ -157,14 +170,14 @@ swan.getSystemInfo({
       if(res!='1'){
           this.notice(res);
            istrue = false;
-         return false;        
+         return false;
       }
-      
-	if (istrue){  
+
+	if (istrue){
 		// 反之，表单填写正常，返回true，执行后续操作
 		//return true;  // 通过验证，返回true
 		// console.log("通过检测，执行业务...")
-         
+
       console.log(formData.pinpaiid)
       var sh=formData.sheng;
       var strsh="";
@@ -197,14 +210,14 @@ swan.getSystemInfo({
         success: function (res) {
            if (res.data.id==1){
               that.notice(res.data.msm);
-              swan.navigateTo({                
+              swan.navigateTo({
               url: '/bangdan/pages/view/view?id='+formData.pinpaiid+''
             });
             }else{
               that.notice("提交失败");
             }
         }
-    }); 
+    });
 
 
     }
@@ -261,14 +274,14 @@ swan.getSystemInfo({
       if(res!='1'){
           this.notice(res);
            istrue = false;
-         return false;        
+         return false;
       }
-      
-	if (istrue){  
+
+	if (istrue){
 		// 反之，表单填写正常，返回true，执行后续操作
 		//return true;  // 通过验证，返回true
 		// console.log("通过检测，执行业务...")
-         
+
       // console.log(formData.pinpaiid)
       var sh=formData.cai_sheng;
       var strsh="";
@@ -286,7 +299,7 @@ swan.getSystemInfo({
         data: {
             id: formData.cai_pinpaiid,
             UserID:formData.UserID,
-            sheng:strsh,        
+            sheng:strsh,
             Address:str+formData.address,
             PurchasingNumber: formData.purchasingnumber,
             PurchasingType: formData.purchasingtype,
@@ -300,17 +313,17 @@ swan.getSystemInfo({
         success: function (res) {
            if (res.data.id==1){
               that.notice(res.data.msm);
-              swan.navigateTo({                
+              swan.navigateTo({
              url: '/bangdan/pages/view/view?id='+formData.cai_pinpaiid+''
             });
             }else{
               that.notice("提交失败");
             }
         }
-    }); 
+    });
 
 
-    
+
     }
        //  console.log('form表单submit：',e.detail.value);
      // console.log('form表单submit：', e.detail.formId);
@@ -319,9 +332,9 @@ swan.getSystemInfo({
         // 监听页面初次渲染完成的生命周期函数
     },
     onShow: function() {
-        
 
- 
+
+
 
         // 监听页面显示的生命周期函数
     },
@@ -364,7 +377,7 @@ swan.getSystemInfo({
         var hash=e.target.dataset.hash;
           that.setData(
            'toView',hash
-        ) 
+        )
 
         // console.log('采购：', hash);
     },
@@ -374,7 +387,7 @@ swan.getSystemInfo({
         var hash=e.target.dataset.hash;
           that.setData(
            'toView',hash
-        ) 
+        )
 
         // console.log('采购：', hash);
     }

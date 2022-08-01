@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'木纹砖十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'木纹砖十大品牌最新排名榜单-木纹砖十大品牌企业有哪些-中国十大木纹砖品牌-中国陶瓷网',
             keywords:'木纹砖十大品牌',
-            description:'中国木纹砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度木纹砖十大品牌榜的品牌有: 蒙娜丽莎瓷砖、马可波罗磁砖、特兰托陶瓷、楼兰陶瓷、斯米克磁砖。',
+            description:'中国木纹砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度木纹砖十大品牌榜的品牌有:蒙娜丽莎瓷砖、马可波罗磁砖、特兰托陶瓷、木诗伦瓷木、康拓陶瓷。',
             articleTitle:'木纹砖十大品牌最新排名榜单-木纹砖十大品牌企业有哪些-中国十大木纹砖品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

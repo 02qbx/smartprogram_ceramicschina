@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'卫浴十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'卫浴十大品牌最新排名榜单-卫浴十大品牌企业有哪些-中国十大卫浴品牌-中国陶瓷网',
             keywords:'卫浴十大品牌',
-            description:'中国卫浴十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度卫浴十大品牌榜的品牌有: 九牧厨卫、浪鲸卫浴、辉煌卫浴、恒通卫浴、益高卫浴、帝王洁具、鹰卫浴。',
+            description:'中国卫浴十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度卫浴十大品牌榜的品牌有:九牧厨卫、TOTO卫浴、恒通卫浴、浪鲸卫浴、辉煌厨卫、恒洁卫浴、科勒卫浴、惠达卫浴、帝王洁具、欧路莎卫浴。',
             articleTitle:'卫浴十大品牌最新排名榜单-卫浴十大品牌企业有哪些-中国十大卫浴品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

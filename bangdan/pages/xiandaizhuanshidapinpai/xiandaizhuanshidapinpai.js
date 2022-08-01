@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'现代砖十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'现代砖十大品牌最新排名榜单-现代砖十大品牌企业有哪些-中国十大现代砖品牌-中国陶瓷网',
             keywords:'现代砖十大品牌',
-            description:'中国现代砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度现代砖十大品牌榜的品牌有: 金意陶瓷砖、卡罗娜瓷砖、YOU&ME尧铭现代砖、宝恩莎、欧文莱素色现代砖。',
+            description:'中国现代砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度现代砖十大品牌榜的品牌有:欧文莱|素色瓷砖、YOU&ME尧铭现代砖、布朗尼瓷砖、帕诺特瓷砖、鹰牌2086、金意陶瓷砖、强牌陶瓷、利家居瓷砖。',
             articleTitle:'现代砖十大品牌最新排名榜单-现代砖十大品牌企业有哪些-中国十大现代砖品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

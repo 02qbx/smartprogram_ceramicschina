@@ -1,163 +1,214 @@
-<view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
-</view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
-        </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<block s-if="{{enname=='taocishidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=taocishidapinpai"   hover-class="navigator-hover"  class="active">陶瓷十大品牌</navigator>
-</block>
- <block s-if="{{enname!='taocishidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
- <block s-if="{{enname=='weiyushidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=weiyushidapinpai"   hover-class="navigator-hover"  class="active">卫浴十大品牌</navigator>
- </block>
-  <block s-if="{{enname!='weiyushidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
- </block>
-</view>
-<view class="nav-list">
-<block s-if="{{enname=='cizhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=cizhuanshidapinpai"   hover-class="navigator-hover"  class="active">瓷砖十大品牌</navigator>
-</block>
-  <block s-if="{{enname!='cizhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
- <block s-if="{{enname=='taociyixian'}}">
-<navigator url="/bangdan/pages/index/index?typename=taociyixian"   hover-class="navigator-hover"  class="active">陶瓷一线品牌</navigator>
- </block>
-  <block s-if="{{enname!='taociyixian'}}">
-<navigator url="/bangdan/pages/index/index?typename=taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
- </block>
-</view>
-<view class="nav-list">
-  <block s-if="{{enname=='dalishishidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=dalishishidapinpai"   hover-class="navigator-hover"  class="active">大理石瓷砖十大品牌</navigator>
-  </block>
-   <block s-if="{{enname!='dalishishidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
-  </block>
-</view>
-<view class="nav-list">
-<block s-if="{{enname=='fangguzhuan'}}">
-<navigator url="/bangdan/pages/index/index?typename=fangguzhuan"   hover-class="navigator-hover"  class="active">仿古砖十大品牌</navigator>
-</block>
- <block s-if="{{enname!='fangguzhuan'}}">
-<navigator url="/bangdan/pages/index/index?typename=fangguzhuan"   hover-class="navigator-hover">仿古砖十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
-<block s-if="{{enname=='xiandaizhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=xiandaizhuanshidapinpai"   hover-class="navigator-hover"  class="active">现代砖十大品牌</navigator>
-</block>
- <block s-if="{{enname!='xiandaizhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
- <block s-if="{{enname=='muwenzhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=muwenzhuanshidapinpai"   hover-class="navigator-hover"  class="active">木纹砖十大品牌</navigator>
- </block>
-  <block s-if="{{enname!='muwenzhuanshidapinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
- </block>
-</view>
-<view class="nav-list">
-<block s-if="{{enname=='cipian'}}">
-<navigator url="/bangdan/pages/index/index?typename=cipian"   hover-class="navigator-hover"  class="active">瓷片十大品牌</navigator>
-</block>
- <block s-if="{{enname!='cipian'}}">
-<navigator url="/bangdan/pages/index/index?typename=cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
-<block s-if="{{enname=='gongnengcizhuan'}}">
-<navigator url="/bangdan/pages/index/index?typename=gongnengcizhuan"   hover-class="navigator-hover"  class="active">功能砖十大品牌</navigator>
-</block>
- <block s-if="{{enname!='gongnengcizhuan'}}">
-<navigator url="/bangdan/pages/index/index?typename=gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
-</block>
-</view>
-<view class="nav-list">
- <block s-if="{{enname=='shejishituijian'}}">
-<navigator url="/bangdan/pages/index/index?typename=shejishituijian"   hover-class="navigator-hover"  class="active">设计师推荐品牌</navigator>
- </block>
-<block s-if="{{enname!='shejishituijian'}}">
-<navigator url="/bangdan/pages/index/index?typename=shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
- </block>
-</view>
-<view class="nav-list">
- <block s-if="{{enname=='gongchengtuijianpinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=gongchengtuijianpinpai"   hover-class="navigator-hover"  class="active">工程推荐品牌</navigator>
- </block>
-  <block s-if="{{enname!='gongchengtuijianpinpai'}}">
-<navigator url="/bangdan/pages/index/index?typename=gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
- </block>
-</view>
-</view>   
-</view>
-<view class="content white shadow">
-<view class="intro">中国{{strname}}榜是由{{RedirectUrl}}，获得年度{{strname}}榜的品牌有:{{listdata}}。</view>
-</view>
-<view class="content white shadow pinpaibox">
-<view class="boxtop">
-<view class="left">{{strname}}</view>
-</view>
-<view class="pinpailist">
-<view class="list" s-for="{{PG_PinpaiData}}" s-for-item="item">
-<view class="left imgbox" >
-<navigator url="/bangdan/pages/view/view?id={{item.ID}}" >
-<image mode="aspectFit" src="https://img1.ceramicschina.com{{item.PinpaiDigest.PinpaiLogo}}"></image>
-</navigator>
-</view>
-<view class="infobox right">
-<navigator url="/bangdan/pages/view/view?id={{item.ID}}"  class="pname">{{item.PinpaiDigest.PinpaiName}}</navigator>
-<view class="sell">{{item.PinpaiDigest.PinpaiDescription}}</view>
 <view>
-<navigator url="/bangdan/pages/view/view?id={{item.ID}}"  class="click-btn-s right">点击查看</navigator>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
 </view>
-</view>
-</view>  
-</view>
-</view>
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
-</view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
-</view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
+<view class="container">
+    <import src="/template/BrandsMune/BrandsMune.swan" />
+
+    <view class="darkgrey">
+        <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+    </view>
+
+    <view class="bdlist">
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+        </view>
+
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+        </view>
+        <view class="nav-link">
+            <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+        </view>
+    </view>
+
+
+        <!-- <view class="darkgrey">
+            <view class="banner">
+                <image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+            </view>
+            <view class="content nav">
+                <view class="nav-list">
+                    <block s-if="{{enname=='taocishidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taocishidapinpai"   hover-class="navigator-hover"  class="active">陶瓷十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='taocishidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='weiyushidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=weiyushidapinpai"   hover-class="navigator-hover"  class="active">卫浴十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='weiyushidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='cizhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=cizhuanshidapinpai"   hover-class="navigator-hover"  class="active">瓷砖十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='cizhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='taociyixian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taociyixian"   hover-class="navigator-hover"  class="active">陶瓷一线品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='taociyixian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='dalishishidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=dalishishidapinpai"   hover-class="navigator-hover"  class="active">大理石瓷砖十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='dalishishidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='taociyanbanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taociyanbanshidapinpai"   hover-class="navigator-hover"  class="active">岩板/大板十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='taociyanbanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=taociyanbanshidapinpai"   hover-class="navigator-hover">岩板/大板十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='xiandaizhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=xiandaizhuanshidapinpai"   hover-class="navigator-hover"  class="active">现代砖十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='xiandaizhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='muwenzhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=muwenzhuanshidapinpai"   hover-class="navigator-hover"  class="active">木纹砖十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='muwenzhuanshidapinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='cipian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=cipian"   hover-class="navigator-hover"  class="active">瓷片十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='cipian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='gongnengcizhuan'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=gongnengcizhuan"   hover-class="navigator-hover"  class="active">功能砖十大品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='gongnengcizhuan'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='shejishituijian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=shejishituijian"   hover-class="navigator-hover"  class="active">设计师推荐品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='shejishituijian'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+                    </block>
+                </view>
+                <view class="nav-list">
+                    <block s-if="{{enname=='gongchengtuijianpinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=gongchengtuijianpinpai"   hover-class="navigator-hover"  class="active">工程推荐品牌</navigator>
+                    </block>
+                    <block s-if="{{enname!='gongchengtuijianpinpai'}}">
+                        <navigator url="/bangdan/pages/index/index?typename=gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="content white shadow">
+            <view class="intro">中国{{strname}}榜是由{{RedirectUrl}}，获得年度{{strname}}榜的品牌有:{{listdata}}。</view>
+        </view>
+        <view class="content white shadow pinpaibox">
+            <view class="boxtop">
+                <view class="left">{{strname}}</view>
+            </view>
+            <view class="pinpailist">
+                <view class="list" s-for="{{PG_PinpaiData}}" s-for-item="item">
+                    <view class="left imgbox" >
+                        <navigator url="/bangdan/pages/view/view?id={{item.digestid}}" >
+                            <image mode="aspectFit" src="https://img1.ceramicschina.com{{item.PinpaiDigest.PinpaiLogo}}"></image>
+                        </navigator>
+                    </view>
+                    <view class="infobox right">
+                        <navigator url="/bangdan/pages/view/view?id={{item.digestid}}"  class="pname">{{item.PinpaiDigest.PinpaiName}}</navigator>
+                        <view class="sell">{{item.PinpaiDigest.PinpaiDescription}}</view>
+                        <view>
+                            <navigator url="/bangdan/pages/view/view?id={{item.digestid}}"  class="click-btn-s right">点击查看</navigator>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view> -->
+
+    <!-- box -->
+    <view class="ppbox">
+        <view class="title">活动组委</view>
+        <view class="intro">
+            <!-- <view>主办单位：中国建筑装饰协会</view> -->
+            <view>承办单位：中国陶瓷网</view>
+            <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+            <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+        </view>
+    </view>
+
+    <view class="ppbox">
+        <view class="title">品牌推广联系方式</view>
+        <view class="intro">
+            <view>电话：400-115-2002 / 0757-82532106</view>
+            <view>联系人：谭小姐 </view>
+            <view>传真：0757-82532105</view>
+            <view>邮箱：cerchn@163.com </view>
+            <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+        </view>
+    </view>
+
+    <view class="footer">
+        <view>经营许可证编号：粤ICP备14052601号-1</view>
+        <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+    </view>
+
  </view>
+
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+    </view>
+</view>

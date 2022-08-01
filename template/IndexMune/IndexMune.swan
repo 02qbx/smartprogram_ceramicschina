@@ -1,0 +1,12 @@
+<view class="nav-top">
+    <view class="topnavlist">
+        <navigator url="/pages/index/index" open-type="redirect" class="cur">首页</navigator>
+        <navigator url="/news/pages/list/list?id=959" >新闻眼</navigator>
+        <!-- <navigator url="">产品城</navigator> -->
+        <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >品牌馆</navigator>
+        <!-- <navigator url="">招商馆</navigator> -->
+        <!-- <navigator url="">金岩奖</navigator> -->
+        <!-- <navigator url="">设计师</navigator>
+        <navigator url="">线上展厅</navigator> -->
+    </view>
+</view>

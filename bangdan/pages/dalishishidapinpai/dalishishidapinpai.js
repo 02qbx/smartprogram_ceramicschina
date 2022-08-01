@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'大理石瓷砖十大品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'大理石瓷砖十大品牌最新排名榜单-大理石瓷砖十大品牌企业有哪些-中国十大大理石瓷砖品牌-中国陶瓷网',
             keywords:'大理石瓷砖十大品牌',
-            description:'中国大理石瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度大理石瓷砖十大品牌榜的品牌有: 简一大理石瓷砖、大角鹿超耐磨大理石瓷砖、新罗玛陶瓷、神州行陶瓷、意万特陶瓷、马可波罗磁砖、强辉陶瓷、欧朗格陶瓷。',
+            description:'中国大理石瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度大理石瓷砖十大品牌榜的品牌有:简一大理石瓷砖、大角鹿超耐磨大理石瓷砖、新濠大理石瓷砖、欧朗格陶瓷、新罗玛陶瓷、伊美洛陶瓷。',
             articleTitle:'大理石瓷砖十大品牌最新排名榜单-大理石瓷砖十大品牌企业有哪些-中国十大大理石瓷砖品牌-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

@@ -1,1 +1,11 @@
-{}
+{
+    "navigationBarTitleText": "中国陶瓷网",
+    "navigationBarBackgroundColor": "#c00",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "smt-navigation": "@smt-ui/component/src/navigation",
+        "smt-icon": "@smt-ui/component/src/icon",
+        "custom":"/components/brandscustom/brandscustom"
+    }
+}

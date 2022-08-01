@@ -1,56 +1,1044 @@
+
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
 <view class="container">
-    <view class="darkgrey">
-        <import src="/template/mune/mune.swan" /> 
+        <import src="/template/mune/mune.swan" />
+        <import src="/template/IndexMune/IndexMune.swan" />
         <!-- ad -->
-         
-        <view class="wrap">
-            <swiper controls="{{!canIUse}}" indicator-dots="true" autoplay="true" interval="3000" duration="1200" style="height:180px;  width:100%; ">
-                
- <block  s-for="{{ad}}" s-for-item="p">
-                <swiper-item class="row-view" > 
-                     <navigator url="/news/pages/view/view?id={{p.id}}" >                  
-                        <image mode="widthFix" bindtap="slideAction" src="https://img1.ceramicschina.com/{{p.ispic}}"></image>
-                     </navigator>                    
-                </swiper-item >  
- </block>
-                
-            </swiper>
-            <!--<view class="ad">广告</view>-->
-        </view>
-      <view class="red">投资有风险，加盟需谨慎</view>
-        <!-- list -->
-        <view class="white newslist shadow">
-            <view class="n-list">
-                <view class="t">
-                    <view class="left">资讯</view>
-                    <view class="right">
-                        <navigator url="/news/pages/list/list?id=974" >专栏</navigator>
-                        <navigator url="/news/pages/list/list?id=973" >人物</navigator>
-                    </view>
-                </view>
-                <view class="list">
-                    <view class="list-con"  s-for="{{list}}" s-for-item="item">
-                        <navigator url="/news/pages/view/view?id={{item.id}}" >
-                            <view class="left">
-                                <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.ispic}}"></image>
-                            </view>
-                            <view class="right">
-                                <view class="title">{{item.news_title}}</view>
-                                <view class="n-bottom">
-                                    <view class="time">{{item.make_date}}</view>
-                                   <!-- <view class="read">{{item.click_n}}</view>-->
-                                </view>
-                            </view>
+
+        <view class="wrap adv">
+            <swiper
+                controls="{{!canIUse}}"
+                indicator-dots="false"
+                autoplay="true"
+                interval="3000"
+                duration="1200"
+                circular="true"
+                style="height:386rpx;  width:100%; "
+                current="{{swiperCurrent}}"
+                bindchange="swiperChangeCustom"
+            >
+
+                <block  s-for="{{ad}}" s-for-item="p">
+                    <swiper-item class="row-view" >
+                        <navigator url="/news/pages/view/view?id={{p.id}}" >
+                            <image mode="widthFix" bindtap="slideAction" src="https://img1.ceramicschina.com/{{p.ispic}}"></image>
                         </navigator>
-                    </view>
-               
-                </view>
-                <view  bindtap="loadMore" data-hash='{{pageid}}'  class="btn-more">点击加载</view>
+                    </swiper-item >
+                </block>
+            </swiper>
+            <view class="dots">
+                <view s-for="{{ad}}" class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
             </view>
         </view>
+        <view class="red tips-none">投资有风险，加盟需谨慎</view>
+
+        <!-- hotnews -->
+        <view class="section ind_hot">
+            <view class="n_list">
+                <view class="news-hot">
+                    <view class="n_con">
+                        <navigator open-type="navigate" url="" class="n_title">雄安新区瓷砖采购潮起！建陶企业的机会来了</navigator>
+                        <view class="info">
+                            <text>行业热点</text>
+                            <text>1325阅读</text>
+                        </view>
+                    </view>
+                    <view class="n_con">
+                        <navigator open-type="navigate" url="" class="n_title">雄安新区瓷砖采购潮起！建陶企业的机会来了</navigator>
+                        <view class="info">
+                            <text>品牌资讯</text>
+                            <text>1325阅读</text>
+                        </view>
+                    </view>
+                    <view class="n_con">
+                        <navigator open-type="navigate" url="" class="n_title">用这10套产品测试话术卖瓷砖，价值蹭蹭往上涨！</navigator>
+                        <view class="info">
+                            <text>终端调研</text>
+                            <text>1358阅读</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- brand -->
+        <view class="section brand-set">
+            <view class="n_list content">
+                <view class="t ind-title">
+                    <view class="left">
+                        <navigator open-type="navigate" url="">十大品牌推荐</navigator>
+                    </view>
+                </view>
+                <view class="brandlist">
+
+                        <view url-query-name="position" class="swiper-tab">
+                            <view class="tab-item {{currentBrand==0 ? 'on' : ''}}" data-current="0" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/taocishidapinpai/taocishidapinpai">陶瓷十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==1 ? 'on' : ''}}" data-current="1" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai">瓷砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==2 ? 'on' : ''}}" data-current="2" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai">卫浴十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==3 ? 'on' : ''}}" data-current="3" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/taociyixian/taociyixian">陶瓷一线品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==4 ? 'on' : ''}}" data-current="4" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai">大理石瓷砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==5 ? 'on' : ''}}" data-current="5" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/fangguzhuan/fangguzhuan">仿古砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==6 ? 'on' : ''}}" data-current="6" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai">现代砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==7 ? 'on' : ''}}" data-current="7" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai">木纹砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==8 ? 'on' : ''}}" data-current="8" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/cipian/cipian">瓷片十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==9 ? 'on' : ''}}" data-current="9" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan">功能砖十大品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==10 ? 'on' : ''}}" data-current="10" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/shejishituijian/shejishituijian">设计师推荐品牌</navigator></view>
+
+                            <view class="tab-item {{currentBrand==11 ? 'on' : ''}}" data-current="11" bindtap="swiperNav"><navigator open-type="navigate" url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai">工程推荐品牌</navigator></view>
+                        </view>
+                        <swiper class="swiper" current="{{currentBrand}}" duration="200" bindchange="swiperChange" style="height:330rpx;">
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8118.html" target="_blank" title="威尔斯陶瓷"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-13/20181213092408.jpg" alt="威尔斯陶瓷" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_85.html" target="_blank" title="强辉陶瓷"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-10-14/20191014100842.jpg" alt="强辉陶瓷" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7993.html" target="_blank" title="顺辉瓷砖"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-01-24/20180124103546.jpg" alt="顺辉瓷砖"></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_281.html" target="_blank" title="能强陶瓷"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203013615.jpg" alt="能强陶瓷" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_104.html" target="_blank" title="嘉俊陶瓷"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-28/20150128052608.jpg" alt="嘉俊陶瓷"></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8001.html" target="_blank" title="白兔瓷砖"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318053255.jpg" alt="白兔瓷砖" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_6894.html" target="_blank" title="金丝玉玛瓷砖"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-11-07/20171107050532.jpg" alt="金丝玉玛瓷砖" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_6724.html" target="_blank" title="大角鹿超耐磨大理石瓷砖"><image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-04-06/20200406084519.jpg" alt="大角鹿超耐磨大理石瓷砖" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8152.html" target="_blank" title="通利大理石瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218022105.jpg" alt="通利大理石瓷砖" ></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_295.html" target="_blank" title="狮王陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-09-11/20150911114347.jpg" alt="狮王陶瓷" ></image></navigator></view>
+
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7.html" target="_blank" title="亚细亚瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-04/20181204084655.png" alt="亚细亚瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_227.html" target="_blank" title="金牌亚洲磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218015138.jpg" alt="金牌亚洲磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_6.html" target="_blank" title="钻石瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-11-26/20161126095123.jpg" alt="钻石瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_454.html" target="_blank" title="大角鹿超耐磨大理石瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-04-06/20200406084519.jpg" alt="大角鹿超耐磨大理石瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_6837.html" target="_blank" title="金玉名家瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-29/20150129063744.jpg" alt="金玉名家瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_307.html" target="_blank" title="汇亚磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-30/20190330051411.jpg" alt="汇亚磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8140.html" target="_blank" title="利家居瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218113044.jpg" alt="利家居瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8151.html" target="_blank" title="来德利陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218111220.jpg" alt="来德利陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_33.html" target="_blank" title="大将军陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218103120.jpg" alt="大将军陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8163.html" target="_blank" title="双庆陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-03-06/20180306043822.jpg" alt="双庆陶瓷" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_79.html" target="_blank" title="九牧厨卫"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-15/20150115045114.jpg" alt="九牧厨卫" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_206.html" target="_blank" title="浪鲸卫浴"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-31/20150131065832.jpg" alt="浪鲸卫浴" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_167.html" target="_blank" title="辉煌卫浴"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-30/20150130074108.jpg" alt="辉煌卫浴" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_251.html" target="_blank" title="恒通卫浴"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-05-02/20180502120357.jpg" alt="恒通卫浴" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_105.html" target="_blank" title="益高卫浴"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-31/20150131100633.jpg" alt="益高卫浴" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_4654.html" target="_blank" title="帝王洁具"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-04-05/20160405045109.jpg" alt="帝王洁具" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_4655.html" target="_blank" title="鹰卫浴"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-04-05/20160405043616.jpg" alt="鹰卫浴" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8117.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_4657.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8209.html" target="_blank" title="能强陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203013615.jpg" alt="能强陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_1500.html" target="_blank" title="强牌陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-12-02/20151202085839.jpg" alt="强牌陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7988.html" target="_blank" title="新罗玛陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-11-17/20171117085900.png" alt="新罗玛陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_369.html" target="_blank" title="如意陶瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-01-19/20190119102320.jpg" alt="如意陶瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8173.html" target="_blank" title="好来登陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-01-10/20190110085730.jpg" alt="好来登陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8212.html" target="_blank" title="金丝路瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-20/20190320100715.jpg" alt="金丝路瓷砖" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_213.html" target="_blank" title="简一大理石瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-03-19/20160319111133.jpg" alt="简一大理石瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_109.html" target="_blank" title="大角鹿超耐磨大理石瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-04-06/20200406084519.jpg" alt="大角鹿超耐磨大理石瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7987.html" target="_blank" title="新罗玛陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-11-17/20171117085900.png" alt="新罗玛陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8169.html" target="_blank" title="神州行陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-03-01/20180301021533.jpg" alt="神州行陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7994.html" target="_blank" title="意万特陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318033954.jpg" alt="意万特陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_407.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8155.html" target="_blank" title="强辉陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-10-14/20191014100842.jpg" alt="强辉陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8221.html" target="_blank" title="欧朗格陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-04-26/20190426033208.jpg" alt="欧朗格陶瓷" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_24.html" target="_blank" title="金意陶瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-06-15/20170615083949.jpg" alt="金意陶瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_258.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_4663.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8219.html" target="_blank" title="L&D陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203112913.jpg" alt="L&D陶瓷" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8188.html" target="_blank" title="金意陶瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-06-15/20170615083949.jpg" alt="金意陶瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8050.html" target="_blank" title="卡罗娜瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-03-03/20180303050246.jpg" alt="卡罗娜瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_6745.html" target="_blank" title="YOU&ME尧铭现代砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-21/20181221110321.jpg" alt="YOU&ME尧铭现代砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8205.html" target="_blank" title="宝恩莎"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318083943.jpg" alt="宝恩莎" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8190.html" target="_blank" title="欧文莱素色现代砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-08-17/20170817035151.jpg" alt="欧文莱素色现代砖" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8114.html" target="_blank" title="蒙娜丽莎瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203040114.jpg" alt="蒙娜丽莎瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_259.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_302.html" target="_blank" title="特兰托陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-03-21/20160321025856.jpg" alt="特兰托陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_29.html" target="_blank" title="楼兰陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-01-13/20150113033845.jpg" alt="楼兰陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_435.html" target="_blank" title="斯米克磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203110207.jpg" alt="斯米克磁砖" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_4694.html" target="_blank" title="华冠陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-12-03/20161203115329.jpg" alt="华冠陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8213.html" target="_blank" title="伊美洛陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318034116.jpg" alt="伊美洛陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8203.html" target="_blank" title="博瓷精工砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-11/20190311062748.jpg" alt="博瓷精工砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_254.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_447.html" target="_blank" title="L&D陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-03/20150203112913.jpg" alt="L&D陶瓷" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8107.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8108.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8184.html" target="_blank" title="强辉陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-10-14/20191014100842.jpg" alt="强辉陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_7997.html" target="_blank" title="淘陶泳池砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-01-26/20180126102620.jpg" alt="淘陶泳池砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8204.html" target="_blank" title="君悦磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-11/20190311063107.jpg" alt="君悦磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8080.html" target="_blank" title="企鹅大板瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-03-08/20180308105557.jpg" alt="企鹅大板瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8220.html" target="_blank" title="剑牌健康瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-04-04/20190404033101.jpg" alt="剑牌健康瓷砖" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8202.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8200.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8192.html" target="_blank" title="金舵瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-08-24/20180824101010.jpg" alt="金舵瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8218.html" target="_blank" title="新中源陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202014445.jpg" alt="新中源陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8214.html" target="_blank" title="COLORX"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-04-01/20190401115051.jpg" alt="COLORX" /></image></navigator></view>
+                            </swiper-item>
+                            <swiper-item>
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8196.html" target="_blank" title="诺贝尔磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-08-13/20190813020943.jpg" alt="诺贝尔磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8198.html" target="_blank" title="金舵瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-08-24/20180824101010.jpg" alt="金舵瓷砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8195.html" target="_blank" title="马可波罗磁砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg" alt="马可波罗磁砖" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8164.html" target="_blank" title="双庆陶瓷"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-03-06/20180306043822.jpg" alt="双庆陶瓷" /></image></navigator></view>
+
+                                <view class="imgbox"><navigator open-type="navigate" url="https://www.ceramicschina.com/pinpai/viewpinpai_8199.html" target="_blank" title="东鹏瓷砖"><image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-12-01/20161201030308.jpg" alt="东鹏瓷砖" /></image></navigator></view>
+                            </swiper-item>
+                        </swiper>
+                        <text class="text-right">滑动更多》》》</text>
+                </view>
+            </view>
+        </view>
+
+        <!-- newslist -->
+        <view class="section">
+            <view class="ind-title tit-fixed">
+                <view class="left">
+                    <navigator open-type="navigate" url="">推荐</navigator>
+                </view>
+                <view class="ind-titRight">
+                    <navigator open-type="navigate" url="/news/pages/list/list?id=959">行业热点</navigator>
+                    <navigator open-type="navigate" url="/news/pages/list/list?id=973">人物访谈</navigator>
+                    <navigator open-type="navigate" url="/news/pages/list/list?id=999">品牌资讯</navigator>
+                    <navigator open-type="navigate" url="">中陶原创</navigator>
+                </view>
+            </view>
+            <view class="n_list ind-news ind-con">
+                <view class="news-hot-pic col_two">
+                    <view class="n_con">
+                        <navigator url="https://m.ceramicschina.com/PG_ViewNews_124645.html" class="imgbox">
+                            <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-11-11/2020111111210473156.jpg"></image>
+                        </navigator>
+                        <view class="news-c">
+                            <navigator url="https://m.ceramicschina.com/PG_ViewNews_124645.html" class="n_title">【案例】简约X至美 遇见属于自己的生活</navigator>
+                        </view>
+                    </view>
+                    <view class="n_con">
+                        <navigator url="https://m.ceramicschina.com/PG_ViewNews_124644.html" class="imgbox">
+                            <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-11-11/2020111109500050752.jpg"></image>
+                        </navigator>
+                        <view class="news-c">
+                            <navigator url="https://m.ceramicschina.com/PG_ViewNews_124644.html">江西高安将诞生首家“30亿级”陶企</navigator>
+                        </view>
+                    </view>
+                </view>
+                <view class="list news-hot">
+                        <view class="n_con"  s-for="{{list}}" s-for-item="item">
+                                <view class="newsleft">
+                                    <navigator url="/news/pages/view/view?id={{item.id}}" class="n_title">{{item.newsTitle}}
+                                    </navigator>
+                                    <view class="info">
+                                        <text class="time">{{item.makeDate}}</text>
+                                    <!-- <text class="read">{{item.click_n}}</text>-->
+                                    </view>
+                                </view>
+                                <view class="imgbox">
+                                    <navigator url="/news/pages/view/view?id={{item.id}}" >
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.ispic}}"></image>
+                                    </navigator>
+                                </view>
+                        </view>
+                    <view class="checkmore">
+                        <navigator url="" class="btnss ind_btn">查看更多资讯&gt;</navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 优品推荐 -->
+        <!-- <view class="section">
+            <view class="ind-title tit-fixed">
+                <view class="left">
+                    <navigator open-type="navigate" url="">优品推荐</navigator>
+                </view>
+                <view class="ind-titRight">
+                    <navigator open-type="navigate" url="">品牌口碑</navigator>
+                    <navigator open-type="navigate" url="">达人秀家</navigator>
+                    <navigator open-type="navigate" url="">对比导购</navigator>
+                </view>
+            </view>
+            <view class="wrap ind-pro">
+                <view class="card-area">
+                        <scroll-view
+                            class="scroll-view"
+                            scroll-x
+                            bindscrolltoupper="toLeft"
+                            bindscrolltolower="toRight"
+                            scroll-left="{= scrollLeft =}"
+                            upper-threshold="1"
+                            lower-threshold="1"
+                            bindscroll="scroll">
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-11-14/2020111410520914747.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-09-29/2020092914364350477.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-11-14/2020111410520914747.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-09-29/2020092914364350477.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-11-14/2020111410520914747.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" class="">
+                                        <image src="https://img1.ceramicschina.com/Upfiles/2020-09-29/2020092914364350477.jpg" alt="萤光灰 TDMF11290180PS900" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="pic-t"><navigator open-type="navigate" url="">萤光灰 TDMF11290180PS900</navigator></view>
+                            </view>
+                        </scroll-view>
+                </view>
+            </view>
+        </view> -->
+
+        <!-- 产品城 -->
+        <!-- <view class="section">
+            <view class="sec-pro">
+                <view class="ind-title tit-fixed">
+                    <view class="left">
+                        <navigator open-type="navigate" url="">产品城</navigator>
+                    </view>
+                    <view class="ind-titRight">
+                        <navigator open-type="navigate" url="">产品测评</navigator>
+                        <navigator open-type="navigate" url="">装修宝典</navigator>
+                        <navigator open-type="navigate" url="">铺贴保养</navigator>
+                        <navigator open-type="navigate" url="">投诉台</navigator>
+                    </view>
+                </view>
+                <view class="n_list ind-news ind-con">
+                    <view class="news-hot-pic col_two">
+                        <view class="n_con">
+                            <navigator url="https://m.ceramicschina.com/PG_ViewNews_124645.html" class="imgbox">
+                                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-11-11/2020111111210473156.jpg"></image>
+                            </navigator>
+                            <view class="news-c">
+                                <navigator url="https://m.ceramicschina.com/PG_ViewNews_124645.html" class="n_title">【案例】简约X至美 遇见属于自己的生活</navigator>
+                            </view>
+                        </view>
+                        <view class="n_con">
+                            <navigator url="https://m.ceramicschina.com/PG_ViewNews_124644.html" class="imgbox">
+                                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-11-11/2020111109500050752.jpg"></image>
+                            </navigator>
+                            <view class="news-c">
+                                <navigator url="https://m.ceramicschina.com/PG_ViewNews_124644.html">江西高安将诞生首家“30亿级”陶企</navigator>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="list news-hot">
+                        <view class="n_con"  s-for="{{list}}" s-for-item="item">
+                            <view class="newsleft">
+                                <navigator url="/news/pages/view/view?id={{item.id}}" class="n_title">{{item.newsTitle}}
+                                </navigator>
+                                <view class="info">
+                                    <text class="time">{{item.makeDate}}</text>
+                                    <text class="read">{{item.click_n}}</text>
+                                </view>
+                            </view>
+                            <view class="imgbox">
+                                <navigator url="/news/pages/view/view?id={{item.id}}" >
+                                    <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.ispic}}"></image>
+                                </navigator>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="sec-koubei">
+                <view class="ind-title tit-fixed">
+                    <view class="left">
+                        <navigator open-type="navigate" url="">品牌口碑</navigator>
+                    </view>
+                </view>
+                <swiper class="swiper" current="{{currentKoubei}}" duration="200" bindchange="swiperChangeKoubei" style="height:532.5rpx;">
+                    <swiper-item>
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC">
+                                <image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-11-26/2020112614110971013.jpg" alt="FAENZA视觉新作|MINIMALISTA BLANC" >
+                                </image>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC" class="link">FAENZA视觉新作|MINIMALISTA BLANC</navigator>
+                        <text class="t-org">¥店询</text>
+                        <text class="xing xing1">9分</text>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124764.html" target="_blank" title="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落">
+                                <image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-11-24/2020112411222165611.png" alt="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落" >
+                                </image>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC" class="link">FAENZA视觉新作|MINIMALISTA BLANC</navigator>
+                        <text class="t-org">¥店询</text>
+                        <text class="xing xing2">35分</text>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124764.html" target="_blank" title="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落">
+                                <image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-11-24/2020112411222165611.png" alt="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落" >
+                                </image>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC" class="link">FAENZA视觉新作|MINIMALISTA BLANC</navigator>
+                        <text class="t-org">¥店询</text>
+                        <text class="xing xing3">53分</text>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124764.html" target="_blank" title="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落">
+                                <image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-11-24/2020112411222165611.png" alt="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落" >
+                                </image>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC" class="link">FAENZA视觉新作|MINIMALISTA BLANC</navigator>
+                        <text class="t-org">¥店询</text>
+                        <text class="xing xing4">78分</text>
+                    </swiper-item>
+                    <swiper-item>
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124764.html" target="_blank" title="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落">
+                                <image  mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-11-24/2020112411222165611.png" alt="法恩莎 意·新奢大板 | 将美好生活方式呈现于每一个角落" >
+                                </image>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="https://www.ceramicschina.com/PG_ViewNews_124807.html" target="_blank" title="FAENZA视觉新作|MINIMALISTA BLANC" class="link">FAENZA视觉新作|MINIMALISTA BLANC</navigator>
+                        <text class="t-org">¥店询</text>
+                        <text class="xing xing5">94分</text>
+                    </swiper-item>
+                </swiper>
+                <text class="text-right">滑动更多》》》</text>
+            </view>
+        </view> -->
+
+        <!-- 热门加盟品牌 -->
+        <!-- <view class="section">
+            <view class="sec-JM">
+                <view class="ind-title tit-fixed">
+                    <view class="left">
+                        <navigator open-type="navigate" url="">热门加盟品牌</navigator>
+                    </view>
+                    <view class="ind-titRight">
+                        <navigator open-type="navigate" url="">我要代理</navigator>
+                        <navigator open-type="navigate" url="">我要采购</navigator>
+                    </view>
+                </view>
+                <view class="JMbrand col_two">
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                    <view class="JMcon n_con">
+                        <view class="imgbox">
+                            <navigator open-type="navigate" url="">
+                                <image src="https://img2.ceramicschina.com//upload/luyimodeng/2020-07-02/2020070216067.jpg" mode="widthFix" alt="路易摩登陶瓷招商"></image>
+                                <text class="jine">20万-50万</text>
+                            </navigator>
+                        </view>
+                        <navigator open-type="navigate" url="" class="link">路易摩登陶瓷招商</navigator>
+                    </view>
+                </view>
+                <view class="checkmore">
+                    <navigator url="" class="btnss ind_btn">查看更多招商品牌&gt;</navigator>
+                </view>
+            </view>
+            <view class="JM-tab wrap">
+                <view class="card-area">
+
+                    <view class="swiper-tab">
+                        <view class="tab-item {{currentJMTab==0 ? 'on' : ''}}" data-current="0" bindtap="swiperJMNav">加盟信息</view>
+                        <view class="tab-item {{currentJMTab==1 ? 'on' : ''}}" data-current="1" bindtap="swiperJMNav">采购信息</view>
+                    </view>
+
+                    <swiper class="swiper-content" current="{{currentJMTab}}" duration="200" bindchange="swiperChangeJMTab">
+                        <swiper-item>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                    <navigator open-type="navigate" url="">本人想做大角鹿超耐磨大理石瓷砖代理</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">投资预算：<text class="t-org">10万人民币</text></view>
+                                    <view class="right">代理档次：零售店</view>
+                                    <view class="text">意向品牌：大角鹿超耐磨大理石瓷砖</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                    <navigator open-type="navigate" url="">本人想做大角鹿超耐磨大理石瓷砖代理</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">投资预算：<text class="t-org">10万人民币</text></view>
+                                    <view class="right">代理档次：零售店</view>
+                                    <view class="text">意向品牌：大角鹿超耐磨大理石瓷砖</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                    <navigator open-type="navigate" url="">本人想做大角鹿超耐磨大理石瓷砖代理</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">投资预算：<text class="t-org">10万人民币</text></view>
+                                    <view class="right">代理档次：零售店</view>
+                                    <view class="text">意向品牌：大角鹿超耐磨大理石瓷砖</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                    <navigator open-type="navigate" url="">本人想做大角鹿超耐磨大理石瓷砖代理</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">投资预算：<text class="t-org">10万人民币</text></view>
+                                    <view class="right">代理档次：零售店</view>
+                                    <view class="text">意向品牌：大角鹿超耐磨大理石瓷砖</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="checkmore">
+                                <navigator url="" class="btnss ind_btn">查看更多加盟信息&gt;</navigator>
+                            </view>
+                        </swiper-item>
+                        <swiper-item>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                <navigator open-type="navigate" url="">本人想要采购10000平方米</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">采购量：<text class="t-org">10000平方米</text></view>
+                                    <view class="right">联系电话：137****</view>
+                                    <view class="text">贵州丨遵义县</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                <navigator open-type="navigate" url="">本人想要采购10000平方米</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">采购量：<text class="t-org">10000平方米</text></view>
+                                    <view class="right">联系电话：137****</view>
+                                    <view class="text">贵州丨遵义县</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                <navigator open-type="navigate" url="">本人想要采购10000平方米</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">采购量：<text class="t-org">10000平方米</text></view>
+                                    <view class="right">联系电话：137****</view>
+                                    <view class="text">贵州丨遵义县</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="list-con">
+                                <view class="DL-t">
+                                <navigator open-type="navigate" url="">本人想要采购10000平方米</navigator>
+                                </view>
+                                <view class="DL-c">
+                                    <view class="left">采购量：<text class="t-org">10000平方米</text></view>
+                                    <view class="right">联系电话：137****</view>
+                                    <view class="text">贵州丨遵义县</view>
+                                    <navigator open-type="navigate" url="" class="btnss">联系他</navigator>
+                                </view>
+                            </view>
+                            <view class="checkmore">
+                                <navigator url="" class="btnss ind_btn">查看更多采购信息&gt;</navigator>
+                            </view>
+                        </swiper-item>
+                    </swiper>
+                </view>
+            </view>
+        </view> -->
+
+        <!-- 设计师 -->
+        <!-- <view class="section"> -->
+            <!-- <view class="ind-title tit-fixed">
+                <view class="left">
+                    <navigator open-type="navigate" url="">设计师</navigator>
+                </view>
+                <view class="ind-titRight">
+                    <navigator open-type="navigate" url="">预约设计</navigator>
+                    <navigator open-type="navigate" url="">作品展示</navigator>
+                    <navigator open-type="navigate" url="">雇佣设计师</navigator>
+                </view>
+            </view>
+            <view class="wrap Designer">
+                <swiper
+                    controls="{{!canIUse}}"
+                    indicator-dots="false"
+                    autoplay="true"
+                    interval="6000"
+                    duration="1500"
+                    circular="true"
+                    style="height:360rpx;  width:100%; "
+                    current="{{CurrentDes}}"
+                    bindchange="swiperCustomDes"
+                >
+
+                    <block s-for="{{Designerlist}}" s-for-item="p">
+                        <swiper-item class="row-view" >
+                            <view class="con">
+                                <view class="left imgbox">
+                                    <navigator url="">
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝"></image>
+                                    </navigator>
+                                </view>
+                                <view class="right">
+                                    <view class="name">
+                                        <navigator url="">吴振宝</navigator>
+                                    </view>
+                                    <text>北京丨室内设计师</text>
+                                    <view class="des-style">擅长风格：美式、混搭、北欧、法式</view>
+                                </view>
+                            </view>
+                            <view class="con">
+                                <view class="left des-fy">50万以下</view>
+                                <view class="right des-btns">
+                                    <navigator url="" class="btns">预约设计</navigator>
+                                </view>
+                            </view>
+                        </swiper-item >
+                        <swiper-item class="row-view" >
+                            <view class="con">
+                                <view class="left imgbox">
+                                    <navigator url="">
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝"></image>
+                                    </navigator>
+                                </view>
+                                <view class="right">
+                                    <view class="name">
+                                        <navigator url="">吴振宝</navigator>
+                                    </view>
+                                    <text>北京丨室内设计师</text>
+                                    <view class="des-style">擅长风格：美式、混搭、北欧、法式</view>
+                                </view>
+                            </view>
+                            <view class="con">
+                                <view class="left des-fy">50万以下</view>
+                                <view class="right des-btns">
+                                    <navigator url="" class="btns">预约设计</navigator>
+                                </view>
+                            </view>
+                        </swiper-item >
+                        <swiper-item class="row-view" >
+                            <view class="con">
+                                <view class="left imgbox">
+                                    <navigator url="">
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝"></image>
+                                    </navigator>
+                                </view>
+                                <view class="right">
+                                    <view class="name">
+                                        <navigator url="">吴振宝</navigator>
+                                    </view>
+                                    <text>北京丨室内设计师</text>
+                                    <view class="des-style">擅长风格：美式、混搭、北欧、法式</view>
+                                </view>
+                            </view>
+                            <view class="con">
+                                <view class="left des-fy">50万以下</view>
+                                <view class="right des-btns">
+                                    <navigator url="" class="btns">预约设计</navigator>
+                                </view>
+                            </view>
+                        </swiper-item >
+                        <swiper-item class="row-view" >
+                            <view class="con">
+                                <view class="left imgbox">
+                                    <navigator url="">
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝"></image>
+                                    </navigator>
+                                </view>
+                                <view class="right">
+                                    <view class="name">
+                                        <navigator url="">吴振宝</navigator>
+                                    </view>
+                                    <text>北京丨室内设计师</text>
+                                    <view class="des-style">擅长风格：美式、混搭、北欧、法式</view>
+                                </view>
+                            </view>
+                            <view class="con">
+                                <view class="left des-fy">50万以下</view>
+                                <view class="right des-btns">
+                                    <navigator url="" class="btns">预约设计</navigator>
+                                </view>
+                            </view>
+                        </swiper-item >
+                        <swiper-item class="row-view" >
+                            <view class="con">
+                                <view class="left imgbox">
+                                    <navigator url="">
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝"></image>
+                                    </navigator>
+                                </view>
+                                <view class="right">
+                                    <view class="name">
+                                        <navigator url="">吴振宝</navigator>
+                                    </view>
+                                    <text>北京丨室内设计师</text>
+                                    <view class="des-style">擅长风格：美式、混搭、北欧、法式</view>
+                                </view>
+                            </view>
+                            <view class="con">
+                                <view class="left des-fy">50万以下</view>
+                                <view class="right des-btns">
+                                    <navigator url="" class="btns">预约设计</navigator>
+                                </view>
+                            </view>
+                        </swiper-item >
+                    </block>
+                </swiper>
+                <view class="dots">
+                    <view s-for="{{Designerlist}}" class="dot {{index == CurrentDes ? ' active' : ''}}"></view>
+                </view>
+            </view> -->
+
+            <!-- 设计师案例 -->
+            <!-- <view class="wrap ind-pro Case">
+                <view class="card-area">
+                        <scroll-view
+                            class="scroll-view"
+                            scroll-x
+                            bindscrolltoupper="toLeft"
+                            bindscrolltolower="toRight"
+                            scroll-left="{= scrollLeft =}"
+                            upper-threshold="1"
+                            lower-threshold="1"
+                            bindscroll="scroll">
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111410513953264.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111409074062504.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111410513953264.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111409074062504.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111410513953264.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="color-a row-view">
+                                <view class="pic-p">
+                                    <navigator open-type="navigate" url="" title="设计案例">
+                                        <image src="https://img1.ceramicschina.com//Upfiles/2020-11-14/2020111409074062504.jpg" alt="设计案例" mode="widthFix"></image>
+                                    </navigator>
+                                </view>
+                                <view class="Case-D">
+                                    <navigator open-type="navigate" url="" title="设计师吴振宝" class="left">
+                                        <view class="imgbox D-pic">
+                                            <image src="https://img1.ceramicschina.com//Upfiles/2020-03-07/20200307044129.jpg" alt="设计师吴振宝" mode="widthFix"></image>
+                                        </view>
+                                        <text>吴振宝</text>
+                                    </navigator>
+                                    <view class="right">
+                                        <text>24 推荐</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </scroll-view>
+                </view>
+            </view> -->
+
+            <!-- 预约设计 -->
+            <!-- <view class="Des-yy">
+                <view class="Des-title"><span>预约设计</span></view>
+                <view class="Des-list">
+                    <view class="Des-con">
+                        <view class="Des-link">
+                            <navigator open-type="navigate" url="">预约地址：广东 - 佛山</navigator>
+                        </view>
+                        <view class="Des-b">
+                            <view class="Des-Designer">预约设计师：<text class="t-blue">戴昆</text></view>
+                            <view class="Des-Owner">业主：张先生</view>
+                            <view class="time">2020/3/16</view>
+                        </view>
+                    </view>
+                    <view class="Des-con">
+                        <view class="Des-link">
+                            <navigator open-type="navigate" url="">预约地址：广东 - 佛山</navigator>
+                        </view>
+                        <view class="Des-b">
+                            <view class="Des-Designer">预约设计师：<text class="t-blue">戴昆</text></view>
+                            <view class="Des-Owner">业主：张先生</view>
+                            <view class="time">2020/3/16</view>
+                        </view>
+                    </view>
+                    <view class="Des-con">
+                        <view class="Des-link">
+                            <navigator open-type="navigate" url="">预约地址：广东 - 佛山</navigator>
+                        </view>
+                        <view class="Des-b">
+                            <view class="Des-Designer">预约设计师：<text class="t-blue">戴昆</text></view>
+                            <view class="Des-Owner">业主：张先生</view>
+                            <view class="time">2020/3/16</view>
+                        </view>
+                    </view>
+                    <view class="Des-con">
+                        <view class="Des-link">
+                            <navigator open-type="navigate" url="">预约地址：广东 - 佛山</navigator>
+                        </view>
+                        <view class="Des-b">
+                            <view class="Des-Designer">预约设计师：<text class="t-blue">戴昆</text></view>
+                            <view class="Des-Owner">业主：张先生</view>
+                            <view class="time">2020/3/16</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="checkmore">
+                    <navigator url="" class="btnss ind_btn">查看更多预约&gt;</navigator>
+                </view>
+            </view> -->
+
+
+        <!-- </view> -->
+
         <view class="footer">
             <view>经营许可证编号：粤ICP备14052601号-1</view>
-            <view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
+            <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
         </view>
+</view>
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
     </view>
 </view>

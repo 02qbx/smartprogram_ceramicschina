@@ -1,88 +1,217 @@
+<view>
+   <!-- 在页面中对自定义组件进行引用 -->
+   <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
 <view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
-</view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
-        </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  >大理石瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover" class="active" >现代砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
-</view>
-</view>   
-</view>
-<view class="content white shadow">
-<view class="intro">中国现代砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度现代砖十大品牌榜的品牌有: 金意陶瓷砖、卡罗娜瓷砖、YOU&ME尧铭现代砖、宝恩莎、欧文莱素色现代砖。</view>
+   <import src="/template/BrandsMune/BrandsMune.swan" />
 
-</view><view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">现代砖十大品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8188" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2017-06-15/20170615083949.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8188" pen-type="redirect" class="pname">金意陶瓷砖</navigator><view class="sell">　金意陶整体空间领航，尊贵生活无疆，风向中国，放眼世界。“尊贵空间，普世共享”，自成立之日起，金意陶陶瓷有限公司即以此立业，“始终坚持国际化”，以全球同步的瓷质饰釉砖（仿古砖），独家提供“瓷砖空间整体解决方案”，矢志不渝兑现“尊贵”承诺，襄助从国内到国外、从家用到工程的无数KITO用户，打造尊贵空间，尊享高质生活。</view><view><navigator url="/bangdan/pages/view/view?id=8188" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8050" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-03-03/20180303050246.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8050" pen-type="redirect" class="pname">卡罗娜瓷砖</navigator><view class="sell">卡罗娜工厂占地面积30万㎡，拥有现代化专业生产线五条，日产能40000㎡，基于对艺术、生活的热爱，联合国内外优秀工艺美术大师，创造出充满艺术又具有温度的产品，为每一位生活充满追求的人带来美好的体验。</view><view><navigator url="/bangdan/pages/view/view?id=8050" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=6745" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-12-21/20181221110321.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=6745" pen-type="redirect" class="pname">YOU&ME尧铭现代砖</navigator><view class="sell">YOU&ME尧铭现代砖始于2013年，是一家集设计、生产、营销及服务系统为一体的年轻化瓷砖品牌。
+   <view class="darkgrey">
+       <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+   </view>
 
-总部注册于芬兰赫尔辛基，营销中心设于中国瓷砖之都佛山市，由芬兰独立设计师以及合作设计师为品牌提供创意支持。
+   <view class="bdlist">
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+       </view>
 
-</view><view><navigator url="/bangdan/pages/view/view?id=6745" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8205" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318083943.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8205" pen-type="redirect" class="pname">宝恩莎</navigator><view class="sell">宝恩莎瓷砖坐落享誉中外的瓷都佛山，总部设在华夏陶瓷博览城，是一家      集设计、研发、生产、销售、服务为一体的陶瓷专业品牌。</view><view><navigator url="/bangdan/pages/view/view?id=8205" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8190" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2017-08-17/20170817035151.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8190" pen-type="redirect" class="pname">欧文莱素色现代砖</navigator><view class="sell">广东欧文莱陶瓷有限公司创建于1999年，位于佛山，是集设计、研发、制造、营销为一体的大型瓷砖企业，致力于为消费者提供简约、时尚、高品位的“素色现代砖”。</view><view><navigator url="/bangdan/pages/view/view?id=8190" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
+       <view class="nav-link on">
+           <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+       </view>
+   </view>
 
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+   <!-- list 现代砖十大品牌 -->
+   <view class="tenbrandint">
+       <view class="title">现代砖十大品牌</view>
+       <view class="int">中国现代砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度现代砖十大品牌榜的品牌有:欧文莱|素色瓷砖、YOU&ME尧铭现代砖、布朗尼瓷砖、帕诺特瓷砖、鹰牌2086、金意陶瓷砖、强牌陶瓷、利家居瓷砖。（以上排名不分前后）</view>
+   </view>
+
+   <!-- bangdan -->
+   <view class="brandlist n_list col_12">
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7582">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-16/20200516053617.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7582">
+                   <view class="pp_name">欧文莱|素色瓷砖</view>
+                   <view class="pp_con">广东欧文莱陶瓷有限公司创建于1999年，位于佛山，是集设计、研发、制造、营销为一体的大型瓷砖企业，致力于为消费者提供简约、时尚、高品位的“素色瓷砖”</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7582" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=6451">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-21/20181221110321.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=6451">
+                   <view class="pp_name">YOU&ME尧铭现代砖</view>
+                   <view class="pp_con">YOU&ME尧铭现代砖始于2013年，是一家集设计、生产、营销及服务系统为一体的年轻化瓷砖品牌。总部注册于芬兰赫尔辛基，营销中心设于中国瓷砖之都佛山市，由芬兰独立设计师以及合作设计师为品牌提供创意支持。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=6451" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7574">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514115610.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7574">
+                   <view class="pp_name">布朗尼瓷砖</view>
+                   <view class="pp_con">布朗尼源自英文Brownies，是英国苏格兰传说中善良活泼的精灵仙子，也是甜美馥郁的美式甜品，引申词Brown，亦是自然万物中代表土壤的色彩，隐喻品牌如大地般具有磅礴的生命力</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7574" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7575">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-14/20200514120112.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7575">
+                   <view class="pp_name">帕诺特瓷砖</view>
+                   <view class="pp_con">帕诺特，源自英文Palette，是艺术家和设计大师创作中不可或缺的灵感调色板，寓意品牌及产品的独特艺术性与创造能力</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7575" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=6476">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-01-08/20180108104319.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=6476">
+                   <view class="pp_name">鹰牌2086</view>
+                   <view class="pp_con">鹰牌2086，一个专注于产品与设计的高端现代仿古砖品牌，洞悉新消费时代下的“精神”趋势，创造以现代仿古为主打风格的瓷砖美学，以“产品+设计”来表现现代的生活形态</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=6476" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=25">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-15/20200515110948.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=25">
+                   <view class="pp_name">金意陶瓷砖</view>
+                   <view class="pp_con">金意陶整体空间领航，尊贵生活无疆，风向中国，放眼世界。“尊贵空间，普世共享”，自成立之日起，金意陶陶瓷有限公司即以此立业，“始终坚持国际化”</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=25" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=128">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-08-10/20200810042804.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=128">
+                   <view class="pp_name">强牌陶瓷</view>
+                   <view class="pp_con">强牌陶瓷是佛山市金舵陶瓷企业旗下核心品牌，企业拥有20多年陶瓷墙地砖生产经验，拥有佛山和梧州两大生产基地，总占地面积达2000亩，总投资超过15亿元，致力成为具有卓越品质的陶瓷行业智造领跑者。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=128" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=190">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2018-12-18/20181218113044.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=190">
+                   <view class="pp_name">利家居瓷砖</view>
+                   <view class="pp_con">广东利家居陶瓷有限公司始创于 2004 年，是目前国内知名的集科研、生产、销售与服务于一体的专业化陶瓷企业</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=190" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+   </view>
+
+   <!-- box -->
+   <view class="ppbox">
+       <view class="title">活动组委</view>
+       <view class="intro">
+           <!-- <view>主办单位：中国建筑装饰协会</view> -->
+           <view>承办单位：中国陶瓷网</view>
+           <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+           <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+       </view>
+   </view>
+
+   <view class="ppbox">
+       <view class="title">品牌推广联系方式</view>
+       <view class="intro">
+           <view>电话：400-115-2002 / 0757-82532106</view>
+           <view>联系人：谭小姐 </view>
+           <view>传真：0757-82532105</view>
+           <view>邮箱：cerchn@163.com </view>
+           <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+       </view>
+   </view>
+
+   <view class="footer">
+       <view>经营许可证编号：粤ICP备14052601号-1</view>
+       <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+   </view>
+
 </view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+
+<view class="page-section-btns" bindtap="scrollToTop">
+   <view class="ToTop">
+       <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+   </view>
 </view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>

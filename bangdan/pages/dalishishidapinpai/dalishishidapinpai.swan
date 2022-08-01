@@ -1,86 +1,187 @@
+<view>
+   <!-- 在页面中对自定义组件进行引用 -->
+   <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
 <view class="container">
-<view class="topbar white">
-<navigator class="logo" url="/pages/index/index" open-type="redirect"><image mode="aspectFit" src="/images/logo.png"></image></navigator>
-</view>
-   <view class="nav-top">
-            <navigator url="/pages/index/index" open-type="redirect">首页</navigator>
-            <navigator url="/news/pages/list/list?id=959" >资讯</navigator>
-            <navigator url="/news/pages/list/list?id=999" >动态</navigator>            
-            <navigator url="/news/pages/list/list?id=993">终端</navigator>
-            <navigator url="/news/pages/list/list?id=972">深度</navigator>
-            <navigator url="/bangdan/pages/indexpinpai/indexpinpai" >榜单</navigator>
-        </view>
-<view class="darkgrey">
-<view class="banner">
-<image mode="widthFix" src="https://m.ceramicschina.com/images/s_2019bangdan.jpg"></image>
-</view>
- <view class="content nav">
-<view class="nav-list">
-<navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover"  >陶瓷十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover"  >卫浴十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover"  >瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover"  >陶瓷一线品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover"  class="active">大理石瓷砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/fangguzhuan/fangguzhuan"   hover-class="navigator-hover"  >仿古砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover"  >现代砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover"  >木纹砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover"  >瓷片十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover"  >功能砖十大品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover"  >设计师推荐品牌</navigator>
-</view>
-<view class="nav-list">
-<navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover"  >工程推荐品牌</navigator>
-</view>
-</view>   
+   <import src="/template/BrandsMune/BrandsMune.swan" />
+
+   <view class="darkgrey">
+       <view class="banner"><image mode="widthFix" src="/images/2019bangdan.jpg"></image>
+   </view>
+
+   <view class="bdlist">
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taocishidapinpai/taocishidapinpai"   hover-class="navigator-hover">陶瓷十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/weiyushidapinpai/weiyushidapinpai"   hover-class="navigator-hover">卫浴十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cizhuanshidapinpai/cizhuanshidapinpai"   hover-class="navigator-hover">瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyixian/taociyixian"   hover-class="navigator-hover">陶瓷一线品牌</navigator>
+       </view>
+       <view class="nav-link on">
+           <navigator url="/bangdan/pages/dalishishidapinpai/dalishishidapinpai"   hover-class="navigator-hover">大理石瓷砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/taociyanbanshidapinpai/taociyanbanshidapinpai"   hover-class="navigator-hover"  >岩板/大板十大品牌</navigator>
+       </view>
+
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai"   hover-class="navigator-hover">现代砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai"   hover-class="navigator-hover">木纹砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/cipian/cipian"   hover-class="navigator-hover">瓷片十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongnengcizhuan/gongnengcizhuan"   hover-class="navigator-hover">功能砖十大品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/shejishituijian/shejishituijian"   hover-class="navigator-hover">设计师推荐品牌</navigator>
+       </view>
+       <view class="nav-link">
+           <navigator url="/bangdan/pages/gongchengtuijianpinpai/gongchengtuijianpinpai"   hover-class="navigator-hover">工程推荐品牌</navigator>
+       </view>
+   </view>
+
+   <!-- list 大理石瓷砖十大品牌 -->
+   <view class="tenbrandint">
+       <view class="title">大理石瓷砖十大品牌</view>
+       <view class="int">中国大理石瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕，获得年度大理石瓷砖十大品牌榜的品牌有:简一大理石瓷砖、大角鹿超耐磨大理石瓷砖、新濠大理石瓷砖、欧朗格陶瓷、新罗玛陶瓷、伊美洛陶瓷。（以上排名不分前后）</view>
+   </view>
+
+   <!-- bangdan -->
+   <view class="brandlist n_list col_12">
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=148">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2016-03-19/20160319111133.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=148">
+                   <view class="pp_name">简一大理石瓷砖</view>
+                   <view class="pp_con">佛山市简一陶瓷有限公司（以下简称“简一”）创建于2002年，是大理石瓷砖品类的开创者与领导者，秉承“大道至简 一以贯之”的发展理念，致力于为追求高品质生活的人们提供高端大理石瓷砖。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=148" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=111">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-25/20200525041740.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=111">
+                   <view class="pp_name">大角鹿超耐磨大理石瓷砖</view>
+                   <view class="pp_con">大角鹿独创“超耐磨钻石釉”专利技术有效提升大理石瓷砖的耐磨性，大角鹿超耐磨大理石瓷砖，超耐磨，持久新！</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=111" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=238">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2020-05-28/20200528114358.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=238">
+                   <view class="pp_name">新濠大理石瓷砖</view>
+                   <view class="pp_con">新濠大理石瓷砖始创于2011年，是广东昊晟企业旗下强势建筑陶瓷品牌，以专注的大理石瓷砖生产为依托，致力于打造 “工程集采渠道的大理石瓷砖首选品牌“，致力于为广大年轻消费者打造时尚潮流的家居生活空间。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=238" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=7569">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-04-26/20190426033208.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=7569">
+                   <view class="pp_name">欧朗格陶瓷</view>
+                   <view class="pp_con">欧朗格吸收中外最先进的设计理念与生产工艺，注重品牌、创新、质量与服务，以精益求精的态度和完善的产品线牢牢把握瓷砖家居市场的主流。欧朗格紧跟行业潮流，生产领先产品，以质量上乘、花色新颖、种类齐全、性价比高、服务完善、信誉可靠等优势获得陶瓷市场的广泛认可。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=7569" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=99">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2017-11-17/20171117085900.png"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=99">
+                   <view class="pp_name">新罗玛陶瓷</view>
+                   <view class="pp_con">佛山市强瓷陶瓷有限公司旗下新罗马陶瓷是一家规模大、实力雄厚的大型陶瓷生产企业，拥有多条现代化全自动生产线。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=99" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+       <view class="n_con">
+           <view class="brandbox vip-icon col_left">
+               <navigator url="/bangdan/pages/view/view?id=6508">
+                   <image mode="widthFix" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318034116.jpg"></image>
+               </navigator>
+           </view>
+           <view class="col_right">
+               <navigator url="/bangdan/pages/view/view?id=6508">
+                   <view class="pp_name">伊美洛陶瓷</view>
+                   <view class="pp_con">佛山市伊美洛陶瓷有限公司，是一家集专业研发、设计、生产、销售于一体的现代化陶瓷企业，拥有大型的营销中心与生产基地。</view>
+               </navigator>
+               <navigator url="/bangdan/pages/view/view?id=6508" class="joinbtn">加盟</navigator>
+           </view>
+       </view>
+
+   </view>
+
+   <!-- box -->
+   <view class="ppbox">
+       <view class="title">活动组委</view>
+       <view class="intro">
+           <!-- <view>主办单位：中国建筑装饰协会</view> -->
+           <view>承办单位：中国陶瓷网</view>
+           <view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
+           <view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+       </view>
+   </view>
+
+   <view class="ppbox">
+       <view class="title">品牌推广联系方式</view>
+       <view class="intro">
+           <view>电话：400-115-2002 / 0757-82532106</view>
+           <view>联系人：谭小姐 </view>
+           <view>传真：0757-82532105</view>
+           <view>邮箱：cerchn@163.com </view>
+           <view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
+       </view>
+   </view>
+
+   <view class="footer">
+       <view>经营许可证编号：粤ICP备14052601号-1</view>
+       <view class="foot">&#169;2002-2020 中国陶瓷网All Rights Reserved</view>
+   </view>
+
 </view>
 
-<view class="content white shadow">
-<view class="intro">中国大理石瓷砖十大品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度大理石瓷砖十大品牌榜的品牌有: 简一大理石瓷砖、大角鹿超耐磨大理石瓷砖、新罗玛陶瓷、神州行陶瓷、意万特陶瓷、马可波罗磁砖、强辉陶瓷、欧朗格陶瓷。</view>
-
-</view><view class="content white shadow pinpaibox" ><view class="boxtop"><view class="left">大理石瓷砖十大品牌</view></view><view class="pinpailist"><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=213" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2016-03-19/20160319111133.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=213" pen-type="redirect" class="pname">简一大理石瓷砖</navigator><view class="sell"> 佛山市简一陶瓷有限公司（以下简称“简一”）创建于2002年，是大理石瓷砖品类的开创者与领导者，秉承“大道至简 一以贯之”的发展理念，致力于为追求高品质生活的人们提供高端大理石瓷砖。  </view><view><navigator url="/bangdan/pages/view/view?id=213" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=109" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-08-22/20190822095714.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=109" pen-type="redirect" class="pname">大角鹿超耐磨大理石瓷砖</navigator><view class="sell">大角鹿独创“超耐磨钻石釉”专利技术有效提升大理石瓷砖的耐磨性，大角鹿超耐磨大理石瓷砖，超耐磨，持久新！</view><view><navigator url="/bangdan/pages/view/view?id=109" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=7987" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2017-11-17/20171117085900.png"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=7987" pen-type="redirect" class="pname">新罗玛陶瓷</navigator><view class="sell">佛山市强瓷陶瓷有限公司旗下新罗马陶瓷是一家规模大、实力雄厚的大型陶瓷生产企业，拥有多条现代化全自动生产线。公司全面引进意大利、西班牙先进机器和制造技术，采用现代化生产管理模式，严格执行ISO9001国际质量体系和国家行业部门质量检测程序，不断提高产品质量。先后获得"中国十大质量品牌""中国质量五百强""国际知名品牌""国家钓鱼台入围品牌"等荣誉称号。在国内建陶行业处于领先地位。</view><view><navigator url="/bangdan/pages/view/view?id=7987" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8169" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2018-03-01/20180301021533.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8169" pen-type="redirect" class="pname">神州行陶瓷</navigator><view class="sell">神州行陶瓷以“非凡品质 驾驭未来”为企业远景目标，始终坚持“诚信为本”的经营理念。以品牌为依托充分发挥自身优势，不断提升产品的品质，提高服务质量。以优质产品服务消费者，回报社会，全心全意把您的家装扮的更加美好。</view><view><navigator url="/bangdan/pages/view/view?id=8169" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=7994" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-03-18/20190318033954.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=7994" pen-type="redirect" class="pname">意万特陶瓷</navigator><view class="sell">   佛山市汇万特陶瓷有限公司，是集研发、制造、营销、服务于一体的墙、地砖生产企业，旗下拥有“意万特”陶瓷品牌。
-    公司生产基地占地面积620亩，项目前期投资2.3亿，分期建成四条大型现代化建筑陶瓷生产线，主要生产中高档高清喷墨艺术瓷片、瓷抛铂晶大理石、仿古砖等系列产品，目前内墙砖、瓷抛铂晶大理石均已上市，并赢得了良好的市场口碑。 </view><view><navigator url="/bangdan/pages/view/view?id=7994" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=407" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2015-02-02/20150202053246.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=407" pen-type="redirect" class="pname">马可波罗磁砖</navigator><view class="sell">马可波罗瓷砖，企业创立于1988年，品牌诞生于1996年。作为国内最早品牌化、产品系列最全最大的建陶品牌，是多家设计院战略合作品牌及奥运亚运世博会等大型工程建设的主要建材供应品牌。连续11年入选“中国最具价值品牌500强”，2014年，品牌价值120.25亿，连续3年位列建陶行业第一位。</view><view><navigator url="/bangdan/pages/view/view?id=407" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8155" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-10-14/20191014100842.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8155" pen-type="redirect" class="pname">强辉陶瓷</navigator><view class="sell">广东强辉陶瓷有限公司成立于2002年8月30日，地处南国陶都腹地广东佛山市禅城区南庄镇，是一家专业生产各种规格建筑陶瓷的现代化陶瓷企业。公司资金雄厚，设备先进，全线引进意大利陶瓷自动化生产线，生产出一流的产品。公司拥有专业研发、生产经营管理、市场营销等全方位的高素质人才，从而使企业从产品创意设计、系列产品研发、生产经营到营销能力等方面均在同行中居于行业领先地位。</view><view><navigator url="/bangdan/pages/view/view?id=8155" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view><view class="list" ><view class="left imgbox" ><navigator url="/bangdan/pages/view/view?id=8221" ><image mode="aspectFit" src="https://img1.ceramicschina.com/Upfiles/2019-04-26/20190426033208.jpg"></image></navigator></view><view class="infobox right"><navigator url="/bangdan/pages/view/view?id=8221" pen-type="redirect" class="pname">欧朗格陶瓷</navigator><view class="sell">欧朗格陶瓷是佛山欧朗格陶瓷有限公司旗下知名陶瓷品牌，主营300×600、300X800、300×300、800×800、600X1200、750X1500、900X900、800X1600、900X1800、等各类规格高档内墙砖、金刚大理石、通体大理石及仿古砖等系列产品，以海纳古今中西，融合古典、现代与时尚为其主要特色，产品门类齐全，花色推陈出新，更有歌坛天后孙悦为其产品做形象代言。欧朗格吸收中外最先进的设计理念与生产工艺，注重品牌、创新、质量与服务，以精益求精的态度和完善的产品线牢牢把握瓷砖家居市场的主流。欧朗格紧跟行业潮流，生产领先产品，以质量上乘、花色新颖、种类齐全、性价比高、服务完善、信誉可靠等优势获得陶瓷市场的广泛认可。</view><view><navigator url="/bangdan/pages/view/view?id=8221" pen-type="redirect" class="click-btn-s right">点击查看</navigator></view></view></view></view></view>
-
-<view class="content white shadow ppbox">
-<view class="tit" style="background-image:url(/images/list.jpg);">活动组委</view>
-<view class="intro">
-    <!--
-<view>主办单位：中国建筑装饰协会</view>-->
-<view>承办单位：中国陶瓷网</view>
-<view>组织单位：中国建筑卫生陶瓷十大品牌榜组委会</view>
-<view>支持媒体：中央电视台、新华社、新浪家居、地产中国网、新浪地产、网易家居、《中国建设报》、《中华建筑报》、《中国房地产报》、《中国质量报》、《中国建材报》、《中国建筑装饰装修》杂志、《陶瓷信息报》、中国建材工业出版社、央视网能源频道、中装新网、中国建材家居网、美丽中国行网等。</view>
+<view class="page-section-btns" bindtap="scrollToTop">
+   <view class="ToTop">
+       <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
+   </view>
 </view>
-<view class="tit" style="background-image:url(/images/list.jpg);">品牌推广联系方式</view>
-<view class="intro">
-<view>电话：400-115-2002 / 0757-82532106</view>
-<view>联系人：谭小姐 </view>
-<view>传真：0757-82532105</view>
-<view>邮箱：cerchn@163.com </view>
-<view>联系地址：佛山市禅城区张槎塱宝西路广东零壹科技园赣商大厦12楼</view>
-</view>
-</view>
-<view class="footer">
-<view>经营许可证编号：粤ICP备14052601号-1</view>
-<view class="foot">© 2002-2020&nbsp;中国陶瓷网 All Rights Reserved</view>
-</view>
-</view>
- </view>

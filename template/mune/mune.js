@@ -1,6 +1,5 @@
 Page({
     data: {
-
     },
     onLoad: function () {
         // 监听页面加载的生命周期函数

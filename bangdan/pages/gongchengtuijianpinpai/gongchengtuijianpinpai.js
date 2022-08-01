@@ -2,6 +2,19 @@ Page({
     data: {
 
     },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
+    },
     onLoad: function () {
            swan.setNavigationBarTitle({
     title:'工程瓷砖推荐品牌'
@@ -9,7 +22,7 @@ Page({
 swan.setPageInfo({
             title:'工程瓷砖推荐品牌最新排名榜单-陶瓷工程推荐品牌企业有哪些-中国陶瓷网',
             keywords:'工程瓷砖推荐品牌',
-            description:'中国工程推荐品牌榜是由中国陶瓷网和中国建筑装饰协会共同于2019年4月11日在北京人民大会堂举行评选颁奖活动，获得年度工程推荐品牌榜的品牌有: 诺贝尔磁砖、金舵瓷砖、马可波罗磁砖、双庆陶瓷、东鹏瓷砖。',
+            description:'中国工程推荐品牌榜是由中国陶瓷网和中国建筑装饰协会于2020年6月18日陶瓷品牌日共同线上揭幕,获得年度工程推荐品牌榜的品牌有:大将军陶瓷、欧神诺陶瓷、威尔斯陶瓷、金舵瓷砖、白兔瓷砖。',
             articleTitle:'工程瓷砖推荐品牌最新排名榜单-陶瓷工程推荐品牌企业有哪些-中国陶瓷网',
             image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
             success: function () {

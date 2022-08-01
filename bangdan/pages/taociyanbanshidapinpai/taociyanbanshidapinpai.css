@@ -1,0 +1,293 @@
+body{
+    background:#f6f6f6;
+}
+swan-nav{
+    color: #666;
+}
+swan-image{
+    width: 100%;
+}
+
+/* 隐藏 scroll-view 的滚动条  */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.shadow{
+    -moz-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    -webkit-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    box-shadow:0px 10rpx 12rpx #e5e5e5;
+    margin-bottom: 22.5rpx;
+}
+.white{
+    background: #ffffff;
+    overflow: hidden;
+}
+.darkgrey{background:#f6f6f6;}
+.left{float: left;}
+.right{float: right;}
+
+
+.tips-none{display: none;}
+
+/*nav-top*/
+.nav-top{
+    background: #ffffff;
+    width: 100%;
+    padding: 0 0.2rem;
+    white-space: nowrap;
+    font-size: 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.topnavlist{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.nav-top:after{
+	content:"";
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: inset -60rpx 0 45rpx rgba(255, 255, 255, 0.75) !important;
+	height: 150%;
+	width:75rpx;
+	z-index: 999;
+}
+.nav-top swan-nav{
+    display: inline-block;
+    line-height: 90rpx;
+    height: 90rpx;
+    font-size:32.25rpx;
+    color: #666;
+    padding: 0 22.5rpx;
+    text-align: center;
+    position: relative;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+.nav-top .cur{
+    color: #ea1c28;
+}
+.nav-top .cur:after{
+	border-bottom: 5.25rpx #ea1c28 solid;
+	content:"";
+	display:block;
+	height: 7.5rpx;
+	position: absolute;
+	bottom: 12rpx;
+	width: 30%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+/* footer */
+.footer{
+    padding: 51rpx 30rpx;
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 1.5;
+    color: #999;
+}
+
+/* foot */
+.page-section-btns{
+    position: fixed;
+    right: 5vw;
+    bottom: 15vh;
+    width: 112.5rpx;
+    height: 112.5rpx;
+    line-height: 130rpx;
+    border-radius:112.5rpx;
+    text-align: center;
+    background: rgba(226, 226, 226, 0.85);
+    z-index: 999;
+}
+.ToTop{
+    width: 60rpx;
+    margin: auto;
+    height: 112.5rpx;
+    line-height: 130rpx;
+}
+.ToTop swan-image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70rpx;
+}
+
+/* section */
+.section{
+    padding: 30rpx;
+    margin-bottom: 30rpx;
+    background: #ffffff;
+}
+
+/* bangdan */
+/* bdlist */
+.bdlist{
+    overflow: hidden;
+}
+.bdlist .nav-link{
+    float:left;
+    margin-left:4%;
+    width:28%;
+    text-align:center;
+    font-size:28rpx;
+    background:#e5e5e5;
+    margin-top: 24rpx;
+    line-height: 62rpx;
+    border-radius: 6rpx;
+}
+.bdlist .nav-link swan-nav{
+    display:block;
+    height:100%;width:100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #666666;
+}
+.bdlist .nav-link.on{
+    background: #777;
+}
+.bdlist .nav-link.on swan-nav{
+    color: #fff;
+}
+
+/* bangdan list */
+.tenbrandint{
+    margin: 48rpx 30rpx 24rpx;
+}
+.tenbrandint .title{
+    text-align:center;
+    width: max-content;
+    margin: auto;
+    color: #333;
+    margin-bottom: 30rpx;
+    font-weight: bold;
+}
+.tenbrandint .title:before,.tenbrandint .title:after{
+    background: url(../../../images/brand-tit.png) no-repeat center;
+    background-size: 36rpx;
+    content:"";
+    width: 36rpx;
+    height: 48rpx;
+    display: block;
+}
+.tenbrandint .title:before{
+    float:left;
+    margin-right:24rpx;
+}
+.tenbrandint .title:after{
+    float:right;
+    margin-left:24rpx;
+}
+.tenbrandint .int{
+    font-size:24rpx;
+    line-height: 42rpx;
+    color: #999;
+}
+
+.brandlist{
+    padding: 0 30rpx;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.brandlist>.n_con:first-child{
+    margin-top: 14rpx;
+}
+.brandlist .n_con{
+    line-height: 50rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    position: relative;
+    padding: 30rpx;
+    background: #ffffff;
+    box-shadow: 0px 0px 30rpx rgba(223,223,223,0.8);
+    border-radius: 9rpx;
+    margin: 30rpx 0;
+}
+
+.brandlist .covera{
+    display: block;
+    width: 100%;
+    height: 100%;;
+}
+.brandlist .col_right{
+    position:relative;
+    width: 57%;
+    float: right;
+}
+.brandlist .pp_name{
+    font-weight:normal;
+    color:#333333;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.brandlist .pp_con{
+    color:#999999;
+    line-height: 32rpx;
+    margin-top: 12rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24rpx;
+}
+.brandlist .joinbtn{
+    position:absolute;
+    right:0;
+    top: 3.75rpx;
+    font-style: normal;
+    line-height: 45rpx !important;
+    font-size: 24rpx;
+    background: #eee;
+    color: #999;
+    padding: 0 18.75rpx;
+    border-radius: 4rpx;
+}
+.brandlist .brandbox{
+    width: 36.5%;
+    margin-right: 37.5rpx;
+    float: left;
+    line-height: 0;
+}
+
+/* box */
+.ppbox{
+    background: #fff;
+    margin: 36rpx 30rpx 0;
+    border-radius: 9rpx;
+    font-size: 32rpx;
+    display: inline-block;
+    width: 690rpx;
+    max-width: 1434rpx;
+    overflow: hidden;
+    box-shadow: 0px 0px 4vw rgba(223,223,223,0.8);
+}
+.ppbox .title{
+    color:#333;
+    line-height:100rpx;
+    background:#e9e9e9;
+    padding:0 30rpx;
+    font-weight: bold;
+}
+.ppbox .intro{
+    padding:30rpx;
+    color: #999;
+    font-size: 28rpx;
+}
+.ppbox .intro swan-view{
+    padding: 9rpx 0;
+}
