@@ -98,40 +98,12 @@ swan.setPageInfo({
         // 监听页面初次渲染完成的生命周期函数
     },
     clickComment(e) {
-    },
-
-    triggerLogin(e) {
-        swan.login({
-            success: res => {
-                swan.request({
-                    url: 'https://spapi.baidu.com/oauth/jscode2sessionkey',
-                    method: 'POST',
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded'
-                    },
-                    data: {
-                        code: res.code,
-                        'client_id': 'dA6j21UFG51AP6EF1nbkgGKgqtBbPNuQ', // AppKey
-                        sk: 'GQZnocF9DlK0mKg38nDqGZX0wtOzXdNk' // AppSecret
-                    },
-                    success: res => {
-                        if (res.statusCode === 200) {
-                            const commentParam = this.data.commentParam;
-                            this.setData({
-                                commentParam: {
-                                    ...commentParam,
-                                    openid: res.data.openid
-                                }
-                            }, () => {
-                                // 我们建议将参数设为全局变量，方便取用
-                                getApp().globalData.commentParam = this.data.commentParam;
-                            });
-                        }
-                    }
-                });
-            }
+        swan.showToast({
+            title: '评论成功'
         });
     },
+
+
     onShow: function() {
         // 监听页面显示的生命周期函数
     },

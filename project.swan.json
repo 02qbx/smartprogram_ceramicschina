@@ -1,22 +1,31 @@
 {
     "appid": "15784611",
+    "compilation-args": {
+        "common": {
+            "quickPreview": true
+        }
+    },
     "developType": "normal",
     "host": "baiduboxapp",
     "minSwanVersion": "3.0.39",
     "preview": {
-        "packageId": 714312
+        "packageId": 944245
     },
     "projectname": "中陶网小程序",
     "publish": {
-        "version": "1.0.41.0"
+        "tips": [
+            "小程序包内容将被百度解析和收录，用于内容的风险控制。",
+            "若您已开通分享web化，请确保分享web化体验无问题后，再进行发布。"
+        ],
+        "version": "1.0.44.0"
     },
     "setting": {
         "urlCheck": false
     },
     "swan": {
         "baiduboxapp": {
-            "swanJsVersion": "3.320.32",
-            "extensionJsVersion": "1.21.2"
+            "extensionJsVersion": "1.21.2",
+            "swanJsVersion": "3.320.32"
         }
     },
     "swanList": ""

@@ -1,28 +1,29 @@
 {
     "pages": [
-        "pages/index/index",
-        "template/mune2/mune2",
-        "components/custom/ss.js/ss.js",
-        "components/custom/custom",
-        "components/customview/customview",
-        "template/IndexMune/IndexMune"
+        "pages/index/index"
     ],
     "subPackages": [
         {
-            "root": "bangdan",
+
+            "root": "bangdan/pages",
+            "name": "packageOne",
             "pages": [
-                "pages/index/index",
-                "pages/view/view",
-                "pages/indexpinpai/indexpinpai"
-            ]
+                "index/index",
+                "view/view",
+                "indexpinpai/indexpinpai"
+            ] ,
+            "independent": true
         },
         {
-            "root": "news",
+
+            "root": "news/pages",
+            "name": "packageTwo",
             "pages": [
-                "pages/list/list",
-                "pages/view/view",
-                "pages/index/index"
-            ]
+                "list/list",
+                "view/view",
+                "index/index"
+            ],
+            "independent": true
         }
     ],
     "window": {
@@ -36,7 +37,9 @@
         "myDynamicLib": {
             "provider": "swan-interaction"
         }
-    },
+    }
+
+    ,
     "tabBar": {
         "backgroundColor" : "#ffffff",
         "borderStyle": "black",
@@ -44,7 +47,7 @@
         "selectedColor": "#f00",
         "list": [
             {
-                "pagePath": "pages/index/index",
+                "pagePath": "/pages/index/index",
                 "text": "首页",
                 "iconPath": "/images/shouye.png",
                 "selectedIconPath": "/images/shouye_h.png"
