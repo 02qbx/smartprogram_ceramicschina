@@ -38,13 +38,13 @@
     <view class="pinglun">
         <view class="title">评论列表</view>
         <!-- 评论列表组件 -->
-        <comment-list class="list"
-            comment-param="{{commentParam}}"
-            detail-path="{{detailPath}}"
-            toolbar-config="{{toolbarConfig}}"
-            bindclickcomment="clickComment"
-            bindunlogin="triggerLogin"
-        ></comment-list>
+        <comment-list
+    comment-param="{{commentParam}}"
+    detail-path="{{detailPath}}"
+    toolbar-config="{{toolbarConfig}}"
+    bindclickcomment="clickComment">
+</comment-list>
+
     </view>
 
 </view>
