@@ -1,18 +1,5 @@
 Page({
-    setTabBarStyle() {
-        swan.setTabBarStyle({
-            color: '#000', // black
-            selectedColor: '#FF0000', // red
-            backgroundColor: '#FFFFBD',
-            borderStyle: 'black', // 可选值还有white
-            success: () => {
-                console.log('setTabBarStyle success');
-            },
-            fail: err => {
-                console.log('setTabBarStyle fail', err);
-            }
-        });
-    },
+
     data: {
 
     },

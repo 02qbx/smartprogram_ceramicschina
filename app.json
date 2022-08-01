@@ -41,6 +41,10 @@
 
     ,
     "tabBar": {
+        "backgroundColor" : "#ffffff",
+        "borderStyle": "black",
+        "color": "#333",
+        "selectedColor": "#f00",
         "list": [
             {
                 "pagePath": "/pages/index/index",
@@ -49,27 +53,24 @@
                 "selectedIconPath": "/images/shouye_h.png"
             },
             {
-                "pagePath": "news/pages/list/list?id=959",
+                "pagePath": "news/pages/index/index",
                 "text": "新闻眼",
                 "iconPath": "/images/xinwen.png",
                 "selectedIconPath": "/images/xinwen_h.png"
             },
             {
-                "pagePath": "/bangdan/pages/indexpinpai/indexpinpai",
+                "pagePath": "bangdan/pages/indexpinpai/indexpinpai",
                 "text": "品牌馆",
                 "iconPath": "/images/pinpai.png",
                 "selectedIconPath": "/images/pinpai_h.png"
             },
             {
-                "pagePath": "news/pages/list/list?id=959",
+                "pagePath": "Video/index/index",
                 "text": "视频",
                 "iconPath": "/images/shipin.png",
                 "selectedIconPath": "/images/shipin_h.png"
             }
-        ],
-        "backgroundColor" : "#ffffff",
-        "borderStyle": "white",
-        "color": "#000",
-        "selectedColor": "#6495ED"
+        ]
+
     }
 }
