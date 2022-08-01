@@ -1,7 +1,12 @@
 {
     "pages": [
         "pages/index/index",
-        "template/mune2/mune2"
+        "template/mune2/mune2",
+        "components/custom/ss.js/ss.js",
+        "components/custom/custom",
+        "components/customview/customview",
+        "template/IndexMune/IndexMune"
+
     ],
     "subPackages": [
         {
@@ -9,26 +14,15 @@
             "pages": [
                 "pages/index/index",
                 "pages/view/view",
-                "pages/indexpinpai/indexpinpai",
-                "pages/taocishidapinpai/taocishidapinpai",
-                "pages/weiyushidapinpai/weiyushidapinpai",
-                "pages/cizhuanshidapinpai/cizhuanshidapinpai",
-                "pages/taociyixian/taociyixian",
-                "pages/dalishishidapinpai/dalishishidapinpai",
-                "pages/fangguzhuan/fangguzhuan",
-                "pages/xiandaizhuanshidapinpai/xiandaizhuanshidapinpai",
-                "pages/muwenzhuanshidapinpai/muwenzhuanshidapinpai",
-                "pages/cipian/cipian",
-                "pages/gongnengcizhuan/gongnengcizhuan",
-                "pages/shejishituijian/shejishituijian",
-        "pages/gongchengtuijianpinpai/gongchengtuijianpinpai"
+                "pages/indexpinpai/indexpinpai"
             ]
         },
         {
             "root": "news",
             "pages": [
                 "pages/list/list",
-                "pages/view/view"
+                "pages/view/view",
+                "pages/index/index"
             ]
         }
     ],
@@ -37,5 +31,10 @@
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "中国陶瓷网",
         "backgroundTextStyle": "light"
+    },
+    "dynamicLib": {
+        "myDynamicLib": {
+            "provider": "swan-interaction"
+        }
     }
 }

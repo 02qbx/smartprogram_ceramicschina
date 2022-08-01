@@ -1,39 +1,56 @@
 <import src="../../../wxParse/wxParse.swan"/>
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
 <view class="container">
-    <view class="darkgrey">
-        <import src="/template/mune/mune.swan" /> 
+    <import src="/template/mune/mune.swan" />
         <!-- content -->
-        <view class="white newsview shadow">
-            <view class="art_title">{{pg_news.news_title}}</view>
-            <view class="tit">
-                <view>{{pg_news.re_title}}</view>
-                <view>{{pg_news.news_from}}</view>
-                <view>{{pg_news.make_date}}</view>
-            </view>
-            <view class="art_content">         
-              <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
-            </view>
+    <view class="white newsview">
+        <view class="art_title">{{pg_news.newsTitle}}</view>
+        <view class="tit">
+            <view>{{pg_news.reTitle}}</view>
+            <view>{{pg_news.newsFrom}}</view>
+            <view>{{pg_news.makeDate}}</view>
+        </view>
+        <view class="art_content">
+            <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
+        </view>
+
             <!-- 广告位 -->
-            
-            <navigator class="ad" url="/pages/index/index" >
-                <image mode="widthFix" src="/images/1.jpg"></image>
-                <view class="gg">广告</view>
-            </navigator>
+        <navigator class="ad" url="/pages/index/index" >
+            <image mode="widthFix" src="/images/1.jpg"></image>
+            <view class="gg">广告</view>
+        </navigator>
 
-            <!-- 头条推荐 -->
-            <view class="newslist">
-                <view class="title">头条推荐</view>
-                <view class="news-con">
-                    <block s-for="{{list}}" s-for-item="item">
-                    <navigator url="/news/pages/view/view?id={{item.id}}" >{{item.news_title}}</navigator>
-                    </block>
-                </view>
+        <!-- 头条推荐 -->
+        <view class="newslist">
+            <view class="title">头条推荐</view>
+            <view class="news-con">
+                <block s-for="{{list}}" s-for-item="item">
+                    <navigator url="/news/pages/view/view?id={{item.id}}" >{{item.newsTitle}}</navigator>
+                </block>
             </view>
         </view>
+        <!-- 头条推荐 -->
+    </view>
 
-        <view class="footer">
-            <view>经营许可证编号：粤ICP备14052601号-1</view>
-            <view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
-        </view>
+    <view class="pinglun">
+        <view class="title">评论列表</view>
+        <!-- 评论列表组件 -->
+        <comment-list class="list"
+            comment-param="{{commentParam}}"
+            detail-path="{{detailPath}}"
+            toolbar-config="{{toolbarConfig}}"
+            bindclickcomment="clickComment"
+            bindunlogin="triggerLogin"
+        ></comment-list>
+    </view>
+
+</view>
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
     </view>
 </view>
+

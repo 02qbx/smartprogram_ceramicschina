@@ -1,1 +1,10 @@
-{}
+{
+    "navigationBarTitleText": "icon",
+    "navigationStyle": "custom",
+    "backgroundColorTop": "#f5f5f5",
+    "backgroundColor": "#f5f5f5",
+    "usingComponents": {
+        "smt-navigation": "@smt-ui/component/src/navigation",
+        "smt-icon": "@smt-ui/component/src/icon"
+    }
+}

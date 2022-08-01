@@ -1,18 +1,31 @@
 const app = getApp()
 
 Page({
-   data: {
-list:[],
-PG_PinpaiData:[],
-PG_PinpaiData2:[] 
+    data: {
+        list:[],
+        PG_PinpaiData:[],
+        PG_PinpaiData2:[]
+    },
+    //top
+    scrollToTop() {
+        swan.pageScrollTo({
+            scrollTop: 0,
+            duration: 300,
+            success: res => {
+                console.log('pageScrollTo success', res);
+            },
+            fail: err => {
+                console.log('pageScrollTo fail', err);
+            }
+        });
     },
     onLoad: function () {
-       var that=this; 
+       var that=this;
             swan.setNavigationBarTitle({
     title: '中国陶瓷网十大品牌榜'
-    });   
-    swan.request({
-        url: 'https://smartprogram.ceramicschina.com/pinpai_ty',
+    });
+  /*  swan.request({
+        url: 'https://smartprogram.ceramicschina.com/pinpai_all',
         method: 'GET',
         dataType: 'json',
          data: {
@@ -21,13 +34,14 @@ PG_PinpaiData2:[]
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) { 
-            
-               that.setData({              
+        success: function (res) {
+
+               that.setData({
               PG_PinpaiData:res.data
             })
-        }     
+        }
         })
+        /*
         swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpai_ty',
         method: 'GET',
@@ -38,43 +52,43 @@ PG_PinpaiData2:[]
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) { 
-            
-               that.setData({              
+        success: function (res) {
+
+               that.setData({
               PG_PinpaiData2:res.data
             })
-        }     
+        }
         })
-
-     /* swan.request({
-        url: 'https://smartprogram.ceramicschina.com/pinpaitype',
+*/
+      swan.request({
+        url: 'https://smartprogram.ceramicschina.com/pinpai_all',
         method: 'GET',
         dataType: 'json',
-         
+
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) {           
-               that.setData({              
+        success: function (res) {
+               that.setData({
               list:res.data
-            }) 
-           }     
+            })
+           }
         })
-        */
- 
+
+
         // 监听页面加载的生命周期函数
-    }, 
+    },
 
     onReady: function() {
         // 监听页面初次渲染完成的生命周期函数
     },
     onShow: function() {
         swan.setPageInfo({
-    title: '陶瓷十大品牌,瓷砖十大品牌,陶瓷一线品牌,卫浴十大品牌,大理石瓷砖十大品牌,十大品牌陶瓷排行榜-中国陶瓷网',
-    keywords: '陶瓷十大品牌,瓷砖十大品牌,陶瓷一线品牌,卫浴十大品牌,大理石瓷砖十大品牌',
-    description: '十大陶瓷排行榜为中国陶瓷网举行的中国建筑卫生陶瓷年度榜单评选，其中包括陶瓷十大品牌,瓷砖十大品牌,陶瓷一线品牌,卫浴十大品牌,大理石瓷砖十大品牌,十大品牌陶瓷排行榜,全抛釉十大品牌等。',
-    articleTitle: '陶瓷十大品牌,瓷砖十大品牌,陶瓷一线品牌,卫浴十大品牌,大理石瓷砖十大品牌,十大品牌陶瓷排行榜-中国陶瓷网',
-    image: ['https://m.ceramicschina.com/images/2019bdfm.jpg'],
+    title: '陶瓷品牌_瓷砖品牌_卫浴品牌_十大陶瓷排行榜-中国陶瓷网',
+    keywords: '陶瓷品牌,瓷砖品牌,卫浴品牌',
+    description: '十大陶瓷排行榜为中国陶瓷网举行的中国建筑卫生陶瓷年度榜单评选，其中包括陶瓷十大品牌、瓷砖十大品牌、卫浴十大品牌、全抛釉十大品牌等。',
+    articleTitle: '陶瓷品牌_瓷砖品牌_卫浴品牌_十大陶瓷排行榜-中国陶瓷网',
+    image: ['https://m.ceramicschina.com/images/logo121.jpg'],
             success: function () {
                 console.log('setPageInfo success');
             },

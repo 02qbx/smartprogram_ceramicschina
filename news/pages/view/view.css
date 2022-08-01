@@ -1,19 +1,27 @@
 view{
     color: #666;
 }
+body{
+    background:#f6f6f6;
+}
+/* 隐藏 scroll-view 的滚动条  */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
 swan-image{
     width: 100%;
 }
 .shadow{
-    -moz-box-shadow:0px 5px 6px #e5e5e5; 
-    -webkit-box-shadow:0px 5px 6px #e5e5e5; 
-    box-shadow:0px 5px 6px #e5e5e5;
-    margin-bottom: .3rem;
+    -moz-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    -webkit-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    box-shadow:0px 10rpx 12rpx #e5e5e5;
+    margin-bottom: 22.5rpx;
 }
 .white{
     background: #ffffff;
-    /* margin: 0 0.2rem 0.2rem;
-    border-radius: 5px; */
     overflow: hidden;
 }
 .darkgrey{
@@ -26,105 +34,226 @@ swan-image{
     float: right;
 }
 
-.logo{
-    display:flex;               
-    justify-content: center;         
-}
- .logo image{
-    width: 100px;
-    height: 50px;
-}
 
 /*nav-top*/
 .nav-top{
-    background: #9b0101;
+    background: #ffffff;
     width: 100%;
+    padding: 0 0.2rem;
+    white-space: nowrap;
+    font-size: 0;
+    position: relative;
+    box-sizing: border-box;
     overflow: hidden;
 }
+.topnavlist{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.nav-top:after{
+	content:"";
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: inset -60rpx 0 45rpx rgba(255, 255, 255, 0.75) !important;
+	height: 150%;
+	width:75rpx;
+	z-index: 999;
+}
 .nav-top swan-nav{
-    float: left;
-    line-height: 40px;
-    height: 40px;
-    font-size:16px;
-    color: #fff;
-    width: 16.667%;
+    display: inline-block;
+    line-height: 1.2rem;
+    height: 1.2rem;
+    font-size:0.43rem;
+    color: #666;
+    padding: 0 0.2rem;
     text-align: center;
+    position: relative;
+    width: 33.33%;
+    box-sizing: border-box;
+}
+.nav-top .cur{
+    color: #ea1c28;
+}
+.nav-top .cur:after{
+	border-bottom: 0.07rem #ea1c28 solid;
+	content:"";
+	display:block;
+	height: 0.1rem;
+	position: absolute;
+	bottom: 0;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 .bangdan-nav{
     background: #f0f0f0;
+    width: 100%;
+    padding: 0 9.75rpx;
+    white-space: nowrap;
+    height: 60rpx;
+    font-size: 0;
+    box-sizing: border-box;
     overflow: hidden;
-    padding: 5px 0;
+    position: relative;
+}
+.bdnavlist{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.bangdan-nav:after{
+	content:"";
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: inset -60rpx 0 45rpx rgba(245, 245, 245, 0.75) !important;
+	height: 150%;
+	width:75rpx;
+	z-index: 999;
 }
 .bangdan-nav swan-nav{
-    float: left;
-    font-size: 12px;
+    display: inline-block;
+    font-size: 24rpx;
     text-align: center;
-    width: 33.334%;
-    line-height: 25px;
+    padding: 0 15rpx;
+    line-height: 60rpx;
     overflow: hidden;
     white-space: nowrap;
-	text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    color: #b5b5b5;
+}
+
+/* foot */
+.page-section-btns{
+    position: fixed;
+    right: 5vw;
+    bottom: 15vh;
+    width: 112.5rpx;
+    height: 112.5rpx;
+    line-height: 130rpx;
+    border-radius:112.5rpx;
+    text-align: center;
+    background: rgba(226, 226, 226, 0.85);
+    z-index: 999;
+}
+.ToTop{
+    width: 60rpx;
+    margin: auto;
+    height: 112.5rpx;
+    line-height: 130rpx;
+}
+.ToTop swan-image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70rpx;
 }
 
 /* newsview */
 .newsview{
-    padding: 15px 12px;
-    margin-bottom: 15px;
+    padding: 15rpx 30rpx 30rpx;
+    margin-bottom: 30rpx;
 }
 .art_title{
-    font-size: 20px;
     font-weight: bold;
     color: #333;
+    margin: 30rpx 0;
+    text-align-last:left;
+    text-align:justify;
+    line-height: 1.4;
+    font-size: 40rpx;
 }
 .newsview .tit{
     overflow: hidden;
-    border-bottom: 1px #ddd dotted;
-    padding-bottom: 5px;
 }
 .newsview .tit swan-view{
     float: left;
-    margin-right: 10px;
-    font-size: 12px;
-    line-height: 30px;
+    margin-right: 20rpx;
+    font-size: 24rpx;
+    line-height: 1.4;
+    color: #999;
 }
 .newsview .tit swan-view:nth-child(3){
-    background: url(https://mip.ceramicschina.com/images/m_read.jpg) left center no-repeat;
-    padding-left: 18px;
-    background-size: 13px; 
 }
 .art_content{
-    font-size: 14px;
-    margin: 15px 0;
+    margin: 50rpx 0 75rpx;
+    line-height: 54rpx;
 }
 .art_content swan-image{
     width: 100%;
 }
-.art_content swan-view{
-    margin-bottom: 8px;
-    line-height: 28px;
+.art_content .wxParse-p{
+    margin: 30rpx 0;
+    text-align-last:left;
+    text-align:justify;
+    line-height: 1.8;
+    font-size: 32rpx;
+    width:100%;
+    overflow:hidden;
+}
+.art_content .wxParse-p swan-view{
+    color: #333;
 }
 
 /* 头条推荐 */
 .newslist{
-    margin-top: 10px;
+    margin-top: 20rpx;
+    overflow:hidden;
 }
 .newslist .title{
-    line-height: 35px;
-    border-bottom: 4px #c00 solid;
-    float:left;
-    width: 80px;
-    text-align: center;
+    line-height: 36rpx;
 }
+.n_list .n_list-head,.newslist .title,.pinglun .title{
+    position:relative;
+    padding-left: 24rpx;
+    color: #333;
+    margin-top: 18.75rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    height: 36rpx;
+    padding: 17rpx 0 17rpx 24rpx;
+    line-height: 36rpx;
+}
+.n_list .n_list-head:before,.newslist .title:before,.pinglun .title:before{
+    content:"";
+    display:block;
+    width: 6rpx;
+    height: 36rpx;
+    background: #e22020;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.pinglun{
+    padding-top: 4rpx;
+    background: #ffffff;
+}
+.pinglun .title{
+    padding-left: 48rpx;
+}
+.pinglun .title::before{
+    left: 24rpx;
+}
+
 .newslist .news-con{
-    font-size: 14px;
+    font-size: 28rpx;
     overflow: hidden;
     width: 100%;
-    padding: 5px 0;
+    padding: 10rpx 0;
 }
 .newslist .news-con swan-nav{
-    border-bottom: 1px #d5d5d5 dotted;
-    line-height: 40px;
-    padding: 0 10px;
+    line-height: 64rpx;
+    padding: 0 20rpx;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -137,62 +266,96 @@ swan-image{
 }
 .ad .gg{
     position: absolute;
-    font-size: 12px;
+    font-size: 24rpx;
     right: 0;
-    bottom: 4px;
+    bottom: 8rpx;
     background: rgba(0,0,0,0.65);
     color: #fff;
-    padding: 2px 5px;
+    padding: 4rpx 10rpx;
     opacity: 0.5;
 }
 
 /* footer */
-.footer{text-align: center;font-size: 12px;line-height: 25px;}
-.foot{background: #9b0101;color: #fff;}
+.footer{
+    padding: 0.68rem 0.4rem;
+    text-align: center;
+    font-size: 0.32rem;
+    line-height: 1.5;
+}
 
-@media screen and (min-width:640px){
-    .logo swan-image{
-        width: 150px;
-        height: 80px;
-    }
 
-    .bangdan-nav swan-nav{
-        font-size: 14px;
-        line-height: 28px;
-    }
-    .nav-top swan-nav{
-        line-height: 45px;
-        height: 45px;
-        font-size: 16px;
-    }
+.article-header {
+    padding: 0 34rpx;
+}
 
-    .art_title{
-        font-size: 22px;
-        line-height: 48px;
-    }
-    .newsview{
-        padding: 20px 30px;
-    }
-    .newsview .tit{
-        padding-bottom: 15px;
-    }
-    .newslist .title{
-        font-size: 18px;
-        padding: 0 5px;
-    }
-    .newslist .news-con swan-nav{
-        line-height: 45px;
-    }
+.article-header .title {
+    display: block;
+    font-size: 48rpx;
+    line-height: 1.5;
+    font-weight: 700;
+}
 
-    swan-swiper{
-        height: 350px !important;
-    }
+.article-header .source {
+    margin-top: 48rpx;
+    display: flex;
+    align-items: flex-start;
+}
 
-    .footer{
-        line-height: 45px;
-        font-size: 14px;
-    }
-    .foot{
-        line-height: 35px;
-    }
+.article-header .source image {
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 100%;
+    margin-right: 16rpx;
+    background-color: #eef1f4;
+    background-size: 32rpx 32rpx;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../common/assets/logo-default.png);
+}
+
+.article-header .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70rpx;
+}
+
+.article-header .info .author {
+    font-size: 32rpx;
+    line-height: 1;
+    display: block;
+    color: #000;
+    margin-bottom: 14rpx;
+}
+
+.article-header .info .time {
+    display: block;
+    color: #999;
+    font-size: 24rpx;
+    line-height: 1;
+}
+
+.article-content {
+    color: #000;
+    font-size: 38rpx;
+    line-height: 1.58;
+    letter-spacing: 2.84;
+    margin-bottom: 60rpx;
+}
+
+.article-content .content-img {
+    width: 100%;
+    margin-top: 60rpx;
+    vertical-align: bottom;
+    background-color: #eef1f4;
+    background-size: 64rpx 64rpx;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../common/assets/logo-default.png);
+}
+
+.article-content .content-p {
+    margin: 49rpx 34rpx -11rpx 34rpx;
+    text-align: justify;
+    word-break: break-all;
 }

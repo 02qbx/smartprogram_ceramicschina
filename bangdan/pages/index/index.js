@@ -8,26 +8,26 @@ Page({
 RedirectUrl:''
     },
     onLoad: function (options) {
-          var that=this; 
+          var that=this;
           var  listdata="";
             var strname="";
             var RedirectUrl="";
-     /* swan.request({
+       swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpaitype',
         method: 'GET',
         dataType: 'json',
-         
+
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) {           
-               that.setData({              
-              list:res.data,
-              enname:options.typename
-            }) 
-           }     
+        success: function (res) {
+               that.setData({
+              list:res.data
+
+            })
+           }
         })
-        */
+
         swan.request({
         url: 'https://smartprogram.ceramicschina.com/pinpai_ty',
         method: 'GET',
@@ -38,29 +38,29 @@ RedirectUrl:''
         header: {
             'content-type': 'application/json' // 默认值
         },
-        success: function (res) { 
-            
-            for (var index in res.data.PG_PinpaiData) {
-         listdata+= res.data.PG_PinpaiData[index].PinpaiDigest.PinpaiName+'、';
+        success: function (res) {
+            console.log(res);
+            for (var index in res.data.pg_pinpaidata) {
+         listdata+= res.data.pg_pinpaidata[index].pg_pinpaidigest.pinpainame+'、';
         }
          listdata = listdata.substring(0, listdata.length - 1);
 
-               that.setData({              
-              PG_PinpaiData:res.data.PG_PinpaiData,
+               that.setData({
+              PG_PinpaiData:res.data.pg_pinpaidata,
               listdata:listdata,
                enname:options.typename,
-               strname:res.data.PinpaiTypeName,
-               RedirectUrl:res.data.RedirectUrl
+               strname:res.data.pinpaitypename,
+               RedirectUrl:res.data.redirecturl
             })
             swan.setNavigationBarTitle({
-    title: res.data.PinpaiTypeName
+    title: res.data.pinpaitypename
 });
 swan.setPageInfo({
-            title: res.data.PinpaiTypeWebTitle,
-            keywords: res.data.PinpaiTypeWebKeywords,
-            description:'中国'+strname+'榜是由'+RedirectUrl+'，获得年度'+strname+'榜的品牌有:'+listdata+'。',
-            articleTitle: res.data.PinpaiTypeWebTitle,
-            image: ['https://m.ceramicschina.com/images/s_2019bangdan.jpg'],
+            title: res.data.pinpaitypewebtitle,
+            keywords: res.data.pinpaitypewebkeywords,
+            description:RedirectUrl+"·"+strname+"”的有："+listdata+"（以上排名不分前后）",
+            articleTitle: res.data.pinpaitypewebtitle,
+            image: ['https://m.ceramicschina.com/images/logo121.jpg'],
             success: function () {
                 console.log('setPageInfo success');
             },
@@ -69,7 +69,7 @@ swan.setPageInfo({
             }
         })
 
-           }     
+           }
         })
 
        /*    swan.request({
@@ -83,17 +83,17 @@ swan.setPageInfo({
             'content-type': 'application/json' // 默认值
         },
         success: function (res) {
-           
+
 strname=res.data.PinpaiTypeName;
           that.setData(
             'strname',res.data.PinpaiTypeName
         );
-        
+
 
 
        // console.log('picker-time changed，值为', res.data);
         }
-    }); 
+    });
         */
         // 监听页面加载的生命周期函数
     },

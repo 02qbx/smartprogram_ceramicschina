@@ -1,14 +1,31 @@
-view{color: #666;}
+body{
+    background:#f6f6f6;
+}
+swan-nav{
+    color: #666;
+}
+swan-image{
+    width: 100%;
+}
+
+/* 隐藏 scroll-view 的滚动条  */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+swan-button:after{
+    border: none;
+}
 .shadow{
-    -moz-box-shadow:0px 0px 10px #cccccc; 
-    -webkit-box-shadow:0px 0px 10px #cccccc; 
-    box-shadow:0px 0px 10px #cccccc;
-    margin-bottom: .3rem;
+    -moz-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    -webkit-box-shadow:0px 10rpx 12rpx #e5e5e5;
+    box-shadow:0px 10rpx 12rpx #e5e5e5;
+    margin-bottom: 22.5rpx;
 }
 .white{
     background: #ffffff;
-    margin: 0 0.2rem 0.2rem;
-    border-radius: 5px;
     overflow: hidden;
 }
 .darkgrey{background:#f6f6f6;}
@@ -17,385 +34,346 @@ view{color: #666;}
 
 /*nav-top*/
 .nav-top{
-    background: #9b0101;
+    background: #f2f2f2;
     width: 100%;
+    padding: 0 15rpx;
+    white-space: nowrap;
+    font-size: 0;
+    position: relative;
+    box-sizing: border-box;
     overflow: hidden;
+}
+.topnavlist{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.nav-top:after{
+	content:"";
+	position: absolute;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: inset -60rpx 0 45rpx rgba(242, 242, 242, 0.75) !important;
+	height: 150%;
+	width:75rpx;
+	z-index: 999;
 }
 .nav-top swan-nav{
-    float: left;
-    line-height: 40px;
-    height: 40px;
-    font-size:16px;
-    color: #fff;
-    width: 16.667%;
+    display: inline-block;
+    line-height: 90rpx;
+    height: 90rpx;
+    font-size:32.25rpx;
+    color: #666;
+    padding: 0 22.5rpx;
     text-align: center;
+    position: relative;
+    width: 33.33%;
+    box-sizing: border-box;
 }
-.bangdan-nav{
-    background: #f0f0f0;
-    overflow: hidden;
-    padding: 5px 0;
+.nav-top .cur{
+    color: #ea1c28;
 }
-.bangdan-nav swan-nav{
-    float: left;
-    font-size: 12px;
-    text-align: center;
-    width: 33.334%;
-    line-height: 25px;
-    overflow: hidden;
-    white-space: nowrap;
-	text-overflow: ellipsis;
-}
-.red{    
-    color: red;
-    text-align: center;
-    background-color:#f8f8f8;
-}
-.logo{
-   display:flex;               
- justify-content: center;         
-}
- .logo image{
-  width: 100px;
-  height: 50px;
-}
-.banner image{
-    width: 100%;
-    height: 150px;
-}
-.nav{
-    margin: 4% auto 3% !important;
-    overflow: hidden;
-}
-.nav-list{
-    width: 32%;
-    margin: 0 2% 2% 0;
-    float: left;
-    background: #e5e5e5;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
-    color: #4c4c4c;
-    line-height: 25px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+.nav-top .cur:after{
+	border-bottom: 5.25rpx #ea1c28 solid;
+	content:"";
+	display:block;
+	height: 7.5rpx;
+	position: absolute;
+	bottom: 0;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 
-.nav-list .navigator-hover,.nav-list .active{
-    background: #9b0101;
-    color: #fff;
-    opacity: 1;
+/* footer */
+.footer{
+    padding: 51rpx 30rpx;
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 1.5;
+    color: #999;
 }
-.nav-list swan-nav{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+
+/* foot */
+.page-section-btns{
+    position: fixed;
+    right: 5vw;
+    bottom: 15vh;
+    width: 112.5rpx;
+    height: 112.5rpx;
+    line-height: 130rpx;
+    border-radius:112.5rpx;
+    text-align: center;
+    background: rgba(226, 226, 226, 0.85);
+    z-index: 999;
 }
-.nav .nav-list:nth-child(3n){margin-right: 0;}
-.content{
-    margin: 2% auto 5%;
-    overflow: hidden;
-    max-width:750px;
-    width:92%;
-}
-.intro{
-    padding: 3% 4%;
-    color: #666;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: justify;
-    text-justify: inter-ideograph;/*IE*/
-}
-swan-image{
-    max-width: 100%;
+.ToTop{
+    width: 60rpx;
     margin: auto;
+    height: 112.5rpx;
+    line-height: 130rpx;
+}
+.ToTop swan-image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70rpx;
+}
+
+/* bangdan list */
+.tenbrandint{
+    margin: 48rpx 30rpx 24rpx;
+}
+.tenbrandint .title{
+    text-align:center;
+    width: max-content;
+    margin: auto;
+    color: #333;
+    margin-bottom: 30rpx;
+    font-weight: bold;
+}
+.tenbrandint .title:before,.tenbrandint .title:after{
+    background: url(../../../images/brand-tit.png) no-repeat center;
+    background-size: 36rpx;
+    content:"";
+    width: 36rpx;
+    height: 48rpx;
     display: block;
 }
-
-.footer{text-align: center;font-size: 12px;line-height: 25px;}
-.foot{background: #9b0101;color: #fff;}
-
-.click-btn-s{
-    background: #d81315;
-    text-align: center;
-    color: #fff;
-    padding:0px 8px;
-    border-radius: 5px;
-    line-height: 20px;
-    margin-top: 5px;
+.tenbrandint .title:before{
+    float:left;
+    margin-right:24rpx;
 }
-.ppbox .tit{
-    padding: 3% 4%;
-    margin: 0% 2%;
-    border-bottom: 1px #ddd solid;
-    color: #000;
-    font-weight: bold;
-    font-size: 14px;
+.tenbrandint .title:after{
+    float:right;
+    margin-left:24rpx;
+}
+.News_content{
+    text-align: justify;
+    font-size:36rpx;
+    line-height:54rpx;
+    margin-top: 36rpx;
+    position: relative;
+    margin-bottom: 75rpx;
     overflow: hidden;
 }
-.ppbox .tit .left{
-        color: #000;
-    }
+.News_content p{
+    margin-bottom: 36rpx;
+    /* color:#333; */
+    font-size: 32rpx;
+}
+
+/* box */
+.ppbox{
+    background: #fff;
+    margin: 36rpx 30rpx 0;
+    border-radius: 9rpx;
+    font-size: 32rpx;
+    display: inline-block;
+    width: 690rpx;
+    max-width: 1434rpx;
+    overflow: hidden;
+    box-shadow: 0px 0px 4vw rgba(223,223,223,0.8);
+}
+.ppbox>.title{
+    color:#333;
+    line-height:100rpx;
+    background:#e9e9e9;
+    padding:0 30rpx;
+    font-weight: bold;
+    overflow: hidden;
+}
 .ppbox .intro{
-    margin:0% 2%;
+    padding:30rpx;
+    color: #999;
+    font-size: 28rpx;
+}
+.ppbox .intro>swan-view{
+    padding: 9rpx 0;
 }
 .ppbox .intro swan-view{
-    margin: 10px 0;
-}
-.ppbox .intro .list{
-    border-bottom: 1px #ddd dotted;
-    padding: 0 5px;
-}
-.ppbox .intro .list .tittop,.ppbox .intro .list .left,.ppbox .intro .list .right{
-    overflow: hidden;
-    margin: 0;
-    color: #ccc;
-}
-.ppbox .intro .list .con{
-    overflow: hidden;
+    line-height: 1.5;
+    color: #666;
+    font-size: 32rpx;
 }
 
-.pinpai{
+/* brand */
+.brandsbox{
+    background:#ffffff;
+    padding:30rpx;
+    width:100%;
     overflow: hidden;
-    font-size: 12px;
-    border-bottom: 1px #ddd solid;
+    box-sizing: border-box;
 }
-.pinpai .pptop{
-    width: 45%;
-    float: left;
-    text-align: center;
-    line-height: 25px;
+.brandbox,.brandsbox>.right{
+    float:left;
 }
-.pinpai .pptop swan-image{
-    height: 90px;
-    border-bottom: 1px #ddd dotted;
-    width: 85%;
-    padding: 5% 0;
-    margin-bottom: 15px;
+.brandsbox>.ppname{
+    overflow: hidden;
 }
-.pinpai .pptop swan-button{
-    background: #ef5414;
-    color:#fff;
-    opacity: 1;
-    line-height: 30px;
-    width: 80px;
-    margin-top:10px;
+.brandbox{
+    margin-right: 20rpx;
+    width: 225rpx;
+    height: 120rpx;
+    position: relative;
 }
-.pinpai .ppbot{
-    width: 49%;
-    padding:0 3%;
-    float: left;
-    background: #e9e9e9;
+.brandbox.imgbox>swan-image{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
-.pinpai .ppbot .ppname{
-    color: #d81315;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 45px;
-    border-bottom: 1px #ddd solid;
+.brandsbox .ppname>.right{
+    width: 440rpx;
+    font-size: 24rpx;
+    color: #999;
+    padding-left: 36rpx;
+    box-sizing: border-box;
+    border-left: 1px #e5e5e5 dotted;
+    min-height: 120rpx;
 }
-.pinpai .ppbot .ppcon{
-    margin: 8px 0;
-    text-overflow: ellipsis;
+.brandsbox .con>swan-view{
+    display:inline-block;
+    margin-top: 10rpx;
+    margin-right: 30rpx;
+}
+.brandsbox .con .red{
+    color: #f34225;
+    margin-right: 10rpx;
+}
+.brandsbox .con>swan-view:last-child{
+    margin-right: 0;
+}
+.namebox{
     white-space: nowrap;
     overflow: hidden;
-    line-height: 22px;
+    text-overflow: ellipsis;
+    margin-top: 11.25rpx;
+    font-weight:bold;
+    color:#333;
+    font-size: 36rpx;
 }
-.pinpai .ppbot .ppcon .ewm swan-image{
-    height: 80px;
-    margin-top: 10px;
+.namebox p{
+    margin-top:7.5rpx;
+    font-size: 24rpx;
 }
-.red{
-    color: #d81315;
-    font-weight: bold;
-}
-.ppbtn {
-    overflow: hidden;
-    width: 93%;
-    margin: 4% auto;
-    max-width:400px;
+.go_vote{
+    background-image: linear-gradient(to top left,#f34225, #e10019);
+    width:146rpx;display:block;
+    line-height:50rpx;
+    border-radius:75rpx;
+    color: #ffffff;
+    margin-top: 16rpx;
 }
 
-.ppbtn .go_join,.ppbtn .go_shop {
+.brandsbox .int{
+    overflow:hidden;
+    width:100%;
+    padding-top: 36rpx;
+    border-top: 1px #eee solid;
+    margin-top: 36rpx;
     display: inline-block;
-    text-decoration: none;
-    background: #444;
-    width: 48%;
-    min-width: 80px;
-    height: 35px;
-    line-height: 35px;
-    overflow: hidden;
-    float: left;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    border-radius: 3px;
-    background-color: #999;
 }
-.ppbtn .go_join {
-    margin-right: 1%;
+.brandsbox .int .brandr{
+    /* float:left; */
 }
-
-.ppbtn .go_shop {
-    float: right;
-}
-
-@media screen and (min-width:640px) {
-    .logo swan-image{
-        width: 150px;
-        height: 80px;
-    }
-    .intro{
-        font-size: 14px;
-        line-height: 25px;
-    }
-    .nav{
-        margin-top: 3.5%;
-    }
-    .nav-list{
-        margin: 0 3.5% 2% 0;
-        width: 31%;
-        line-height: 35px;
-    }
-    .ppbox .tit{
-        font-size: 18px;
-    }
-    
-    .pinpaibox .boxtop{
-        padding: 15px;
-        font-size:18px;
-    }
-    .pinpailist{
-        padding: 0;
-    }
-    .pinpailist .imgbox{
-        width: 35%;
-    }
-    .pinpailist .imgbox swan-image{
-        height: 90px;
-    }
-    .pinpailist .infobox{
-        width: 60%;
-    }
-    .pinpailist .infobox .pname{
-        font-size: 18px;
-        line-height: 38px;
-    }
-    .pinpailist .infobox .click-btn-s{
-        margin-top: 10px;
-        padding: 4px 15px;
-    }
-    .pinpai .pptop{
-        line-height: 35px;
-        font-size: 16px;
-    }
-    .pinpai .pptop swan-image{
-        margin-bottom: 15px;
-        height: 150px;
-    }
-    .pinpai .ppbot .ppname{
-        font-size: 18px;
-        line-height: 60px;
-    }
-    .pinpai .ppbot .ppcon{
-        margin: 5% 0;
-        line-height: 30px;
-        font-size: 14px;
-    }
-    .pinpai .ppbot .ppcon .ewm swan-image{
-        height: 120px;
-    }
-    .ppbtn swan-nav{
-        height: 45px;
-        line-height: 45px;
-    }
-}
-
-
- .ui-li-static
- {
-     font-size: 34rpx;
-     color: #333333;
- }
-
- .fb-mobile
- {
-     border-bottom: 1rpx #ddd solid;
-     padding: 0.2rem;
- }
-  .fb-mobile .left1
- {
-    float: left;
-    height: 50rpx;
-    line-height: 50rpx;
-    width: 30%;
- }
- 
-  .fb-mobile .right1
- {
-    
-    height: 50rpx;
-    line-height: 50rpx;
- }
-
-.radio {
-    margin: 0 .25rem;
-}
-.item-wrap {
-    background: #fff;
-}
-.item {
-   
-    padding: .15rem 0;
-    border-bottom: 1px #f5f5f5 solid;
-    margin-left: .25rem;
-}
-.radio-background-active:active {
-    display: block;
-    background-color: #f2f2f2;
-}
-.switch {
-    float: right;
-}
-input {
-    background-color: #f5f5f5;
-    height: .44rem;
-    padding-left: .2rem;
-   
-}
-
-.fb-btn{
-  color: #fff;
-  font-family: 微软雅黑;
-  margin-top:10rpx;
-  width:95%;
-  background-color:#2d7dee;
-  margin-bottom: 5rpx;
-}
-
-
-.date-section {
-    margin-bottom: .1rem;
-}
-.section {
-   height: 50rpx;
-    line-height: 50rpx;
-  
-    background: #fff;
-    display: flex;
-}
-.section:active {
-    background-color: #f2f2f2;
-}
-.section-title {
-    color: #000;
-    flex: 0 0 1rem;
-}
-picker {
+.brandsbox .brandr>swan-view{
+    height:48rpx;
+    color: #999;
+    font-size: 24rpx;
     width: 100%;
-    padding: 0 .22rem;
+    padding: 0 10rpx;
+    box-sizing: border-box;
 }
-.chooseItem {
-    margin-right: .2rem;
+.brandsbox .brandr .left{
+    width:20%;
+    text-align-last: justify;
+}
+.brandsbox .brandr .right{
+    width:80%;
+}
+.brandsbox .btn{
+    overflow:hidden;
+    width: max-content;
+    margin: 16rpx auto 32rpx;
+}
+.brandsbox .btn>swan-view{
+    width:275rpx;
+    height:77.5rpx;
+    line-height:77.5rpx;
+    font-size:28rpx;
+    color:#666;
+    display:block;
+    float:left;
+    background:#e5e5e5;
+    text-align:center;
+    margin: 0 15rpx;
+    border-radius: 10rpx;
+}
+
+/* from ui */
+.ppbox .intro .fb-mobile{
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.ppbox .intro .fb-mobile .left1{
+    width: 29%;
+    float: left;
+    line-height: 64rpx;
+}
+.ppbox .intro .fb-mobile .right1{
+    width: 71%;
+    float: left;
+    line-height: 64rpx;
+    font-size: 24rpx;
+}
+.ppbox .intro swan-picker{
+    border: 1px #ddd solid;
+    border-radius: 8rpx;
+    padding:0 20rpx;
+    background:#f6f6f6;
+}
+.ppbox .intro swan-picker .picker{
+    font-size: 24rpx;
+    line-height:64rpx;
+    height:64rpx;
+}
+.ppbox .intro swan-input{
+    width:100%;
+    line-height:72rpx;
+    height:64rpx;
+    border-radius: 7.5rpx;
+    border: 1px #e5e5e5 solid;
+    background:#f6f6f6;
+    padding:0 20rpx;
+    color: #999;
+    font-size: 24rpx;
+    box-sizing: border-box;
+}
+.ppbox .intro swan-button{
+    width:100%;
+    background-image: linear-gradient(to top left,#f34225, #e10019);
+    border: none;
+    color: #fff;
+    border-radius: 7.5rpx;
+    font-size: 36rpx;
+    line-height: 87.5rpx;
+    text-align: center;
+    margin: 30rpx 0;
+}
+.ppbox .intro .item-wrap{
+    margin-left: 30rpx;
+}
+.ppbox .intro .item,.ppbox .intro .check-box,.ppbox .intro swan-radio-group{
+    display: inline-block;
+    font-size: 28rpx;
+    margin-right: 60rpx;
+    line-height: 2;
 }

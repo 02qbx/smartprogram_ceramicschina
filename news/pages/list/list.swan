@@ -1,38 +1,61 @@
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
 <view class="container">
-    <view class="darkgrey">
-   <import src="/template/mune/mune.swan" /> 
-        
+
+   <import src="/template/mune/mune.swan" />
+   <!-- <import src="/template/NewsMune/NewsMune.swan" /> -->
+   <view class="nav-top">
+        <view class="topnavlist">
+            <navigator url="/news/pages/index/index" open-type="redirect" >最新消息</navigator>
+            <black  s-for="{{PG_NewClass}}" s-for-item="item">
+                 <block s-if="{{id== item.id}}">
+            <navigator url="/news/pages/list/list?id={{item.id}}" open-type="redirect" class="cur" >{{item.proclass}}</navigator>
+            </block>
+             <block s-if="{{id!= item.id}}">
+                  <navigator url="/news/pages/list/list?id={{item.id}}" open-type="redirect"  >{{item.proclass}}</navigator>
+                  </block>
+            </black>
+        </view>
+    </view>
+
         <!-- list -->
-        <view class="white newslist shadow">
-            <view class="n-list">
-                <view class="t">
+        <view class="section">
+                <!-- <view class="t">
                     <view class="left">{{proclass}}</view>
-                 
-                </view>
-                <view class="list">
-                    <view class="list-con"  s-for="{{list}}" s-for-item="item">
-                        <navigator url="/news/pages/view/view?id={{item.pg_news.id}}" >
-                            <view class="left">
-                                <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.pg_news.ispic}}"></image>
-                            </view>
-                            <view class="right">
-                                <view class="title">{{item.pg_news.news_title}}</view>
-                                <view class="n-bottom">
-                                    <view class="time">{{item.pg_news.make_date}}</view>
-                                   <!-- <view class="read">{{item.pg_news.click_n}}</view>-->
+                </view> -->
+                <view class="n_list ind-news ind-con">
+                    <view class="list news-hot">
+                        <view class="n_con"  s-for="{{list}}" s-for-item="item">
+                                <view class="newsleft">
+                                    <navigator url="/news/pages/view/view?id={{item.pg_news.id}}" class="n_title">{{item.pg_news.newsTitle}}
+                                    </navigator>
+                                    <view class="info">
+                                        <text class="time">{{item.pg_news.makeDate}}</text>
+                                    <!-- <text class="read">{{item.pg_news.click_n}}</text>-->
+                                    </view>
                                 </view>
-                            </view>
-                        </navigator>
+                                <view class="imgbox">
+                                    <navigator url="/news/pages/view/view?id={{item.pg_news.id}}" >
+                                        <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.pg_news.ispic}}"></image>
+                                    </navigator>
+                                </view>
+                        </view>
+                        <view class="checkmore">
+                            <navigator class="btnss ind_btn" bindtap="loadMore" data-hash='{{pageid}}'>点击加载</navigator>
+                        </view>
                     </view>
-                   
-                      
                 </view>
-                  <view  bindtap="loadMore" data-hash='{{pageid}}'  class="btn-more">点击加载</view>
-            </view>
         </view>
         <view class="footer">
             <view>经营许可证编号：粤ICP备14052601号-1</view>
             <view class="foot">© 2002-2018&nbsp;中国陶瓷网 All Rights Reserved</view>
         </view>
+</view>
+<view class="page-section-btns" bindtap="scrollToTop">
+    <view class="ToTop">
+        <image mode="widthFix" src="/images/ztw_retopbtn.png" alt="返回顶部"></image>
     </view>
 </view>
