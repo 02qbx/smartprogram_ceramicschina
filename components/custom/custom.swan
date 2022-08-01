@@ -1,10 +1,10 @@
 <!-- 自定义组件内部的模板 (custom.swan) -->
 <view class="nav-box">
-    <view class="top-title" style="margin-top:{{statusBarHeight+0.53}}px">
+    <view class="top-title" style="height:{{statusBarHeight*2+100}}rpx">
         <!-- <view class="back-icon-wrap" bindtap="back">
             <image class="back-icon" src="/images/back.png"></image>
         </view> -->
-        <view class="topbar white page-title">
+        <view class="topbar white page-title" style="padding-top:{{statusBarHeight+10}}rpx">
             <navigator class="logo" url="/pages/index/index" open-type="redirect">
                 <image mode="aspectFit" src="/images/logo.png"></image>
             </navigator>
@@ -13,4 +13,4 @@
 </view>
 
 <!-- 占位元素，防止接下来的页面内容被导航栏遮挡 -->
-<view style="padding-top:{{(statusBarHeight*2+120)}}rpx"></view>
+<view style="padding-top:{{statusBarHeight*2+100}}rpx"></view>

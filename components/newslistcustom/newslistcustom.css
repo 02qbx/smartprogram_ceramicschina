@@ -7,7 +7,7 @@
 }
 
 .top-title {
-    height: 120rpx;
+    height: 140rpx;
     font-size:32.25rpx;
     display: flex;
     justify-content: center; /* 水平居中 */
@@ -15,16 +15,24 @@
     /* margin-bottom: 16rpx; */
 }
 .list-title{
-    margin-left: 16rpx;
+    /* margin-left: 16rpx; */
     position: absolute;
-    left: 60rpx;
-    margin-top: 5.25rpx;
+    /* left: 60rpx; */
+    /* margin-top: 5.25rpx; */
     color: #ffffff;
     width: 180rpx;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     font-weight: bold;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 64rpx;
+    line-height: 64rpx;
+    text-align: center;
 }
 
 .page-title {

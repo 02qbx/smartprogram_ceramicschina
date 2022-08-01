@@ -2,7 +2,7 @@
     "navigationBarTitleText": "中国陶瓷网",
     "navigationBarBackgroundColor": "#c00",
     "navigationStyle": "custom",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "homeIcon":"ture",
     "usingComponents": {
         "smt-navigation": "@smt-ui/component/src/navigation",
