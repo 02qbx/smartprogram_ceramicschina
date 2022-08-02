@@ -14,14 +14,14 @@
             <view>{{pg_news.makeDate}}</view>
         </view>
         <view class="art_content">
-           <text><template is="wxParse" data="{{{wxParseData.nodes}}}"/></text>
+           <template is="wxParse" data="{{{wxParseData.nodes}}}"/>
         </view>
 
-            <!-- 广告位 -->
+            <!-- 广告位
         <navigator class="ad" url="/pages/index/index" >
-            <image mode="widthFix" src="/images/1.jpg"></image>
+            <image mode="widthFix" src="https://m.ceramicschina.com/images/1.jpg"></image>
             <view class="gg">广告</view>
-        </navigator>
+        </navigator>-->
 
         <!-- 头条推荐 -->
         <view class="newslist">
