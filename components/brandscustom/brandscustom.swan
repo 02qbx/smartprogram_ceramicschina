@@ -9,11 +9,12 @@
                 <image class="back-icon" src="/images/ztw_shouye.png"></image>
             </navigator>
         </view> -->
-        <view class="topbar white page-title" style="padding-top:{{statusBarHeight+10}}rpx">
+        <!-- <view class="topbar white page-title" style="padding-top:{{statusBarHeight+10}}rpx">
             <navigator class="logo" url="/pages/index/index" open-type="redirect">
                 <image mode="aspectFit" src="/images/logo-w.png"></image>
             </navigator>
-        </view>
+        </view> -->
+        <view class="list-title" style="padding-top:{{statusBarHeight+10}}rpx">品牌馆</view>
     </view>
 </view>
 

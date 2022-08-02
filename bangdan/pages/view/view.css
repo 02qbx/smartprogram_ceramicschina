@@ -199,7 +199,6 @@ swan-button:after{
 .ppbox .intro swan-view{
     line-height: 1.5;
     color: #666;
-    font-size: 32rpx;
 }
 
 /* brand */
@@ -271,6 +270,16 @@ swan-button:after{
     border-radius:75rpx;
     color: #ffffff;
     margin-top: 16rpx;
+}
+.phonenum{
+    width:280rpx;
+    display:block;
+    line-height:66rpx;
+    border-radius:6rpx;
+    color: #ffffff;
+    margin: 16rpx 0 0 0;
+    padding: 0;
+    font-size: 32rpx;
 }
 
 .brandsbox .int{

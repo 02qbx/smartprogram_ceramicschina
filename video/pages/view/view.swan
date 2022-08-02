@@ -1,0 +1,40 @@
+<import src="../../../wxParse/wxParse.swan"/>
+
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
+<view class="container">
+    <view class="wrap">
+        <view class="video-wrap">
+            <video
+                style="width: 100%;"
+                id="myVideo"
+                src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
+                title="全屏title">
+            </video>
+        </view>
+    </view>
+    <view class="section">
+        <view class="vid-con">
+            <view class="title">750×1500瓷砖为何被称为黄金规格？</view>
+            <view class="con">
+                <view class="playnum">60</view>
+                <view class="time">2022-07-25</view>
+            </view>
+        </view>
+    </view>
+    <view class="pinglun">
+        <view class="float-title">- 全部评论 -</view>
+        <!-- 评论列表组件 -->
+        <comment-list
+            comment-param="{{commentParam}}"
+            detail-path="{{detailPath}}"
+            toolbar-config="{{toolbarConfig}}"
+            bindclickcomment="clickComment">
+        </comment-list>
+    </view>
+
+
+</view>

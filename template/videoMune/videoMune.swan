@@ -1,0 +1,7 @@
+<view class="nav-top">
+    <view class="topnavlist">
+        <navigator url="/video/pages/list/list">瓷砖宝典</navigator>
+        <navigator url="/video/pages/list/list">品牌之窗</navigator>
+        <navigator url="/video/pages/list/list">人物专访</navigator>
+    </view>
+</view>

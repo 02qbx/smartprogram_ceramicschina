@@ -6,7 +6,7 @@
 </view>
 
 <view class="container darkgrey">
-    <import src="/template/BrandsMune/BrandsMune.swan" />
+    <!-- <import src="/template/BrandsMune/BrandsMune.swan" /> -->
 
     <view class="brandsbox">
         <view class="ppname">
@@ -20,7 +20,7 @@
                     <view>微信：<text class="red">{{digest.Count}}</text>票</view>
                 </view> -->
 
-                 <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true">400-115-2002</button>
+                 <button bind:tap="makePhoneCall" type="primary" hover-stop-propagation="true" class="phonenum">400-115-2002</button>
             </view>
         </view>
         <view class="int">
