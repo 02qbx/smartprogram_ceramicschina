@@ -4,7 +4,7 @@
 </view>
 
  <view class="container">
-    <import src="/template/BrandsMune/BrandsMune.swan" />
+    <!-- <import src="/template/BrandsMune/BrandsMune.swan" /> -->
 
     <view class="darkgrey">
         <view class="banner"><image mode="widthFix" src="https://m.ceramicschina.com/image/bangdan.jpg"></image>

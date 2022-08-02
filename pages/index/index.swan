@@ -6,7 +6,7 @@
 
 <view class="container">
         <import src="/template/mune/mune.swan" />
-        <import src="/template/IndexMune/IndexMune.swan" />
+        <!-- <import src="/template/IndexMune/IndexMune.swan" /> -->
         <!-- ad -->
 
         <view class="wrap adv">

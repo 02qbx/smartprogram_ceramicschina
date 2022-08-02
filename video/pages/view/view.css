@@ -1,0 +1,42 @@
+@import "/pages/index/index.css";
+
+body{background: #ffffff;}
+
+.vid-con .title{
+    overflow:hidden;
+    margin: 12rpx 0 28rpx;
+    color:#333;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.vid-con .vid-con{
+    overflow: hidden;
+    margin: 24rpx 0;
+}
+.vid-con .con{
+    font-size: 24rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    margin-bottom: 20rpx;
+}
+.vid-con .playnum{
+    padding-left: 36rpx;
+    background: url(https://m.ceramicschina.com/Content/ztw2020_img/icon-bofang.png) no-repeat left center;
+    background-size: 28rpx;
+    font-size: 28rpx;
+    color: #999;
+    margin-right: 30rpx;
+    float: left;
+}
+.vid-con .time{
+    color:#ccc;
+    float: left;
+}
+.pinglun{
+    border-top: 1px #e5e5e5 dotted;
+}
+.pinglun .float-title{
+    text-align: center;
+    padding: 40rpx 0;
+    color: #f00;
+}

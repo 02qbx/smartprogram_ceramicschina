@@ -1,0 +1,155 @@
+<import src="../../../wxParse/wxParse.swan"/>
+
+<view>
+    <!-- 在页面中对自定义组件进行引用 -->
+    <custom chinaName="中国陶瓷网" engName="Custom title"></custom>
+</view>
+
+<import src="/template/mune/mune.swan" />
+<import src="/template/videomune/videomune.swan" />
+
+<view class="container">
+    <!--to do-->
+    <view class="video section">
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+        <view class="con">
+            <navigator class="imgbox" openType="navigate" url="/video/pages/view/view">
+                <image mode="widthFix" src="https://img1.ceramicschina.com//Upfiles/2022-07-28/2022072814515052015.jpg" alt="岩板工厂探访·走进将军陶瓷集团岩板研发智造基地"></image>
+                <view class="num">137 播放量</view>
+            </navigator>
+            <navigator openType="navigate" url="/video/pages/view/view" class="tit">岩板工厂探访·走进将军陶瓷集团岩板研发智造基地</navigator>
+        </view>
+    </view>
+</view>
