@@ -22,6 +22,17 @@ Page({
             }
         });
     },
+    switchTab() {
+        swan.switchTab({
+            url: '/news/pages/index/index',
+            success: res => {
+                console.log('switchTab success');
+            },
+            fail: err => {
+                console.log('switchTab fail', err);
+            }
+        })
+    },
     onLoad: function () {
             var that=this;
             swan.setNavigationBarTitle({

@@ -9,7 +9,7 @@
    <!-- <import src="/template/NewsMune/NewsMune.swan" /> -->
    <view class="nav-top">
         <view class="topnavlist">
-            <navigator url="/news/pages/index/index" open-type="redirect" class="cur">最新消息</navigator>
+            <navigator bind:tap="switchTab" hover-stop-propagation="true" class="cur">最新消息</navigator>
             <black  s-for="{{PG_NewClass}}" s-for-item="item">
             <navigator url="/news/pages/list/list?id={{item.id}}" open-type="redirect"  >{{item.proclass}}</navigator>
             </black>
