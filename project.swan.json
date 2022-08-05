@@ -9,7 +9,7 @@
     "host": "baiduboxapp",
     "minSwanVersion": "3.0.39",
     "preview": {
-        "packageId": 944898
+        "packageId": 944913
     },
     "projectname": "中陶网小程序",
     "publish": {
@@ -17,7 +17,7 @@
             "小程序包内容将被百度解析和收录，用于内容的风险控制。",
             "若您已开通分享web化，请确保分享web化体验无问题后，再进行发布。"
         ],
-        "version": "1.0.44.0"
+        "version": "1.0.45.0"
     },
     "setting": {
         "urlCheck": false

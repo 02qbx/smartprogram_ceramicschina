@@ -42,7 +42,7 @@ Page({
 
                 that.setData({
                     ProClass:res.data.name,
-
+                    id:options.id,
 
                 webtitle:res.data.webtitle,
                 webkey:res.data.metakeywords,
