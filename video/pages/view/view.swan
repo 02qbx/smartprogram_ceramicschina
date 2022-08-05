@@ -11,17 +11,17 @@
             <video
                 style="width: 100%;"
                 id="myVideo"
-                src="https://b.bdstatic.com/swan-temp/940fe716b0eaad38f47b209d61657490.mp4"
-                title="全屏title">
+                src="{{video.video}}"
+               >
             </video>
         </view>
     </view>
     <view class="section">
         <view class="vid-con">
-            <view class="title">750×1500瓷砖为何被称为黄金规格？</view>
+            <view class="title">{{video.title}}</view>
             <view class="con">
-                <view class="playnum">60</view>
-                <view class="time">2022-07-25</view>
+                <view class="playnum">{{video.clickN}}</view>
+                <view class="time">{{video.makeDate}}</view>
             </view>
         </view>
     </view>

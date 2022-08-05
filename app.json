@@ -1,8 +1,6 @@
 {
     "pages": [
         "pages/index/index",
-        "video/pages/index/index/index",
-        "video/pages/list/list/list",
         "video/pages/view/view",
         "video/pages/index/index",
         "video/pages/list/list",

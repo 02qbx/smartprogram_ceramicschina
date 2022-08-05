@@ -1,19 +1,10 @@
 Page({
-    data: {
-        commentParam: {
-            // 模拟数据，使用时请替换真实数据
-            snid: 'BD20200202',
-            path: '/page/list/index?snid=BD20200202',
-            title: '测试文章标题',
-            content: '测试文章内容',
-            images: ['https://b.bdstatic.com/miniapp/images/demo-dog.png']
-        },
-        detailPath: '',
-        // 底部互动 bar 的配置
+    data: {video:{},
+        commentParam: {},
         toolbarConfig: {
             // 若 moduleList 中配置有 share 模块，默认是有，则该属性为必填，title 必传
             share: {
-                title: '测试文章标题'
+                title: '中国陶瓷网'
             }
         }
 
@@ -22,7 +13,56 @@ Page({
     onInit: function () {
         // 监听页面初始化的生命周期函数
     },
-    onLoad: function () {
+    onLoad: function (options) {
+        var that=this;
+        swan.request({
+      url: 'https://smartprogram.ceramicschina.com/videoview',
+      method: 'GET',
+      data: {
+          id: options.id
+      },
+      dataType: 'json',
+      header: {
+          'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+           that.setData({
+            video:res.data
+            //,
+            //list:res.data.PG_NewsList
+          })
+          that.setData({
+              commentParam: {
+                  snid: options.id,
+                  path: '/video/pages/view/view?id='+options.id+'',
+                  title: res.data.title + '-中国陶瓷网',
+                  content: res.data.title,
+                  images: ['https://img1.ceramicschina.com'+res.data.bigpic+'']
+              }
+          });
+
+
+
+swan.setNavigationBarTitle({
+  title: '中国陶瓷网'
+});
+swan.setPageInfo({
+          title: res.data.title + '-中国陶瓷网',
+          keywords: '' ,
+          description: res.data.title,
+          articleTitle:res.data.title + '-中国陶瓷网',
+           image: ['https://img1.ceramicschina.com'+res.data.bigpic+''],
+          success: function () {
+              console.log('setPageInfo success');
+          },
+          fail: function (err) {
+              console.log('setPageInfo fail', err);
+          }
+      });
+
+      }
+      })
+
         // 监听页面加载的生命周期函数
 
     },
