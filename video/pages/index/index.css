@@ -3,11 +3,17 @@
 body {
     background: #f5f5f5;
 }
+.nav-top swan-nav{
+    width: 25%;
+}
+.nav-top .cur:after{
+    width: 30%;
+}
 .ind-title{
     margin-bottom: 0;
 }
 .ind-title .ind-titLeft{
-    font-size: 44rpx;
+    font-size: 38rpx;
     float: left;
     font-weight: bold;
 }

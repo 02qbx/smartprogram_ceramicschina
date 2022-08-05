@@ -6,12 +6,20 @@
 </view>
 
 <import src="/template/mune/mune.swan" />
-<import src="/template/videomune/videomune.swan" />
+
+<view class="nav-top">
+    <view class="topnavlist">
+        <navigator bindtap="switchTab" hover-stop-propagation="true">视频首页</navigator>
+        <navigator url="/video/pages/list/list?id=1" class="cur">瓷砖宝典</navigator>
+        <navigator url="/video/pages/list/list?id=3">品牌之窗</navigator>
+        <navigator url="/video/pages/list/list?id=2">人物专访</navigator>
+    </view>
+</view>
 
 <view class="container">
     <!--to do-->
     <view class="video section">
-        <view class="con"  s-for="{{list}}" s-for-item="item">
+        <view class="con" s-for="{{list}}" s-for-item="item">
             <navigator class="imgbox" openType="navigate" url="/video/pages/view/view?id={{item.pg_video.id}}">
                 <image mode="widthFix" src="https://img1.ceramicschina.com/{{item.pg_video.bigpic}}" alt="{{item.pg_video.title}}"></image>
                 <view class="num">{{item.pg_video.clickN}} 播放量</view>

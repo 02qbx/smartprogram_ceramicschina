@@ -8,6 +8,17 @@ Page({
         webkey:'',
         webds:''
     },
+    switchTab() {
+        swan.switchTab({
+            url: '/video/pages/index/index',
+            success: res => {
+                console.log('switchTab success');
+            },
+            fail: err => {
+                console.log('switchTab fail', err);
+            }
+        })
+    },
     onInit: function () {
         // 监听页面初始化的生命周期函数
     },

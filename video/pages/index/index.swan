@@ -6,7 +6,15 @@
 </view>
 
 <import src="/template/mune/mune.swan" />
-<import src="/template/videomune/videomune.swan" />
+
+<view class="nav-top">
+    <view class="topnavlist">
+        <navigator bindtap="switchTab" hover-stop-propagation="true" class="cur">视频首页</navigator>
+        <navigator url="/video/pages/list/list?id=1">瓷砖宝典</navigator>
+        <navigator url="/video/pages/list/list?id=3">品牌之窗</navigator>
+        <navigator url="/video/pages/list/list?id=2">人物专访</navigator>
+    </view>
+</view>
 
 <view class="container">
     <!--to do-->
