@@ -26,6 +26,7 @@
                     <swiper-item class="row-view" >
                         <navigator url="/news/pages/view/view?id={{p.id}}" >
                             <image mode="widthFix" bindtap="slideAction" src="https://img1.ceramicschina.com/{{p.ispic}}"></image>
+                            <view class="title">{{p.id}}</view>
                         </navigator>
                     </swiper-item >
                 </block>
