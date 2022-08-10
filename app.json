@@ -1,17 +1,13 @@
 {
     "pages": [
         "pages/index/index",
-        "video/pages/view/view",
-        "video/pages/index/index",
-        "video/pages/list/list",
         "bangdan/pages/indexpinpai/indexpinpai",
         "bangdan/pages/index/index",
         "bangdan/pages/view/view",
         "news/pages/list/list",
         "news/pages/index/index",
-        "news/pages/view/view",
-        "components/videocustom/videocustom",
-        "template/videoMune/videoMune"
+        "news/pages/view/view"
+
     ],
     "window": {
         "navigationBarBackgroundColor": "#ffffff",

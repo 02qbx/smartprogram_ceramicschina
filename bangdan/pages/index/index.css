@@ -291,3 +291,11 @@ swan-image{
 .ppbox .intro swan-view{
     padding: 9rpx 0;
 }
+.pinglun{
+    border-top: 1px #e5e5e5 dotted;
+}
+.pinglun .float-title{
+    text-align: center;
+    padding: 40rpx 0;
+    color: #f00;
+}

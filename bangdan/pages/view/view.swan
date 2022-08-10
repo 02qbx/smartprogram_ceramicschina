@@ -309,9 +309,15 @@
         </view>
     </view> -->
 
-    <view class="footer">
-        <view>经营许可证编号：粤ICP备14052601号-1</view>
-        <view class="foot">&#169;2002-2022 中国陶瓷网All Rights Reserved</view>
+ <view class="pinglun">
+        <view class="float-title">- 全部评论 -</view>
+        <!-- 评论列表组件 -->
+        <comment-list
+            comment-param="{{commentParam}}"
+            detail-path="{{detailPath}}"
+            toolbar-config="{{toolbarConfig}}"
+            bindclickcomment="clickComment">
+        </comment-list>
     </view>
 
 </view>

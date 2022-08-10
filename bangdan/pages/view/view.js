@@ -9,7 +9,14 @@ Page({
         customItem1: '',
         digest:{},
         agentlist:[],
-        cailist:[]
+        cailist:[],
+        commentParam: {},
+        toolbarConfig: {
+            // 若 moduleList 中配置有 share 模块，默认是有，则该属性为必填，title 必传
+            share: {
+                title: '中国陶瓷网'
+            }
+        }
     },
     //top
     scrollToTop() {
@@ -26,6 +33,15 @@ Page({
     },
     onLoad: function (options) {
         var that=this;
+        swan.showFavoriteGuide({
+            type: 'tip',
+            success: res =>  {
+                console.log('调起关注小程序引导组件成功：', res);
+            },
+            fail: err => {
+                console.log('调起关注小程序引导组件失败：', err);
+            }
+        })
           swan.request({
         url: 'https://smartprogram.ceramicschina.com/viewpinpai',
         method: 'GET',
@@ -42,6 +58,16 @@ Page({
               digest:res.data,
              // agentlist:res.data.pg_PinpaiJiaMeng,
               // cailist:res.data.pg_purchasing
+
+              commentParam: {
+                snid: options.id,
+                path: '/bangdan/pages/view/view?id='+options.id+'',
+                title: res.data.pinpainame + '怎么样_'+res.data.pinpainame+'企业简介_中国陶瓷网',
+                content: res.data.pinpaidescription,
+                images: ['https://img1.ceramicschina.com'+res.data.pinpailogo+'']
+            }
+
+
             })
 
          WxParse.wxParse('wxParseData', 'html', res.data.pinpaijianjie, that, 10);

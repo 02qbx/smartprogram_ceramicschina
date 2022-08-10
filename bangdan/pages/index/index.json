@@ -7,5 +7,8 @@
         "smt-navigation": "@smt-ui/component/src/navigation",
         "smt-icon": "@smt-ui/component/src/icon",
         "custom":"/components/brandscustom/brandscustom"
+    },
+    "usingSwanComponents": {
+        "comment-list": "dynamicLib://myDynamicLib/comment-list"
     }
 }

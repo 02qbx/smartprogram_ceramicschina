@@ -26,6 +26,15 @@ Page({
     },
 
     onLoad: function (options) {
+        swan.showFavoriteGuide({
+            type: 'tip',
+            success: res =>  {
+                console.log('调起关注小程序引导组件成功：', res);
+            },
+            fail: err => {
+                console.log('调起关注小程序引导组件失败：', err);
+            }
+        })
        var that=this;
           swan.request({
         url: 'https://smartprogram.ceramicschina.com/view',

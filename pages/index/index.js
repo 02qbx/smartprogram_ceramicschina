@@ -29,7 +29,10 @@ Page({
         swiperCurrent: 0,
         currentJMTab: 0,
         Designerlist:[{CurrentDes: 0}],
+
     },
+
+
     //top
     scrollToTop() {
         swan.pageScrollTo({
@@ -123,6 +126,15 @@ Page({
         swan.setNavigationBarTitle({
             title: '中国陶瓷网'
         });
+        swan.showFavoriteGuide({
+            type: 'tip',
+            success: res =>  {
+                console.log('调起关注小程序引导组件成功：', res);
+            },
+            fail: err => {
+                console.log('调起关注小程序引导组件失败：', err);
+            }
+        })
         swan.request({
             url: 'https://smartprogram.ceramicschina.com/indexhot',
             method: 'GET',

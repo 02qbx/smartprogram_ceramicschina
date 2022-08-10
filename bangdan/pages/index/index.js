@@ -5,9 +5,26 @@ Page({
       strname:'',
       PG_PinpaiData:[],
       listdata:'',
-RedirectUrl:''
+RedirectUrl:'',
+commentParam: {},
+toolbarConfig: {
+    // 若 moduleList 中配置有 share 模块，默认是有，则该属性为必填，title 必传
+    share: {
+        title: '中国陶瓷网'
+    }
+}
     },
     onLoad: function (options) {
+        swan.showFavoriteGuide({
+            type: 'tip',
+            success: res =>  {
+                console.log('调起关注小程序引导组件成功：', res);
+            },
+            fail: err => {
+                console.log('调起关注小程序引导组件失败：', err);
+            }
+        })
+
           var that=this;
           var  listdata="";
             var strname="";
@@ -50,7 +67,14 @@ RedirectUrl:''
               listdata:listdata,
                enname:options.typename,
                strname:res.data.pinpaitypename,
-               RedirectUrl:res.data.redirecturl
+               RedirectUrl:res.data.redirecturl,
+               commentParam: {
+                snid: options.typename,
+                path: '/bangdan/pages/index/index?typename='+options.typename+'',
+                title: res.data.pinpaitypewebtitle,
+                content: res.data.redirecturl+"·"+res.data.pinpaitypename+"”的有："+listdata+"（以上排名不分前后）",
+                images: ['https://m.ceramicschina.com/image/bangdan.jpg']
+            }
             })
             swan.setNavigationBarTitle({
     title: res.data.pinpaitypename
@@ -99,6 +123,12 @@ strname=res.data.PinpaiTypeName;
     },
     onReady: function() {
         // 监听页面初次渲染完成的生命周期函数
+         requireDynamicLib('myDynamicLib').listenEvent();
+    },
+    clickComment(e) {
+        swan.showToast({
+            title: '发布评论成功'
+        });
     },
     onShow: function() {
         // 监听页面显示的生命周期函数

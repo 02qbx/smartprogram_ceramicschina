@@ -385,4 +385,11 @@ swan-button:after{
     font-size: 28rpx;
     margin-right: 60rpx;
     line-height: 2;
+}.pinglun{
+    border-top: 1px #e5e5e5 dotted;
+}
+.pinglun .float-title{
+    text-align: center;
+    padding: 40rpx 0;
+    color: #f00;
 }
